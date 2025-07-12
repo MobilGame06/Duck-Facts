@@ -12,6 +12,24 @@ const loadData = async (filename) => {
   }
 };
 
+/**
+ * @swagger
+ * /api/facts/random:
+ *   get:
+ *     summary: Returns a random duck fact
+ *     responses:
+ *       200:
+ *         description: Successfully retrieved a random duck fact
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 id:
+ *                   type: integer
+ *                 fact:
+ *                   type: string
+ */
 router.get('/facts/random', function (req, res, next) {
   const facts = loadData('./data/facts.json')
     .then(data => {
@@ -26,6 +44,36 @@ router.get('/facts/random', function (req, res, next) {
     });
 });
 
+
+/**
+ * @swagger
+ * /api/facts/{id}:
+ *   get:
+ *     summary: Returns a duck fact by ID
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *         description: Identifier of the duck fact to retrieve
+ *     responses:
+ *       200:
+ *         description: Successfully retrieved the duck fact
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 id:
+ *                   type: integer
+ *                 fact:
+ *                   type: string
+ *       400:
+ *         description: Unable to process the request due to invalid input
+ *       404:
+ *         description: Duck fact not found
+ */
 router.get('/facts/:id', function (req, res, next) {
   const id = parseInt(req.params.id, 10);
   if (isNaN(id)) {
