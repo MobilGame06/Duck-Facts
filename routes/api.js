@@ -30,18 +30,17 @@ const loadData = async (filename) => {
  *                 fact:
  *                   type: string
  */
-router.get('/facts/random', (req, res, next) => {
-  const facts = loadData('./data/facts.json')
-    .then(data => {
-      const randomIndex = Math.floor(Math.random() * data.length);
-      res.json({
-        id: randomIndex,
-        fact: data[randomIndex]
-      });
-    })
-    .catch(error => {
-      res.status(500).json({ error: 'Failed to load facts' });
+router.get('/facts/random', async (req, res, next) => {
+  try {
+    const data = await loadData('./data/facts.json');
+    const randomIndex = Math.floor(Math.random() * data.length);
+    res.json({
+      id: randomIndex,
+      fact: data[randomIndex]
     });
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to load facts' });
+  }
 });
 
 
@@ -74,25 +73,24 @@ router.get('/facts/random', (req, res, next) => {
  *       404:
  *         description: Duck fact not found
  */
-router.get('/facts/:id', (req, res, next) => {
+router.get('/facts/:id', async (req, res, next) => {
   const id = parseInt(req.params.id, 10);
   if (isNaN(id)) {
     return res.status(400).json({ error: 'Invalid ID format' });
   }
 
-  loadData('./data/facts.json')
-    .then(data => {
-      if (id < 0 || id >= data.length) {
-        return res.status(404).json({ error: 'Fact not found' });
-      }
-      res.json({
-        id: id,
-        fact: data[id]
-      });
-    })
-    .catch(error => {
-      res.status(500).json({ error: 'Failed to load facts' });
+  try {
+    const data = await loadData('./data/facts.json');
+    if (id < 0 || id >= data.length) {
+      return res.status(404).json({ error: 'Fact not found' });
+    }
+    res.json({
+      id: id,
+      fact: data[id]
     });
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to load facts' });
+  }
 });
 
 module.exports = router;
