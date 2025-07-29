@@ -1,8 +1,8 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
 const loadData = async (filename) => {
-  const fs = require('fs').promises;
+  const { promises: fs } = require('fs');
   try {
     const data = await fs.readFile(filename, 'utf8');
     return JSON.parse(data);
@@ -30,7 +30,7 @@ const loadData = async (filename) => {
  *                 fact:
  *                   type: string
  */
-router.get('/facts/random', function (req, res, next) {
+router.get('/facts/random', (req, res, next) => {
   const facts = loadData('./data/facts.json')
     .then(data => {
       const randomIndex = Math.floor(Math.random() * data.length);
@@ -74,7 +74,7 @@ router.get('/facts/random', function (req, res, next) {
  *       404:
  *         description: Duck fact not found
  */
-router.get('/facts/:id', function (req, res, next) {
+router.get('/facts/:id', (req, res, next) => {
   const id = parseInt(req.params.id, 10);
   if (isNaN(id)) {
     return res.status(400).json({ error: 'Invalid ID format' });
