@@ -18,6 +18,20 @@ export default [
     },
   },
   {
+    files: ['**/*.test.js', '**/__tests__/**/*.js'],
+    languageOptions: {
+      globals: {
+        ...globals.node,
+        ...globals.jest,
+      },
+      sourceType: 'commonjs',
+    },
+    rules: {
+      'no-console': 'off',
+      'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+    },
+  },
+  {
     files: ['**/*.mjs'],
     languageOptions: {
       globals: {
