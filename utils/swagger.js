@@ -18,16 +18,6 @@ const options = {
         url: 'https://opensource.org/licenses/MIT',
       },
     },
-    servers: [
-      {
-        url: 'https://duck-facts.onrender.com',
-        description: 'Production server',
-      },
-      {
-        url: 'http://localhost:3000',
-        description: 'Development server',
-      },
-    ],
     tags: [
       {
         name: 'facts',
