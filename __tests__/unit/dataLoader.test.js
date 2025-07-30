@@ -12,10 +12,13 @@ describe('dataLoader', () => {
     beforeAll(async () => {
       // Create test fixtures directory
       await fs.mkdir(testDataDir, { recursive: true });
-      
+
       // Create valid JSON test file
-      await fs.writeFile(validJsonFile, JSON.stringify(['fact1', 'fact2', 'fact3']));
-      
+      await fs.writeFile(
+        validJsonFile,
+        JSON.stringify(['fact1', 'fact2', 'fact3'])
+      );
+
       // Create invalid JSON test file
       await fs.writeFile(invalidJsonFile, '{"invalid": json}');
     });
@@ -47,9 +50,9 @@ describe('dataLoader', () => {
     it('should handle empty file', async () => {
       const emptyFile = path.join(testDataDir, 'empty.json');
       await fs.writeFile(emptyFile, '');
-      
+
       await expect(loadData(emptyFile)).rejects.toThrow();
-      
+
       await fs.unlink(emptyFile);
     });
   });
@@ -61,11 +64,11 @@ describe('dataLoader', () => {
     beforeAll(async () => {
       // Create test fixtures directory
       await fs.mkdir(testDataDir, { recursive: true });
-      
+
       // Create multilingual test file
       const multilingualData = {
         en: ['English fact 1', 'English fact 2'],
-        de: ['German fact 1', 'German fact 2']
+        de: ['German fact 1', 'German fact 2'],
       };
       await fs.writeFile(multilingualFile, JSON.stringify(multilingualData));
     });

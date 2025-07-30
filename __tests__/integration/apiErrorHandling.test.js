@@ -14,12 +14,10 @@ describe('API Error Handling', () => {
     it('should return 500 when loadData fails', async () => {
       loadData.mockRejectedValue(new Error('File not found'));
 
-      const response = await request(app)
-        .get('/api/facts/random')
-        .expect(500);
+      const response = await request(app).get('/api/facts/random').expect(500);
 
       expect(response.body).toEqual({
-        error: 'Failed to load facts'
+        error: 'Failed to load facts',
       });
     });
   });
@@ -28,12 +26,10 @@ describe('API Error Handling', () => {
     it('should return 500 when loadData fails', async () => {
       loadData.mockRejectedValue(new Error('File corrupted'));
 
-      const response = await request(app)
-        .get('/api/facts/0')
-        .expect(500);
+      const response = await request(app).get('/api/facts/0').expect(500);
 
       expect(response.body).toEqual({
-        error: 'Failed to load facts'
+        error: 'Failed to load facts',
       });
     });
   });
