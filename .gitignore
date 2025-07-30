@@ -6,15 +6,3 @@ npm-debug.log
 
 # Test coverage files
 coverage/
-
-# Dependency update workflow artifacts
-updates.json
-update-summary.json
-potential-updates.json
-outdated.json
-security-audit.json
-dependency-report.txt
-pr-body.md
-enhanced-pr-body.md
-code-analysis.md
-startup-test.log
