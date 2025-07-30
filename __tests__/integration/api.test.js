@@ -51,7 +51,7 @@ describe('API Integration Tests', () => {
         facts.add(response.body.fact);
       }
 
-      // With 30 facts, getting at least 2 different ones in 10 calls is very likely
+      // With 171 facts, getting at least 2 different ones in 10 calls is very likely
       expect(facts.size).toBeGreaterThan(1);
     });
 
@@ -119,12 +119,12 @@ describe('API Integration Tests', () => {
       expect(response.body.fact).toEqual('Ducks have waterproof feathers thanks to an oil gland near their tails.');
     });
 
-    it('should handle boundary conditions - last fact (id=29)', async () => {
+    it('should handle boundary conditions - last fact (id=170)', async () => {
       const response = await request(app)
-        .get('/api/facts/29')
+        .get('/api/facts/170')
         .expect(200);
 
-      expect(response.body.id).toBe(29);
+      expect(response.body.id).toBe(170);
       expect(response.body.lang).toBe('en');
       expect(response.body.fact).toBeTruthy();
     });
