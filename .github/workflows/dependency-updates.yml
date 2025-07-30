@@ -51,14 +51,6 @@ jobs:
             cat updates.json
           fi
       
-      - name: Create update branch
-        if: steps.check-updates.outputs.no-updates == 'false'
-        run: |
-          # Create a unique branch name with timestamp
-          BRANCH_NAME="automated-dependency-updates-$(date +%Y%m%d-%H%M%S)"
-          echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
-          git checkout -b $BRANCH_NAME
-      
       - name: Update dependencies
         if: steps.check-updates.outputs.no-updates == 'false'
         run: |
@@ -72,15 +64,37 @@ jobs:
           # Save the update summary
           ncu --jsonUpgraded > update-summary.json
       
-      - name: Run tests to check compatibility
+      - name: Check for actual changes
         if: steps.check-updates.outputs.no-updates == 'false'
+        id: check-changes
+        run: |
+          # Check if there are any actual changes to files
+          if git diff --quiet && git diff --cached --quiet; then
+            echo "has-changes=false" >> $GITHUB_OUTPUT
+            echo "No actual file changes detected after dependency update"
+          else
+            echo "has-changes=true" >> $GITHUB_OUTPUT
+            echo "File changes detected after dependency update"
+            git diff --name-only
+          fi
+      
+      - name: Create update branch
+        if: steps.check-updates.outputs.no-updates == 'false' && steps.check-changes.outputs.has-changes == 'true'
+        run: |
+          # Create a unique branch name with timestamp
+          BRANCH_NAME="automated-dependency-updates-$(date +%Y%m%d-%H%M%S)"
+          echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
+          git checkout -b $BRANCH_NAME
+      
+      - name: Run tests to check compatibility
+        if: steps.check-updates.outputs.no-updates == 'false' && steps.check-changes.outputs.has-changes == 'true'
         run: |
           echo "Running tests to verify compatibility..."
           npm test
           npm run lint
       
       - name: Generate changelog and PR body
-        if: steps.check-updates.outputs.no-updates == 'false'
+        if: steps.check-updates.outputs.no-updates == 'false' && steps.check-changes.outputs.has-changes == 'true'
         id: generate-changelog
         run: |
           echo "Generating changelog..."
@@ -135,19 +149,13 @@ jobs:
           echo "EOF" >> $GITHUB_OUTPUT
       
       - name: Commit changes
-        if: steps.check-updates.outputs.no-updates == 'false'
+        if: steps.check-updates.outputs.no-updates == 'false' && steps.check-changes.outputs.has-changes == 'true'
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           
           # Add all changes
           git add .
-          
-          # Check if there are changes to commit
-          if git diff --staged --quiet; then
-            echo "No changes to commit"
-            exit 0
-          fi
           
           # Commit with detailed message
           git commit -m "🤖 Automated dependency updates
@@ -159,12 +167,12 @@ jobs:
           Updates performed by automated workflow on $(date)"
       
       - name: Push changes
-        if: steps.check-updates.outputs.no-updates == 'false'
+        if: steps.check-updates.outputs.no-updates == 'false' && steps.check-changes.outputs.has-changes == 'true'
         run: |
           git push origin $BRANCH_NAME
       
       - name: Create Pull Request
-        if: steps.check-updates.outputs.no-updates == 'false'
+        if: steps.check-updates.outputs.no-updates == 'false' && steps.check-changes.outputs.has-changes == 'true'
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -182,6 +190,8 @@ jobs:
         run: |
           if [ "${{ steps.check-updates.outputs.no-updates }}" = "true" ]; then
             echo "✅ No dependency updates needed - all dependencies are up to date!"
+          elif [ "${{ steps.check-changes.outputs.has-changes }}" = "false" ]; then
+            echo "✅ Dependency updates were available but resulted in no file changes - no action needed!"
           else
             echo "✅ Dependency update PR created successfully!"
             echo "Branch: $BRANCH_NAME"
