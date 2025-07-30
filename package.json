@@ -11,9 +11,7 @@
     "format:check": "prettier --check .",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage",
-    "deps:check": "node scripts/dependency-check.js",
-    "deps:update": "ncu -u && npm install && npm test"
+    "test:coverage": "jest --coverage"
   },
   "dependencies": {
     "cookie-parser": "~1.4.7",
