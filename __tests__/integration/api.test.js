@@ -10,10 +10,33 @@ describe('API Integration Tests', () => {
 
       expect(response.body).toHaveProperty('id');
       expect(response.body).toHaveProperty('fact');
+      expect(response.body).toHaveProperty('lang');
       expect(typeof response.body.id).toBe('number');
       expect(typeof response.body.fact).toBe('string');
       expect(response.body.id).toBeGreaterThanOrEqual(0);
       expect(response.body.fact.length).toBeGreaterThan(0);
+      expect(response.body.lang).toBe('en'); // default language
+    });
+
+    it('should return German facts when lang=de is specified', async () => {
+      const response = await request(app)
+        .get('/api/facts/random?lang=de')
+        .expect(200);
+
+      expect(response.body).toHaveProperty('id');
+      expect(response.body).toHaveProperty('fact');
+      expect(response.body).toHaveProperty('lang');
+      expect(response.body.lang).toBe('de');
+      expect(typeof response.body.fact).toBe('string');
+      expect(response.body.fact.length).toBeGreaterThan(0);
+    });
+
+    it('should default to English for invalid language codes', async () => {
+      const response = await request(app)
+        .get('/api/facts/random?lang=fr')
+        .expect(200);
+
+      expect(response.body.lang).toBe('en');
     });
 
     it('should return different facts on multiple calls (probabilistic)', async () => {
@@ -41,6 +64,7 @@ describe('API Integration Tests', () => {
 
       expect(response.body).toHaveProperty('id');
       expect(response.body).toHaveProperty('fact');
+      expect(response.body).toHaveProperty('lang');
     });
   });
 
@@ -52,9 +76,23 @@ describe('API Integration Tests', () => {
 
       expect(response.body).toEqual({
         id: 0,
-        fact: expect.any(String)
+        fact: expect.any(String),
+        lang: 'en'
       });
       expect(response.body.fact.length).toBeGreaterThan(0);
+    });
+
+    it('should return German fact when lang=de is specified', async () => {
+      const response = await request(app)
+        .get('/api/facts/0?lang=de')
+        .expect(200);
+
+      expect(response.body).toEqual({
+        id: 0,
+        fact: expect.any(String),
+        lang: 'de'
+      });
+      expect(response.body.fact).toEqual('Enten haben wasserdichte Federn dank einer Öldrüse in der Nähe ihrer Schwänze.');
     });
 
     it('should return the same fact for the same ID', async () => {
@@ -77,6 +115,7 @@ describe('API Integration Tests', () => {
         .expect(200);
 
       expect(response.body.id).toBe(0);
+      expect(response.body.lang).toBe('en');
       expect(response.body.fact).toEqual('Ducks have waterproof feathers thanks to an oil gland near their tails.');
     });
 
@@ -86,6 +125,7 @@ describe('API Integration Tests', () => {
         .expect(200);
 
       expect(response.body.id).toBe(170);
+      expect(response.body.lang).toBe('en');
       expect(response.body.fact).toBeTruthy();
     });
 
