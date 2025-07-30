@@ -120,11 +120,8 @@ jobs:
 
       - name: Apply updates based on strategy
         if: env.HAS_UPDATES == 'true'
+        id: apply-updates
         run: |
-          BRANCH_NAME="copilot-enhanced-updates-$(date +%Y%m%d-%H%M%S)"
-          echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
-          git checkout -b $BRANCH_NAME
-          
           case "${{ steps.strategy.outputs.strategy }}" in
             "conservative")
               echo "Applying conservative updates (patch and minor only)..."
@@ -144,9 +141,26 @@ jobs:
           esac
           
           npm install
+          
+          # Check if there are any actual changes to files
+          if git diff --quiet && git diff --cached --quiet; then
+            echo "has-changes=false" >> $GITHUB_OUTPUT
+            echo "No actual file changes detected after dependency update"
+          else
+            echo "has-changes=true" >> $GITHUB_OUTPUT
+            echo "File changes detected after dependency update"
+            git diff --name-only
+          fi
+      
+      - name: Create update branch
+        if: env.HAS_UPDATES == 'true' && steps.apply-updates.outputs.has-changes == 'true'
+        run: |
+          BRANCH_NAME="copilot-enhanced-updates-$(date +%Y%m%d-%H%M%S)"
+          echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
+          git checkout -b $BRANCH_NAME
 
       - name: Intelligent code adaptation analysis
-        if: env.HAS_UPDATES == 'true'
+        if: env.HAS_UPDATES == 'true' && steps.apply-updates.outputs.has-changes == 'true'
         id: code-analysis
         run: |
           echo "Analyzing code for potential adaptation needs..."
@@ -199,7 +213,7 @@ jobs:
           echo "code-analysis-completed=true" >> $GITHUB_OUTPUT
 
       - name: Run comprehensive testing suite
-        if: env.HAS_UPDATES == 'true'
+        if: env.HAS_UPDATES == 'true' && steps.apply-updates.outputs.has-changes == 'true'
         run: |
           echo "Running comprehensive tests after updates..."
           
@@ -229,7 +243,7 @@ jobs:
           fi
 
       - name: Generate intelligent PR description
-        if: env.HAS_UPDATES == 'true'
+        if: env.HAS_UPDATES == 'true' && steps.apply-updates.outputs.has-changes == 'true'
         id: pr-description
         run: |
           cat > enhanced-pr-body.md << 'EOF'
@@ -333,17 +347,12 @@ jobs:
           echo "EOF" >> $GITHUB_OUTPUT
 
       - name: Commit and push changes
-        if: env.HAS_UPDATES == 'true'
+        if: env.HAS_UPDATES == 'true' && steps.apply-updates.outputs.has-changes == 'true'
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "Copilot Enhanced Updates"
           
           git add .
-          
-          if git diff --staged --quiet; then
-            echo "No changes to commit"
-            exit 0
-          fi
           
           git commit -m "🤖 Copilot-enhanced dependency updates (${{ steps.strategy.outputs.strategy }} strategy)
 
@@ -360,7 +369,7 @@ jobs:
           git push origin $BRANCH_NAME
 
       - name: Create enhanced pull request
-        if: env.HAS_UPDATES == 'true'
+        if: env.HAS_UPDATES == 'true' && steps.apply-updates.outputs.has-changes == 'true'
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -381,11 +390,16 @@ jobs:
           echo "" >> $GITHUB_STEP_SUMMARY
           
           if [ "$HAS_UPDATES" = "true" ]; then
-            echo "✅ **Updates Applied**" >> $GITHUB_STEP_SUMMARY
-            echo "- Strategy: ${{ steps.strategy.outputs.strategy }}" >> $GITHUB_STEP_SUMMARY
-            echo "- Complexity: $UPDATE_COMPLEXITY" >> $GITHUB_STEP_SUMMARY
-            echo "- Branch: $BRANCH_NAME" >> $GITHUB_STEP_SUMMARY
-            echo "- All tests passing ✅" >> $GITHUB_STEP_SUMMARY
+            if [ "${{ steps.apply-updates.outputs.has-changes }}" = "true" ]; then
+              echo "✅ **Updates Applied**" >> $GITHUB_STEP_SUMMARY
+              echo "- Strategy: ${{ steps.strategy.outputs.strategy }}" >> $GITHUB_STEP_SUMMARY
+              echo "- Complexity: $UPDATE_COMPLEXITY" >> $GITHUB_STEP_SUMMARY
+              echo "- Branch: $BRANCH_NAME" >> $GITHUB_STEP_SUMMARY
+              echo "- All tests passing ✅" >> $GITHUB_STEP_SUMMARY
+            else
+              echo "✅ **Updates Available But No Changes**" >> $GITHUB_STEP_SUMMARY
+              echo "Dependency updates were available but resulted in no file changes." >> $GITHUB_STEP_SUMMARY
+            fi
           else
             echo "✅ **No Updates Needed**" >> $GITHUB_STEP_SUMMARY
             echo "All dependencies are current and secure." >> $GITHUB_STEP_SUMMARY
