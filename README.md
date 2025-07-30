@@ -252,6 +252,80 @@ Please use the GitHub issue tracker to report bugs or request features. When rep
 - Expected vs actual behavior
 - Error messages (if any)
 
+## Docker
+
+### Using the Docker Image
+
+The Duck Facts API is available as a Docker image on Docker Hub for easy deployment.
+
+#### Quick Start
+
+```bash
+# Run the latest image
+docker run -p 3000:3000 <dockerhub-username>/duck-facts:latest
+
+# Or with custom port
+docker run -p 8080:3000 -e PORT=3000 <dockerhub-username>/duck-facts:latest
+```
+
+#### Environment Variables
+
+The Docker container supports the following environment variables:
+
+- `PORT` (optional): Port number for the server to listen on. Defaults to `3000`.
+- `NODE_ENV` (optional): Node.js environment. Set to `production` by default in the Docker image.
+
+#### Docker Compose
+
+Create a `docker-compose.yml` file for easy deployment:
+
+```yaml
+version: '3.8'
+services:
+  duck-facts:
+    image: <dockerhub-username>/duck-facts:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    restart: unless-stopped
+```
+
+Then run:
+
+```bash
+docker-compose up -d
+```
+
+#### Building Locally
+
+To build the Docker image locally:
+
+```bash
+# Clone the repository
+git clone https://github.com/MobilGame06/Duck-Facts.git
+cd Duck-Facts
+
+# Build the image
+docker build -t duck-facts .
+
+# Run the container
+docker run -p 3000:3000 duck-facts
+```
+
+#### Health Check
+
+The Docker image includes a built-in health check that verifies the API is responding correctly:
+
+```bash
+# Check container health
+docker ps
+
+# View health check logs
+docker inspect --format='{{json .State.Health}}' <container-id>
+```
+
 ## Deployment
 
 The project is configured for deployment on various platforms:
@@ -260,7 +334,36 @@ The project is configured for deployment on various platforms:
 
 The project includes a `vercel.json` configuration file for seamless Vercel deployment.
 
-### Manual Deployment
+### Automated Docker Publishing
+
+This repository includes a GitHub Actions workflow that automatically builds and publishes Docker images to Docker Hub when changes are made to the main branch or when new releases are created.
+
+#### Required Secrets
+
+To enable automatic Docker publishing, the following secrets must be configured in the GitHub repository settings:
+
+- `DOCKERHUB_USERNAME`: Your Docker Hub username
+- `DOCKERHUB_TOKEN`: A Docker Hub access token (not your password)
+
+#### Creating Docker Hub Access Token
+
+1. Log in to [Docker Hub](https://hub.docker.com/)
+2. Go to Account Settings → Security
+3. Click "New Access Token"
+4. Provide a description and click "Generate"
+5. Copy the generated token and add it as `DOCKERHUB_TOKEN` secret in GitHub
+
+#### Workflow Features
+
+The workflow:
+- Builds multi-platform images (Linux AMD64 and ARM64)
+- Automatically tags images based on Git branches and tags
+- Pushes to Docker Hub on main branch commits and releases
+- Includes security scanning with Trivy
+- Uses Docker layer caching for faster builds
+- Only runs on pull requests for testing (no push)
+
+#### Manual Deployment
 
 1. Set the `PORT` environment variable if needed
 2. Run `npm start` to start the production server

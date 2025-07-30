@@ -1,0 +1,46 @@
+# Dependencies
+node_modules
+npm-debug.log*
+
+# Testing
+__tests__
+coverage
+
+# Development files
+.git
+.gitignore
+*.md
+.prettierrc.json
+.prettierignore
+eslint.config.mjs
+jest.config.js
+
+# Vercel specific
+vercel.json
+.vercel
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE files
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Docker files (to avoid recursive copying)
+Dockerfile*
+.dockerignore
+
+# Temporary files
+tmp
+.tmp
+*.tmp
