@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<%= currentLang %>">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Duct Facts API</title>
+  <title><%= currentLang === 'de' ? 'Enten-Fakten API' : 'Duck Facts API' %></title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
@@ -13,36 +13,50 @@
 
 <body class="dark-mode">
   <div class="container py-5">
-    <div class="d-flex justify-content-end mb-3">
+    <div class="d-flex justify-content-between mb-3">
+      <div class="dropdown">
+        <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown">
+          <%= currentLang === 'de' ? '🇩🇪 Deutsch' : '🇺🇸 English' %>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="/?lang=en">🇺🇸 English</a></li>
+          <li><a class="dropdown-item" href="/?lang=de">🇩🇪 Deutsch</a></li>
+        </ul>
+      </div>
       <button id="darkModeToggle" class="btn btn-outline-secondary btn-sm">
-        Toggle Dark Mode
+        <%= currentLang === 'de' ? 'Dunkler Modus umschalten' : 'Toggle Dark Mode' %>
       </button>
     </div>
 
     <div class="card p-5">
-      <h1 class="mb-3 fw-bold">Duck Facts API</h1>
+      <h1 class="mb-3 fw-bold"><%= currentLang === 'de' ? 'Enten-Fakten API' : 'Duck Facts API' %></h1>
       <p class="lead mb-4">
-        Welcome to the official Duck Facts API. Here you can explore weird, fun, and useful facts about ducks.
+        <%= currentLang === 'de' ? 
+          'Willkommen bei der offiziellen Enten-Fakten API. Hier können Sie seltsame, lustige und nützliche Fakten über Enten entdecken.' :
+          'Welcome to the official Duck Facts API. Here you can explore weird, fun, and useful facts about ducks.'
+        %>
       </p>
 
       <ul class="list-group list-group-flush mb-4">
-        <li class="list-group-item">Male ducks are called drakes; females are simply ducks.</li>
-        <li class="list-group-item">Ducks can feel vibrations in the water through their bills.</li>
-        <li class="list-group-item">In cartoons, ducks often don’t wear pants — but they never get arrested.</li>
-        <li class="list-group-item">A duck’s voice can carry up to half a kilometer over open water.</li>
+        <% exampleFacts.forEach(function(fact) { %>
+          <li class="list-group-item"><%= fact %></li>
+        <% }); %>
       </ul>
 
-      <a href="/api-docs" class="btn btn-primary mt-3">Explore the API Docs →</a>
+      <a href="/api-docs" class="btn btn-primary mt-3">
+        <%= currentLang === 'de' ? 'API-Dokumentation erkunden →' : 'Explore the API Docs →' %>
+      </a>
     </div>
 
     <footer class="mt-5 text-center">
       <p>
-        Made with ♥ by
+        <%= currentLang === 'de' ? 'Erstellt mit ♥ von' : 'Made with ♥ by' %>
         <a class="text-light" href="https://info.mobilserver.xyz">MobilGame06</a>
       </p>
     </footer>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <script>
     const toggleButton = document.getElementById('darkModeToggle');
     const body = document.body;
@@ -62,6 +76,5 @@
     });
   </script>
 </body>
-
 
 </html>
