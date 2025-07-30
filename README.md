@@ -17,6 +17,7 @@ This project serves as a test case for AI code generation, showcasing how AI can
 - 🚀 Production-ready deployment configuration
 - 🔍 Input validation and error handling
 - 💻 Modern Node.js/Express.js architecture
+- 🤖 **Automated dependency updates with GitHub Copilot integration**
 
 ## Installation
 
@@ -198,18 +199,45 @@ npm run format:check
 
 ```
 Duck-Facts/
+├── .github/workflows/   # GitHub Actions workflows
 ├── __tests__/           # Test files
 │   ├── integration/     # API integration tests
 │   └── unit/           # Unit tests
 ├── bin/                # Server startup script
 ├── data/               # JSON data files
+├── docs/               # Documentation
 ├── middleware/         # Express middleware
 ├── public/             # Static assets
 ├── routes/             # API route definitions
+├── scripts/            # Utility scripts
 ├── utils/              # Utility functions
 ├── views/              # EJS templates
 └── app.js              # Main application file
 ```
+
+## Automated Dependency Management
+
+This project includes an automated dependency management system that uses GitHub Copilot to keep dependencies up-to-date while ensuring code compatibility.
+
+### Quick Commands
+
+```bash
+# Check for dependency updates
+npm run deps:check
+
+# Update dependencies manually (with testing)
+npm run deps:update
+```
+
+### Automated Features
+
+- 🔄 **Weekly automated dependency scanning**
+- 🤖 **Copilot-enhanced update strategies** based on change complexity
+- 🧪 **Comprehensive compatibility testing** before updates
+- 📋 **Automated pull requests** with detailed change analysis
+- 🔒 **Security vulnerability detection and resolution**
+
+For detailed information about the automated dependency system, see: [Dependency Automation Documentation](docs/dependency-automation.md)
 
 ## Contributing
 
