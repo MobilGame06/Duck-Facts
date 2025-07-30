@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { loadData } = require('../utils/dataLoader');
+const { validateFactId } = require('../middleware/validation');
 
 /**
  * @swagger
@@ -62,18 +63,8 @@ router.get('/facts/random', async (req, res, _next) => {
  *       404:
  *         description: Duck fact not found
  */
-router.get('/facts/:id', async (req, res, _next) => {
-  const idParam = req.params.id;
-  
-  // Check if the parameter contains only digits (and optional minus sign)
-  if (!/^-?\d+$/.test(idParam)) {
-    return res.status(400).json({ error: 'Invalid ID format' });
-  }
-  
-  const id = parseInt(idParam, 10);
-  if (isNaN(id)) {
-    return res.status(400).json({ error: 'Invalid ID format' });
-  }
+router.get('/facts/:id', validateFactId, async (req, res, _next) => {
+  const id = req.params.id; // Already validated and converted to integer by middleware
 
   try {
     const data = await loadData('./data/facts.json');
