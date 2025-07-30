@@ -1,16 +1,6 @@
 const express = require('express');
 const router = express.Router();
-
-const loadData = async (filename) => {
-  const { promises: fs } = require('fs');
-  try {
-    const data = await fs.readFile(filename, 'utf8');
-    return JSON.parse(data);
-  } catch (error) {
-    console.error(`Error reading file ${filename}:`, error);
-    throw error;
-  }
-};
+const { loadData } = require('../utils/dataLoader');
 
 /**
  * @swagger
@@ -73,7 +63,14 @@ router.get('/facts/random', async (req, res, _next) => {
  *         description: Duck fact not found
  */
 router.get('/facts/:id', async (req, res, _next) => {
-  const id = parseInt(req.params.id, 10);
+  const idParam = req.params.id;
+  
+  // Check if the parameter contains only digits (and optional minus sign)
+  if (!/^-?\d+$/.test(idParam)) {
+    return res.status(400).json({ error: 'Invalid ID format' });
+  }
+  
+  const id = parseInt(idParam, 10);
   if (isNaN(id)) {
     return res.status(400).json({ error: 'Invalid ID format' });
   }
