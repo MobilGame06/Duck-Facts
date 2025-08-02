@@ -98,7 +98,7 @@
 
 @mixin button-outline {
   background: transparent;
-  color: get-color(brand-primary);
+  color: white;
   border: 2px solid get-color(brand-primary);
   
   &:hover {
