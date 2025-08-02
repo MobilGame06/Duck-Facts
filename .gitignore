@@ -6,3 +6,7 @@ npm-debug.log
 
 # Test coverage files
 coverage/
+
+/dist/*
+/dist/**/*.js
+/dist/**/*.css
