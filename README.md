@@ -2,8 +2,7 @@
 
 A simple REST API that serves interesting facts about ducks in multiple languages. This project is primarily a test for AI code generation and demonstrates modern Node.js API development practices.
 
-🦆 **[Live Demo/API](https://duck-facts.onrender.com/)** _(Could take some time to load first time)_
-
+🦆 **[Live Demo/API](https://duck.mobilserver.xyz/)**
 ## About This Project
 
 This project serves as a test case for AI code generation, showcasing how AI can create a fully functional REST API with comprehensive testing, documentation, and modern development practices. It demonstrates proper API design, error handling, internationalization, and documentation standards.
@@ -58,7 +57,7 @@ This project serves as a test case for AI code generation, showcasing how AI can
 ### Base URL
 
 - Development: `http://localhost:3000/api`
-- Production: `https://duck-facts.onrender.com/api`
+- Production: `https://duck.mobilserver.xyz//api`
 
 ### Available Endpoints
 
@@ -141,7 +140,7 @@ The API returns appropriate HTTP status codes and error messages:
 Visit `/api-docs` when the server is running to access the interactive Swagger UI documentation:
 
 - Development: `http://localhost:3000/api-docs`
-- Production: `https://duck-facts.onrender.com/api-docs`
+- Production: `https://duck.mobilserver.xyz/api-docs`
 
 ## Testing
 
