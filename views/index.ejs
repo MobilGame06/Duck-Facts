@@ -4,13 +4,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title><%= currentLang === 'de' ? 'Enten-Fakten API' : 'Duck Facts API' %></title>
+  <title>
+    <%= currentLang==='de' ? 'Enten-Fakten API' : 'Duck Facts API' %>
+  </title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+
   <link rel="stylesheet" href="/stylesheets/style.css" />
 </head>
 
@@ -22,13 +24,13 @@
         <i class="fas fa-duck"></i>
         <span>DuckFacts</span>
       </div>
-      
+
       <div class="nav-controls">
         <!-- Language Switcher -->
         <div class="language-switcher">
           <button class="lang-toggle" id="languageDropdown">
-            <%= currentLang === 'de' ? '🇩🇪 DE' : '🇺🇸 EN' %>
-            <i class="fas fa-chevron-down"></i>
+            <%= currentLang==='de' ? '🇩🇪 DE' : '🇺🇸 EN' %>
+              <i class="fas fa-chevron-down"></i>
           </button>
           <div class="lang-dropdown" id="langDropdown">
             <a href="/?lang=en" class="lang-option <%= currentLang === 'en' ? 'active' : '' %>">
@@ -66,47 +68,51 @@
         <div class="shape shape-4"></div>
       </div>
     </div>
-    
+
     <div class="hero-content">
       <div class="hero-text">
         <h1 class="hero-title">
-          <%= currentLang === 'de' ? 'Enten-Fakten' : 'Duck Facts' %>
-          <span class="gradient-text">API</span>
+          <%= currentLang==='de' ? 'Enten-Fakten' : 'Duck Facts' %>
+            <span class="gradient-text">API</span>
         </h1>
         <p class="hero-subtitle">
-          <%= currentLang === 'de' 
-            ? 'Entdecke faszinierende, lustige und ungewöhnliche Fakten über Enten mit unserer modernen RESTful API.' 
-            : 'Discover fascinating, fun, and quirky facts about ducks with our modern RESTful API.' %>
+          <%= currentLang==='de' ? 'Entdecke faszinierende, lustige und ungewöhnliche Fakten über Enten mit unserer modernen RESTful API.' : 'Discover fascinating, fun, and quirky facts about ducks with our modern RESTful API.' %>
         </p>
-        
+
         <div class="hero-buttons">
           <a href="#api" class="btn btn-primary">
             <i class="fas fa-code"></i>
-            <%= currentLang === 'de' ? 'API Erkunden' : 'Explore API' %>
+            <%= currentLang==='de' ? 'API Erkunden' : 'Explore API' %>
           </a>
           <a href="#facts" class="btn btn-secondary">
             <i class="fas fa-lightbulb"></i>
-            <%= currentLang === 'de' ? 'Fakten Entdecken' : 'Discover Facts' %>
+            <%= currentLang==='de' ? 'Fakten Entdecken' : 'Discover Facts' %>
           </a>
         </div>
       </div>
-      
+
       <div class="hero-visual">
         <div class="duck-illustration">
-          <i class="fas fa-duck"></i>
+          <img src="/images/ente.png" alt="Duck" class="duck-image">
         </div>
         <div class="stats">
           <div class="stat">
             <div class="stat-number">170+</div>
-            <div class="stat-label"><%= currentLang === 'de' ? 'Fakten' : 'Facts' %></div>
+            <div class="stat-label">
+              <%= currentLang==='de' ? 'Fakten' : 'Facts' %>
+            </div>
           </div>
           <div class="stat">
             <div class="stat-number">2</div>
-            <div class="stat-label"><%= currentLang === 'de' ? 'Sprachen' : 'Languages' %></div>
+            <div class="stat-label">
+              <%= currentLang==='de' ? 'Sprachen' : 'Languages' %>
+            </div>
           </div>
           <div class="stat">
             <div class="stat-number">∞</div>
-            <div class="stat-label"><%= currentLang === 'de' ? 'Spaß' : 'Fun' %></div>
+            <div class="stat-label">
+              <%= currentLang==='de' ? 'Spaß' : 'Fun' %>
+            </div>
           </div>
         </div>
       </div>
@@ -117,71 +123,85 @@
   <section class="features" id="features">
     <div class="container">
       <div class="section-header">
-        <h2><%= currentLang === 'de' ? 'API Features' : 'API Features' %></h2>
-        <p><%= currentLang === 'de' 
-          ? 'Entdecke die mächtigen Features unserer Duck Facts API' 
-          : 'Discover the powerful features of our Duck Facts API' %></p>
+        <h2>
+          <%= currentLang==='de' ? 'API Features' : 'API Features' %>
+        </h2>
+        <p>
+          <%= currentLang==='de' ? 'Entdecke die mächtigen Features unserer Duck Facts API' : 'Discover the powerful features of our Duck Facts API' %>
+        </p>
       </div>
-      
+
       <div class="features-grid">
         <div class="feature-card">
           <div class="feature-icon">
             <i class="fas fa-random"></i>
           </div>
-          <h3><%= currentLang === 'de' ? 'Zufällige Fakten' : 'Random Facts' %></h3>
-          <p><%= currentLang === 'de' 
-            ? 'Erhalte zufällige Enten-Fakten für endlose Überraschungen' 
-            : 'Get random duck facts for endless surprises' %></p>
+          <h3>
+            <%= currentLang==='de' ? 'Zufällige Fakten' : 'Random Facts' %>
+          </h3>
+          <p>
+            <%= currentLang==='de' ? 'Erhalte zufällige Enten-Fakten für endlose Überraschungen' : 'Get random duck facts for endless surprises' %>
+          </p>
         </div>
-        
+
         <div class="feature-card">
           <div class="feature-icon">
             <i class="fas fa-search"></i>
           </div>
-          <h3><%= currentLang === 'de' ? 'Spezifische Fakten' : 'Specific Facts' %></h3>
-          <p><%= currentLang === 'de' 
-            ? 'Suche nach spezifischen Fakten mit eindeutigen IDs' 
-            : 'Search for specific facts using unique IDs' %></p>
+          <h3>
+            <%= currentLang==='de' ? 'Spezifische Fakten' : 'Specific Facts' %>
+          </h3>
+          <p>
+            <%= currentLang==='de' ? 'Suche nach spezifischen Fakten mit eindeutigen IDs' : 'Search for specific facts using unique IDs' %>
+          </p>
         </div>
-        
+
         <div class="feature-card">
           <div class="feature-icon">
             <i class="fas fa-globe"></i>
           </div>
-          <h3><%= currentLang === 'de' ? 'Mehrsprachig' : 'Multilingual' %></h3>
-          <p><%= currentLang === 'de' 
-            ? 'Verfügbar in Englisch und Deutsch' 
-            : 'Available in English and German' %></p>
+          <h3>
+            <%= currentLang==='de' ? 'Mehrsprachig' : 'Multilingual' %>
+          </h3>
+          <p>
+            <%= currentLang==='de' ? 'Verfügbar in Englisch und Deutsch' : 'Available in English and German' %>
+          </p>
         </div>
-        
+
         <div class="feature-card">
           <div class="feature-icon">
             <i class="fas fa-rocket"></i>
           </div>
-          <h3><%= currentLang === 'de' ? 'Schnell & Zuverlässig' : 'Fast & Reliable' %></h3>
-          <p><%= currentLang === 'de' 
-            ? 'Hochperformante API mit minimaler Latenz' 
-            : 'High-performance API with minimal latency' %></p>
+          <h3>
+            <%= currentLang==='de' ? 'Schnell & Zuverlässig' : 'Fast & Reliable' %>
+          </h3>
+          <p>
+            <%= currentLang==='de' ? 'Hochperformante API mit minimaler Latenz' : 'High-performance API with minimal latency' %>
+          </p>
         </div>
-        
+
         <div class="feature-card">
           <div class="feature-icon">
             <i class="fas fa-code"></i>
           </div>
-          <h3><%= currentLang === 'de' ? 'RESTful Design' : 'RESTful Design' %></h3>
-          <p><%= currentLang === 'de' 
-            ? 'Folgt REST-Prinzipien für einfache Integration' 
-            : 'Follows REST principles for easy integration' %></p>
+          <h3>
+            <%= currentLang==='de' ? 'RESTful Design' : 'RESTful Design' %>
+          </h3>
+          <p>
+            <%= currentLang==='de' ? 'Folgt REST-Prinzipien für einfache Integration' : 'Follows REST principles for easy integration' %>
+          </p>
         </div>
-        
+
         <div class="feature-card">
           <div class="feature-icon">
             <i class="fas fa-book"></i>
           </div>
-          <h3><%= currentLang === 'de' ? 'Vollständige Docs' : 'Complete Docs' %></h3>
-          <p><%= currentLang === 'de' 
-            ? 'Umfassende Swagger-Dokumentation' 
-            : 'Comprehensive Swagger documentation' %></p>
+          <h3>
+            <%= currentLang==='de' ? 'Vollständige Docs' : 'Complete Docs' %>
+          </h3>
+          <p>
+            <%= currentLang==='de' ? 'Umfassende Swagger-Dokumentation' : 'Comprehensive Swagger documentation' %>
+          </p>
         </div>
       </div>
     </div>
@@ -191,28 +211,33 @@
   <section class="facts-showcase" id="facts">
     <div class="container">
       <div class="section-header">
-        <h2><%= currentLang === 'de' ? 'Beispiel Fakten' : 'Sample Facts' %></h2>
-        <p><%= currentLang === 'de' 
-          ? 'Hier sind einige interessante Enten-Fakten aus unserer Sammlung' 
-          : 'Here are some interesting duck facts from our collection' %></p>
+        <h2>
+          <%= currentLang==='de' ? 'Beispiel Fakten' : 'Sample Facts' %>
+        </h2>
+        <p>
+          <%= currentLang==='de' ? 'Hier sind einige interessante Enten-Fakten aus unserer Sammlung' : 'Here are some interesting duck facts from our collection' %>
+        </p>
       </div>
-      
+
       <div class="facts-grid">
         <% exampleFacts.forEach(function(fact, index) { %>
           <div class="fact-card" data-index="<%= index %>">
             <div class="fact-icon">
               <i class="fas fa-quote-left"></i>
             </div>
-            <p class="fact-text"><%= fact %></p>
-            <div class="fact-number">#<%= index + 1 %></div>
+            <p class="fact-text">
+              <%= fact %>
+            </p>
+            <div class="fact-number">#<%= index + 1 %>
+            </div>
           </div>
-        <% }); %>
+          <% }); %>
       </div>
-      
+
       <div class="facts-actions">
         <button class="btn btn-outline" id="loadMoreFacts">
           <i class="fas fa-refresh"></i>
-          <%= currentLang === 'de' ? 'Mehr Fakten laden' : 'Load More Facts' %>
+          <%= currentLang==='de' ? 'Mehr Fakten laden' : 'Load More Facts' %>
         </button>
       </div>
     </div>
@@ -222,21 +247,27 @@
   <section class="api-section" id="api">
     <div class="container">
       <div class="section-header">
-        <h2><%= currentLang === 'de' ? 'API Dokumentation' : 'API Documentation' %></h2>
-        <p><%= currentLang === 'de' 
-          ? 'Integriere unsere Duck Facts API in deine Anwendung' 
-          : 'Integrate our Duck Facts API into your application' %></p>
+        <h2>
+          <%= currentLang==='de' ? 'API Dokumentation' : 'API Documentation' %>
+        </h2>
+        <p>
+          <%= currentLang==='de' ? 'Integriere unsere Duck Facts API in deine Anwendung' : 'Integrate our Duck Facts API into your application' %>
+        </p>
       </div>
-      
+
       <div class="api-content">
         <div class="api-examples">
           <div class="example-card">
-            <h3><%= currentLang === 'de' ? 'Zufälligen Fakt abrufen' : 'Get Random Fact' %></h3>
+            <h3>
+              <%= currentLang==='de' ? 'Zufälligen Fakt abrufen' : 'Get Random Fact' %>
+            </h3>
             <div class="code-block">
               <pre><code>GET /api/facts/random</code></pre>
             </div>
             <div class="example-response">
-              <strong><%= currentLang === 'de' ? 'Antwort:' : 'Response:' %></strong>
+              <strong>
+                <%= currentLang==='de' ? 'Antwort:' : 'Response:' %>
+              </strong>
               <div class="code-block">
                 <pre><code>{
   "fact": "Ducks have an incredible memory and can recognize faces.",
@@ -246,29 +277,33 @@
               </div>
             </div>
           </div>
-          
+
           <div class="example-card">
-            <h3><%= currentLang === 'de' ? 'Spezifischen Fakt abrufen' : 'Get Specific Fact' %></h3>
+            <h3>
+              <%= currentLang==='de' ? 'Spezifischen Fakt abrufen' : 'Get Specific Fact' %>
+            </h3>
             <div class="code-block">
               <pre><code>GET /api/facts/:id</code></pre>
             </div>
             <div class="example-response">
-              <strong><%= currentLang === 'de' ? 'Beispiel:' : 'Example:' %></strong>
+              <strong>
+                <%= currentLang==='de' ? 'Beispiel:' : 'Example:' %>
+              </strong>
               <div class="code-block">
                 <pre><code>GET /api/facts/42?lang=de</code></pre>
               </div>
             </div>
           </div>
         </div>
-        
+
         <div class="api-actions">
           <a href="/api-docs" class="btn btn-primary">
             <i class="fas fa-book"></i>
-            <%= currentLang === 'de' ? 'Vollständige Dokumentation' : 'Full Documentation' %>
+            <%= currentLang==='de' ? 'Vollständige Dokumentation' : 'Full Documentation' %>
           </a>
           <button class="btn btn-secondary" id="tryApiBtn">
             <i class="fas fa-play"></i>
-            <%= currentLang === 'de' ? 'API Testen' : 'Try API' %>
+            <%= currentLang==='de' ? 'API Testen' : 'Try API' %>
           </button>
         </div>
       </div>
@@ -283,19 +318,21 @@
           <i class="fas fa-duck"></i>
           <span>DuckFacts API</span>
         </div>
-        
+
         <div class="footer-links">
-          <a href="/api-docs"><%= currentLang === 'de' ? 'Dokumentation' : 'Documentation' %></a>
+          <a href="/api-docs">
+            <%= currentLang==='de' ? 'Dokumentation' : 'Documentation' %>
+          </a>
           <a href="https://github.com/MobilGame06/Duck-Facts">GitHub</a>
           <a href="https://info.mobilserver.xyz">Contact</a>
         </div>
-        
+
         <div class="footer-social">
           <p>
-            <%= currentLang === 'de' ? 'Erstellt mit' : 'Made with' %> 
-            <i class="fas fa-heart"></i> 
-            <%= currentLang === 'de' ? 'von' : 'by' %> 
-            <a href="https://info.mobilserver.xyz">MobilGame06</a>
+            <%= currentLang==='de' ? 'Erstellt mit' : 'Made with' %>
+              <i class="fas fa-heart"></i>
+              <%= currentLang==='de' ? 'von' : 'by' %>
+                <a href="https://info.mobilserver.xyz">MobilGame06</a>
           </p>
         </div>
       </div>

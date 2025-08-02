@@ -381,6 +381,7 @@ body.dark-mode .theme-toggle .fa-sun {
 .hero-title {
   margin-bottom: 1.5rem;
   line-height: 1.1;
+  text-align: center;
 }
 
 .gradient-text {
@@ -394,12 +395,14 @@ body.dark-mode .theme-toggle .fa-sun {
   font-size: 1.25rem;
   margin-bottom: 2rem;
   color: var(--text-secondary);
+  text-align: center;
 }
 
 .hero-buttons {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .hero-visual {
@@ -425,6 +428,11 @@ body.dark-mode .theme-toggle .fa-sun {
 .duck-illustration i {
   font-size: 5rem;
   color: white;
+}
+
+.duck-image {
+  width: 100%;
+  height: auto;
 }
 
 @keyframes bounce {
@@ -866,32 +874,5 @@ section {
   .api-actions {
     flex-direction: column;
     align-items: center;
-  }
-}
-
-/* Print Styles */
-@media print {
-  .navbar,
-  .floating-shapes,
-  .hero-buttons,
-  .facts-actions,
-  .api-actions {
-    display: none;
-  }
-  
-  .hero {
-    min-height: auto;
-    padding: 2rem 0;
-  }
-  
-  section {
-    padding: 2rem 0;
-    break-inside: avoid;
-  }
-  
-  .fact-card,
-  .feature-card,
-  .example-card {
-    break-inside: avoid;
   }
 }
