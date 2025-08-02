@@ -18,6 +18,20 @@ export default [
     },
   },
   {
+    files: ['src/**/*.js', 'vite.config.js'],
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
+      sourceType: 'module',
+    },
+    rules: {
+      'no-console': 'off',
+      'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+    },
+  },
+  {
     files: ['public/**/*.js'],
     languageOptions: {
       globals: {
@@ -58,6 +72,6 @@ export default [
     },
   },
   {
-    ignores: ['node_modules/**', 'dist/**', 'build/**', '.git/**'],
+    ignores: ['node_modules/**', 'public/dist/**', 'build/**', '.git/**', 'coverage/**'],
   },
 ];

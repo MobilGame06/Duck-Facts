@@ -1,0 +1,90 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+// Typography scale
+h1, h2, h3, h4, h5, h6 {
+  font-weight: get-font(weight-bold);
+  line-height: 1.2;
+  margin-bottom: get-spacing(md);
+  color: get-color(dark-text-primary);
+}
+
+h1 { 
+  @include clamp-text(2.5rem, 5vw, 4rem);
+}
+
+h2 { 
+  @include clamp-text(2rem, 4vw, 3rem);
+}
+
+h3 { 
+  @include clamp-text(1.5rem, 3vw, 2rem);
+}
+
+h4 { 
+  font-size: 1.5rem;
+}
+
+h5 { 
+  font-size: 1.25rem;
+}
+
+h6 { 
+  font-size: 1.125rem;
+}
+
+// Paragraphs
+p {
+  margin-bottom: get-spacing(md);
+  color: get-color(dark-text-secondary);
+}
+
+// Text utilities
+.text-primary {
+  color: get-color(dark-text-primary) !important;
+}
+
+.text-secondary {
+  color: get-color(dark-text-secondary) !important;
+}
+
+.text-muted {
+  color: get-color(dark-text-muted) !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+// Font weights
+.font-normal {
+  font-weight: get-font(weight-normal);
+}
+
+.font-medium {
+  font-weight: get-font(weight-medium);
+}
+
+.font-semibold {
+  font-weight: get-font(weight-semibold);
+}
+
+.font-bold {
+  font-weight: get-font(weight-bold);
+}
+
+// Gradient text
+.gradient-text {
+  @include text-get-gradient(get-gradient(primary));
+}

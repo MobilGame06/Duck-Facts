@@ -1,0 +1,198 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// Notification system
+.notification {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  z-index: get-z(notification);
+  border-radius: get-spacing(sm);
+  box-shadow: get-shadow(lg);
+  transform: translateX(100%);
+  transition: transform get-transition(normal);
+  max-width: 400px;
+  
+  &.notification-success {
+    background: get-color(success);
+    color: white;
+  }
+  
+  &.notification-error {
+    background: get-color(error);
+    color: white;
+  }
+  
+  &.notification-info {
+    background: get-color(brand-primary);
+    color: white;
+  }
+  
+  &.show {
+    transform: translateX(0);
+  }
+}
+
+.notification-content {
+  @include flex-center;
+  gap: 0.75rem;
+  padding: get-spacing(md) get-spacing(lg);
+}
+
+.notification-close {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-left: auto;
+  padding: get-spacing(xs);
+  border-radius: get-spacing(xs);
+  
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+// Code blocks
+.code-block {
+  background: get-color(dark-bg-accent);
+  border: 1px solid get-color(dark-border-primary);
+  border-radius: get-spacing(sm);
+  padding: get-spacing(md);
+  margin: get-spacing(md) 0;
+  overflow-x: auto;
+  @include custom-scrollbar;
+  
+  pre {
+    margin: 0;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 0.9rem;
+    color: get-color(dark-text-primary);
+  }
+}
+
+// Loading spinner
+.spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 0.75s linear infinite;
+}
+
+// Floating shapes
+.floating-shapes {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+  opacity: 0.1;
+  
+  &.shape-1 {
+    width: 200px;
+    height: 200px;
+    background: get-gradient(primary);
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+  }
+  
+  &.shape-2 {
+    width: 150px;
+    height: 150px;
+    background: get-gradient(secondary);
+    top: 60%;
+    right: 20%;
+    animation-delay: 2s;
+  }
+  
+  &.shape-3 {
+    width: 100px;
+    height: 100px;
+    background: get-gradient(accent);
+    bottom: 20%;
+    left: 20%;
+    animation-delay: 4s;
+  }
+  
+  &.shape-4 {
+    width: 80px;
+    height: 80px;
+    background: get-gradient(primary);
+    top: 10%;
+    right: 10%;
+    animation-delay: 1s;
+  }
+}
+
+// Animations
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg); 
+  }
+  33% { 
+    transform: translateY(-20px) rotate(120deg); 
+  }
+  66% { 
+    transform: translateY(-10px) rotate(240deg); 
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% { 
+    transform: translateY(0); 
+  }
+  50% { 
+    transform: translateY(-20px); 
+  }
+}

@@ -1,0 +1,125 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// Base card component
+.card {
+  @include card-base;
+  padding: get-spacing(xl);
+}
+
+// Feature cards
+.feature-card {
+  @include card-base;
+  @include card-hover;
+  padding: get-spacing(xl);
+  text-align: center;
+  cursor: pointer;
+  
+  h3 {
+    margin-bottom: get-spacing(md);
+    color: get-color(dark-text-primary);
+  }
+  
+  p {
+    color: get-color(dark-text-secondary);
+  }
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  background: get-gradient(primary);
+  border-radius: 50%;
+  @include flex-center;
+  margin: 0 auto get-spacing(lg);
+  
+  i {
+    font-size: 1.5rem;
+    color: white;
+  }
+}
+
+// Fact cards
+.fact-card {
+  background: get-color(dark-bg-secondary);
+  border: 1px solid get-color(dark-border-primary);
+  border-radius: get-spacing(md);
+  padding: get-spacing(xl);
+  position: relative;
+  transition: all get-transition(normal);
+  cursor: pointer;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: get-shadow(dark-lg);
+  }
+}
+
+.fact-icon {
+  color: get-color(brand-primary);
+  font-size: 1.5rem;
+  margin-bottom: get-spacing(md);
+}
+
+.fact-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: get-spacing(md);
+  color: get-color(dark-text-primary);
+}
+
+.fact-number {
+  position: absolute;
+  top: get-spacing(md);
+  right: get-spacing(md);
+  background: get-gradient(primary);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: get-spacing(md);
+  font-size: 0.8rem;
+  font-weight: get-font(weight-medium);
+}
+
+// Example/API cards
+.example-card {
+  @include card-base;
+  padding: get-spacing(xl);
+  transition: all get-transition(normal);
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: get-shadow(dark-md);
+  }
+  
+  h3 {
+    margin-bottom: get-spacing(md);
+    color: get-color(dark-text-primary);
+  }
+}
+
+// Statistics cards
+.stat {
+  text-align: center;
+  padding: get-spacing(md);
+  background: get-color(dark-bg-secondary);
+  border-radius: get-spacing(md);
+  border: 1px solid get-color(dark-border-primary);
+  min-width: 80px;
+  transition: transform get-transition(fast);
+  
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: get-font(weight-bold);
+  color: get-color(brand-primary);
+  margin-bottom: get-spacing(sm);
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: get-color(dark-text-muted);
+}
