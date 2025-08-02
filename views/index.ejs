@@ -6,75 +6,304 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title><%= currentLang === 'de' ? 'Enten-Fakten API' : 'Duck Facts API' %></title>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
   <link rel="stylesheet" href="/stylesheets/style.css" />
 </head>
 
-<body class="dark-mode">
-  <div class="container py-5">
-    <div class="d-flex justify-content-between mb-3">
-      <div class="dropdown">
-        <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown">
-          <%= currentLang === 'de' ? '🇩🇪 Deutsch' : '🇺🇸 English' %>
-        </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="/?lang=en">🇺🇸 English</a></li>
-          <li><a class="dropdown-item" href="/?lang=de">🇩🇪 Deutsch</a></li>
-        </ul>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <i class="fas fa-duck"></i>
+        <span>DuckFacts</span>
       </div>
-      <button id="darkModeToggle" class="btn btn-outline-secondary btn-sm">
-        <%= currentLang === 'de' ? 'Dunkler Modus umschalten' : 'Toggle Dark Mode' %>
-      </button>
+      
+      <div class="nav-controls">
+        <!-- Language Switcher -->
+        <div class="language-switcher">
+          <button class="lang-toggle" id="languageDropdown">
+            <%= currentLang === 'de' ? '🇩🇪 DE' : '🇺🇸 EN' %>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="lang-dropdown" id="langDropdown">
+            <a href="/?lang=en" class="lang-option <%= currentLang === 'en' ? 'active' : '' %>">
+              🇺🇸 English
+            </a>
+            <a href="/?lang=de" class="lang-option <%= currentLang === 'de' ? 'active' : '' %>">
+              🇩🇪 Deutsch
+            </a>
+          </div>
+        </div>
+
+        <!-- Dark Mode Toggle -->
+        <button class="theme-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun"></i>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" id="mobileMenuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
+  </nav>
 
-    <div class="card p-5">
-      <h1 class="mb-3 fw-bold"><%= currentLang === 'de' ? 'Enten-Fakten API' : 'Duck Facts API' %></h1>
-      <p class="lead mb-4">
-        <%= currentLang === 'de' ? 
-          'Willkommen bei der offiziellen Enten-Fakten API. Hier können Sie seltsame, lustige und nützliche Fakten über Enten entdecken.' :
-          'Welcome to the official Duck Facts API. Here you can explore weird, fun, and useful facts about ducks.'
-        %>
-      </p>
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-background">
+      <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+      </div>
+    </div>
+    
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">
+          <%= currentLang === 'de' ? 'Enten-Fakten' : 'Duck Facts' %>
+          <span class="gradient-text">API</span>
+        </h1>
+        <p class="hero-subtitle">
+          <%= currentLang === 'de' 
+            ? 'Entdecke faszinierende, lustige und ungewöhnliche Fakten über Enten mit unserer modernen RESTful API.' 
+            : 'Discover fascinating, fun, and quirky facts about ducks with our modern RESTful API.' %>
+        </p>
+        
+        <div class="hero-buttons">
+          <a href="#api" class="btn btn-primary">
+            <i class="fas fa-code"></i>
+            <%= currentLang === 'de' ? 'API Erkunden' : 'Explore API' %>
+          </a>
+          <a href="#facts" class="btn btn-secondary">
+            <i class="fas fa-lightbulb"></i>
+            <%= currentLang === 'de' ? 'Fakten Entdecken' : 'Discover Facts' %>
+          </a>
+        </div>
+      </div>
+      
+      <div class="hero-visual">
+        <div class="duck-illustration">
+          <i class="fas fa-duck"></i>
+        </div>
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-number">170+</div>
+            <div class="stat-label"><%= currentLang === 'de' ? 'Fakten' : 'Facts' %></div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">2</div>
+            <div class="stat-label"><%= currentLang === 'de' ? 'Sprachen' : 'Languages' %></div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">∞</div>
+            <div class="stat-label"><%= currentLang === 'de' ? 'Spaß' : 'Fun' %></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <ul class="list-group list-group-flush mb-4">
-        <% exampleFacts.forEach(function(fact) { %>
-          <li class="list-group-item"><%= fact %></li>
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <h2><%= currentLang === 'de' ? 'API Features' : 'API Features' %></h2>
+        <p><%= currentLang === 'de' 
+          ? 'Entdecke die mächtigen Features unserer Duck Facts API' 
+          : 'Discover the powerful features of our Duck Facts API' %></p>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-random"></i>
+          </div>
+          <h3><%= currentLang === 'de' ? 'Zufällige Fakten' : 'Random Facts' %></h3>
+          <p><%= currentLang === 'de' 
+            ? 'Erhalte zufällige Enten-Fakten für endlose Überraschungen' 
+            : 'Get random duck facts for endless surprises' %></p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-search"></i>
+          </div>
+          <h3><%= currentLang === 'de' ? 'Spezifische Fakten' : 'Specific Facts' %></h3>
+          <p><%= currentLang === 'de' 
+            ? 'Suche nach spezifischen Fakten mit eindeutigen IDs' 
+            : 'Search for specific facts using unique IDs' %></p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-globe"></i>
+          </div>
+          <h3><%= currentLang === 'de' ? 'Mehrsprachig' : 'Multilingual' %></h3>
+          <p><%= currentLang === 'de' 
+            ? 'Verfügbar in Englisch und Deutsch' 
+            : 'Available in English and German' %></p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <h3><%= currentLang === 'de' ? 'Schnell & Zuverlässig' : 'Fast & Reliable' %></h3>
+          <p><%= currentLang === 'de' 
+            ? 'Hochperformante API mit minimaler Latenz' 
+            : 'High-performance API with minimal latency' %></p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3><%= currentLang === 'de' ? 'RESTful Design' : 'RESTful Design' %></h3>
+          <p><%= currentLang === 'de' 
+            ? 'Folgt REST-Prinzipien für einfache Integration' 
+            : 'Follows REST principles for easy integration' %></p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-book"></i>
+          </div>
+          <h3><%= currentLang === 'de' ? 'Vollständige Docs' : 'Complete Docs' %></h3>
+          <p><%= currentLang === 'de' 
+            ? 'Umfassende Swagger-Dokumentation' 
+            : 'Comprehensive Swagger documentation' %></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Facts Showcase -->
+  <section class="facts-showcase" id="facts">
+    <div class="container">
+      <div class="section-header">
+        <h2><%= currentLang === 'de' ? 'Beispiel Fakten' : 'Sample Facts' %></h2>
+        <p><%= currentLang === 'de' 
+          ? 'Hier sind einige interessante Enten-Fakten aus unserer Sammlung' 
+          : 'Here are some interesting duck facts from our collection' %></p>
+      </div>
+      
+      <div class="facts-grid">
+        <% exampleFacts.forEach(function(fact, index) { %>
+          <div class="fact-card" data-index="<%= index %>">
+            <div class="fact-icon">
+              <i class="fas fa-quote-left"></i>
+            </div>
+            <p class="fact-text"><%= fact %></p>
+            <div class="fact-number">#<%= index + 1 %></div>
+          </div>
         <% }); %>
-      </ul>
-
-      <a href="/api-docs" class="btn btn-primary mt-3">
-        <%= currentLang === 'de' ? 'API-Dokumentation erkunden →' : 'Explore the API Docs →' %>
-      </a>
+      </div>
+      
+      <div class="facts-actions">
+        <button class="btn btn-outline" id="loadMoreFacts">
+          <i class="fas fa-refresh"></i>
+          <%= currentLang === 'de' ? 'Mehr Fakten laden' : 'Load More Facts' %>
+        </button>
+      </div>
     </div>
+  </section>
 
-    <footer class="mt-5 text-center">
-      <p>
-        <%= currentLang === 'de' ? 'Erstellt mit ♥ von' : 'Made with ♥ by' %>
-        <a class="text-light" href="https://info.mobilserver.xyz">MobilGame06</a>
-      </p>
-    </footer>
-  </div>
+  <!-- API Documentation Section -->
+  <section class="api-section" id="api">
+    <div class="container">
+      <div class="section-header">
+        <h2><%= currentLang === 'de' ? 'API Dokumentation' : 'API Documentation' %></h2>
+        <p><%= currentLang === 'de' 
+          ? 'Integriere unsere Duck Facts API in deine Anwendung' 
+          : 'Integrate our Duck Facts API into your application' %></p>
+      </div>
+      
+      <div class="api-content">
+        <div class="api-examples">
+          <div class="example-card">
+            <h3><%= currentLang === 'de' ? 'Zufälligen Fakt abrufen' : 'Get Random Fact' %></h3>
+            <div class="code-block">
+              <pre><code>GET /api/facts/random</code></pre>
+            </div>
+            <div class="example-response">
+              <strong><%= currentLang === 'de' ? 'Antwort:' : 'Response:' %></strong>
+              <div class="code-block">
+                <pre><code>{
+  "fact": "Ducks have an incredible memory and can recognize faces.",
+  "id": 16,
+  "language": "en"
+}</code></pre>
+              </div>
+            </div>
+          </div>
+          
+          <div class="example-card">
+            <h3><%= currentLang === 'de' ? 'Spezifischen Fakt abrufen' : 'Get Specific Fact' %></h3>
+            <div class="code-block">
+              <pre><code>GET /api/facts/:id</code></pre>
+            </div>
+            <div class="example-response">
+              <strong><%= currentLang === 'de' ? 'Beispiel:' : 'Example:' %></strong>
+              <div class="code-block">
+                <pre><code>GET /api/facts/42?lang=de</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="api-actions">
+          <a href="/api-docs" class="btn btn-primary">
+            <i class="fas fa-book"></i>
+            <%= currentLang === 'de' ? 'Vollständige Dokumentation' : 'Full Documentation' %>
+          </a>
+          <button class="btn btn-secondary" id="tryApiBtn">
+            <i class="fas fa-play"></i>
+            <%= currentLang === 'de' ? 'API Testen' : 'Try API' %>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  <script>
-    const toggleButton = document.getElementById('darkModeToggle');
-    const body = document.body;
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <i class="fas fa-duck"></i>
+          <span>DuckFacts API</span>
+        </div>
+        
+        <div class="footer-links">
+          <a href="/api-docs"><%= currentLang === 'de' ? 'Dokumentation' : 'Documentation' %></a>
+          <a href="https://github.com/MobilGame06/Duck-Facts">GitHub</a>
+          <a href="https://info.mobilserver.xyz">Contact</a>
+        </div>
+        
+        <div class="footer-social">
+          <p>
+            <%= currentLang === 'de' ? 'Erstellt mit' : 'Made with' %> 
+            <i class="fas fa-heart"></i> 
+            <%= currentLang === 'de' ? 'von' : 'by' %> 
+            <a href="https://info.mobilserver.xyz">MobilGame06</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-    if (localStorage.getItem('darkMode') === 'enabled') {
-      body.classList.add('dark-mode');
-    }
-
-    toggleButton.addEventListener('click', () => {
-      body.classList.toggle('dark-mode');
-
-      if (body.classList.contains('dark-mode')) {
-        localStorage.setItem('darkMode', 'enabled');
-      } else {
-        localStorage.setItem('darkMode', 'disabled');
-      }
-    });
-  </script>
+  <!-- Scripts -->
+  <script src="/javascripts/app.js"></script>
 </body>
 
 </html>
