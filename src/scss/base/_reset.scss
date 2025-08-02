@@ -1,0 +1,73 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+/* Modern CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: get-font(font-family);
+  font-weight: get-font(weight-normal);
+  line-height: 1.6;
+  color: get-color(text-primary);
+  background-color: get-color(bg-primary);
+  transition: background-color get-transition(normal), color get-transition(normal);
+  overflow-x: hidden;
+  
+  @include dark-mode {
+    color: get-color(dark-text-primary);
+    background-color: get-color(dark-bg-primary);
+  }
+}
+
+// Container
+.container {
+  max-width: get-breakpoint(wide);
+  margin: 0 auto;
+  padding: 0 get-spacing(lg);
+  
+  @include mobile {
+    padding: 0 get-spacing(md);
+  }
+}
+
+// Links
+a {
+  color: get-color(brand-primary);
+  text-decoration: none;
+  transition: color get-transition(fast);
+  
+  &:hover {
+    color: get-color(brand-secondary);
+  }
+}
+
+// Images
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Lists
+ul, ol {
+  list-style: none;
+}
+
+// Buttons
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}

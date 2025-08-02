@@ -6,3 +6,9 @@ npm-debug.log
 
 # Test coverage files
 coverage/
+
+# Vite build output
+public/dist/
+
+# Backup files
+*.backup

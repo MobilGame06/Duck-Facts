@@ -1,0 +1,99 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// Section base styles
+section {
+  padding: 5rem 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: get-spacing(xxxl);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  
+  h2 {
+    margin-bottom: get-spacing(md);
+  }
+  
+  p {
+    font-size: 1.1rem;
+    color: get-color(text-secondary);
+    
+    @include dark-mode {
+      color: get-color(dark-text-secondary);
+    }
+  }
+}
+
+// Features section
+.features {
+  background: get-color(bg-secondary);
+  
+  @include dark-mode {
+    background: get-color(dark-bg-secondary);
+  }
+}
+
+.features-grid {
+  @include grid-auto-fit(300px);
+  gap: get-spacing(xl);
+  
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Facts showcase section
+.facts-grid {
+  @include grid-auto-fit(300px);
+  gap: get-spacing(xl);
+  margin-bottom: get-spacing(xxl);
+  
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+}
+
+.facts-actions {
+  text-align: center;
+}
+
+// API section
+.api-section {
+  background: get-color(bg-secondary);
+  
+  @include dark-mode {
+    background: get-color(dark-bg-secondary);
+  }
+}
+
+.api-content {
+  display: grid;
+  gap: get-spacing(xxl);
+}
+
+.api-examples {
+  @include grid-auto-fit(400px);
+  gap: get-spacing(xl);
+  
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+}
+
+.example-response {
+  margin-top: get-spacing(md);
+}
+
+.api-actions {
+  @include flex-center;
+  gap: get-spacing(md);
+  flex-wrap: wrap;
+  
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+  }
+}
