@@ -13,7 +13,7 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <link rel="stylesheet" href="/stylesheets/style.css" />
+  <link rel="stylesheet" href="/dist/css/style.css" />
 </head>
 
 <body>
@@ -41,19 +41,6 @@
             </a>
           </div>
         </div>
-
-        <!-- Dark Mode Toggle -->
-        <button class="theme-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
-          <i class="fas fa-moon"></i>
-          <i class="fas fa-sun"></i>
-        </button>
-
-        <!-- Mobile Menu Toggle -->
-        <button class="mobile-menu-toggle" id="mobileMenuToggle">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
       </div>
     </div>
   </nav>
@@ -82,18 +69,14 @@
         <div class="hero-buttons">
           <a href="#api" class="btn btn-primary">
             <i class="fas fa-code"></i>
-            <%= currentLang==='de' ? 'API Erkunden' : 'Explore API' %>
-          </a>
-          <a href="#facts" class="btn btn-secondary">
-            <i class="fas fa-lightbulb"></i>
-            <%= currentLang==='de' ? 'Fakten Entdecken' : 'Discover Facts' %>
+            <%= currentLang==='de' ? 'API Testen' : 'Try API' %>
           </a>
         </div>
       </div>
 
       <div class="hero-visual">
         <div class="duck-illustration">
-          <img src="/images/ente.png" alt="Duck" class="duck-image">
+          <img src="/images/ente.svg" alt="Duck" class="duck-image">
         </div>
         <div class="stats">
           <div class="stat">
@@ -106,12 +89,6 @@
             <div class="stat-number">2</div>
             <div class="stat-label">
               <%= currentLang==='de' ? 'Sprachen' : 'Languages' %>
-            </div>
-          </div>
-          <div class="stat">
-            <div class="stat-number">∞</div>
-            <div class="stat-label">
-              <%= currentLang==='de' ? 'Spaß' : 'Fun' %>
             </div>
           </div>
         </div>
@@ -146,18 +123,6 @@
 
         <div class="feature-card">
           <div class="feature-icon">
-            <i class="fas fa-search"></i>
-          </div>
-          <h3>
-            <%= currentLang==='de' ? 'Spezifische Fakten' : 'Specific Facts' %>
-          </h3>
-          <p>
-            <%= currentLang==='de' ? 'Suche nach spezifischen Fakten mit eindeutigen IDs' : 'Search for specific facts using unique IDs' %>
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
             <i class="fas fa-globe"></i>
           </div>
           <h3>
@@ -177,30 +142,6 @@
           </h3>
           <p>
             <%= currentLang==='de' ? 'Hochperformante API mit minimaler Latenz' : 'High-performance API with minimal latency' %>
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-code"></i>
-          </div>
-          <h3>
-            <%= currentLang==='de' ? 'RESTful Design' : 'RESTful Design' %>
-          </h3>
-          <p>
-            <%= currentLang==='de' ? 'Folgt REST-Prinzipien für einfache Integration' : 'Follows REST principles for easy integration' %>
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-book"></i>
-          </div>
-          <h3>
-            <%= currentLang==='de' ? 'Vollständige Docs' : 'Complete Docs' %>
-          </h3>
-          <p>
-            <%= currentLang==='de' ? 'Umfassende Swagger-Dokumentation' : 'Comprehensive Swagger documentation' %>
           </p>
         </div>
       </div>
@@ -297,13 +238,9 @@
         </div>
 
         <div class="api-actions">
-          <a href="/api-docs" class="btn btn-primary">
-            <i class="fas fa-book"></i>
-            <%= currentLang==='de' ? 'Vollständige Dokumentation' : 'Full Documentation' %>
-          </a>
-          <button class="btn btn-secondary" id="tryApiBtn">
+          <button class="btn btn-primary" id="tryApiBtn">
             <i class="fas fa-play"></i>
-            <%= currentLang==='de' ? 'API Testen' : 'Try API' %>
+            <%= currentLang==='de' ? 'API Jetzt Testen' : 'Try API Now' %>
           </button>
         </div>
       </div>
@@ -324,7 +261,6 @@
             <%= currentLang==='de' ? 'Dokumentation' : 'Documentation' %>
           </a>
           <a href="https://github.com/MobilGame06/Duck-Facts">GitHub</a>
-          <a href="https://info.mobilserver.xyz">Contact</a>
         </div>
 
         <div class="footer-social">
@@ -340,7 +276,7 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="/javascripts/app.js"></script>
+  <script src="/dist/js/main.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,194 @@
+// Responsive breakpoints
+@mixin mobile {
+  @media (max-width: get-breakpoint(mobile)) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: get-breakpoint(tablet)) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: get-breakpoint(desktop)) {
+    @content;
+  }
+}
+
+@mixin mobile-up {
+  @media (min-width: #{get-breakpoint(mobile) + 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media (min-width: #{get-breakpoint(tablet) + 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media (min-width: #{get-breakpoint(desktop) + 1px}) {
+    @content;
+  }
+}
+
+// Flexbox utilities
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-column-center {
+  @include flex-column;
+  align-items: center;
+  justify-content: center;
+}
+
+// Grid utilities
+@mixin grid-auto-fit($min-width: 300px) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
+}
+
+// Button states
+@mixin button-hover-lift {
+  transition: all get-transition(fast);
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: get-shadow(lg);
+  }
+}
+
+@mixin button-primary {
+  background: get-gradient(primary);
+  color: white;
+  box-shadow: get-shadow(md);
+  
+  &:hover {
+    color: white;
+  }
+}
+
+@mixin button-secondary {
+  background: get-color(dark-bg-secondary);
+  color: get-color(dark-text-primary);
+  border: 1px solid get-color(dark-border-primary);
+  
+  &:hover {
+    background: get-color(dark-bg-accent);
+    color: get-color(dark-text-primary);
+  }
+}
+
+@mixin button-outline {
+  background: transparent;
+  color: white;
+  border: 2px solid get-color(brand-primary);
+  
+  &:hover {
+    background: get-color(brand-primary);
+    color: white;
+  }
+}
+
+// Card styles
+@mixin card-base {
+  background: get-color(dark-bg-primary);
+  border: 1px solid get-color(dark-border-primary);
+  border-radius: 1rem;
+  transition: all get-transition(normal);
+}
+
+@mixin card-hover {
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: get-shadow(dark-lg);
+  }
+}
+
+// Text utilities
+@mixin text-get-gradient($gradient) {
+  background: $gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@mixin clamp-text($min-size, $preferred-size, $max-size) {
+  font-size: clamp($min-size, $preferred-size, $max-size);
+}
+
+// Animation utilities
+@mixin fade-in($duration: get-transition(normal)) {
+  opacity: 0;
+  animation: fadeIn $duration ease forwards;
+}
+
+@mixin slide-in-left($duration: get-transition(normal)) {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideInLeft $duration ease forwards;
+}
+
+@mixin slide-in-right($duration: get-transition(normal)) {
+  opacity: 0;
+  transform: translateX(50px);
+  animation: slideInRight $duration ease forwards;
+}
+
+@mixin slide-in-up($duration: get-transition(normal)) {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideInUp $duration ease forwards;
+}
+
+// Dark mode utilities
+@mixin dark-mode {
+  body.dark-mode & {
+    @content;
+  }
+}
+
+// Scrollbar styling
+@mixin custom-scrollbar {
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: get-color(dark-bg-secondary);
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: get-color(dark-border-secondary);
+    border-radius: 4px;
+  }
+  
+  &::-webkit-scrollbar-thumb:hover {
+    background: get-color(dark-text-muted);
+  }
+}
+
+// Focus states
+@mixin focus-ring($color: #3b82f6) {
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba($color, 0.1);
+  }
+}

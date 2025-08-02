@@ -1,0 +1,79 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+// Base button styles
+.btn {
+  @include flex-center;
+  gap: get-spacing(sm);
+  padding: 0.75rem get-spacing(lg);
+  border-radius: 0.75rem;
+  font-weight: get-font(weight-medium);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  white-space: nowrap;
+  @include button-hover-lift;
+  @include focus-ring;
+  
+  @include tablet {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  @include mobile {
+    width: 100%;
+    max-width: 250px;
+    justify-content: center;
+  }
+}
+
+// Button variants
+.btn-primary {
+  @include button-primary;
+}
+
+.btn-secondary {
+  @include button-secondary;
+}
+
+.btn-outline {
+  @include button-outline;
+}
+
+// Button states
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+// Loading state
+.btn-loading {
+  position: relative;
+  color: transparent !important;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    margin-left: -8px;
+    margin-top: -8px;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    border-right-color: transparent;
+    animation: spin 0.75s linear infinite;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

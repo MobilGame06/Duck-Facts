@@ -1,0 +1,67 @@
+// 7-1 Architecture Main SCSS File
+// https://sass-guidelin.es/#architecture
+
+// 1. Abstracts
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
+
+// 2. Base
+@use 'base/reset';
+@use 'base/typography';
+
+// 3. Components
+@use 'components/buttons';
+@use 'components/navbar';
+@use 'components/cards';
+@use 'components/animations';
+
+// 4. Layout
+@use 'layout/hero';
+@use 'layout/sections';
+@use 'layout/footer';
+
+// 5. Pages (if any specific page styles needed)
+// @use 'pages/home';
+
+// 6. Themes
+// @use 'themes/dark'; // Already handled in components
+
+// 7. Vendors (external libraries)
+// @use 'vendors/vendor-name';
+
+// Utility classes
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.no-scroll {
+  overflow: hidden !important;
+}
+
+// Animation classes for GSAP/scroll triggers
+.animate-fade-in {
+  opacity: 0;
+}
+
+.animate-slide-up {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.animate-slide-left {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+.animate-slide-right {
+  opacity: 0;
+  transform: translateX(50px);
+}
