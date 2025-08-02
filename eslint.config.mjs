@@ -18,6 +18,19 @@ export default [
     },
   },
   {
+    files: ['public/**/*.js'],
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+      },
+      sourceType: 'script',
+    },
+    rules: {
+      'no-console': 'off', // Allow console.log in browser apps
+      'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+    },
+  },
+  {
     files: ['**/*.test.js', '**/__tests__/**/*.js'],
     languageOptions: {
       globals: {
