@@ -5,11 +5,6 @@
 .card {
   @include card-base;
   padding: get-spacing(xl);
-  
-  @include dark-mode {
-    background: get-color(dark-bg-primary);
-    border-color: get-color(dark-border-primary);
-  }
 }
 
 // Feature cards
@@ -20,26 +15,13 @@
   text-align: center;
   cursor: pointer;
   
-  @include dark-mode {
-    background: get-color(dark-bg-primary);
-    border-color: get-color(dark-border-primary);
-  }
-  
   h3 {
     margin-bottom: get-spacing(md);
-    color: get-color(text-primary);
-    
-    @include dark-mode {
-      color: get-color(dark-text-primary);
-    }
+    color: get-color(dark-text-primary);
   }
   
   p {
-    color: get-color(text-secondary);
-    
-    @include dark-mode {
-      color: get-color(dark-text-secondary);
-    }
+    color: get-color(dark-text-secondary);
   }
 }
 
@@ -59,26 +41,17 @@
 
 // Fact cards
 .fact-card {
-  background: get-color(bg-secondary);
-  border: 1px solid get-color(border-primary);
+  background: get-color(dark-bg-secondary);
+  border: 1px solid get-color(dark-border-primary);
   border-radius: get-spacing(md);
   padding: get-spacing(xl);
   position: relative;
   transition: all get-transition(normal);
   cursor: pointer;
   
-  @include dark-mode {
-    background: get-color(dark-bg-secondary);
-    border-color: get-color(dark-border-primary);
-  }
-  
   &:hover {
     transform: translateY(-5px);
-    box-shadow: get-shadow(lg);
-    
-    @include dark-mode {
-      box-shadow: get-shadow(dark-lg);
-    }
+    box-shadow: get-shadow(dark-lg);
   }
 }
 
@@ -92,11 +65,7 @@
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: get-spacing(md);
-  color: get-color(text-primary);
-  
-  @include dark-mode {
-    color: get-color(dark-text-primary);
-  }
+  color: get-color(dark-text-primary);
 }
 
 .fact-number {
@@ -117,27 +86,14 @@
   padding: get-spacing(xl);
   transition: all get-transition(normal);
   
-  @include dark-mode {
-    background: get-color(dark-bg-primary);
-    border-color: get-color(dark-border-primary);
-  }
-  
   &:hover {
     transform: translateY(-2px);
-    box-shadow: get-shadow(md);
-    
-    @include dark-mode {
-      box-shadow: get-shadow(dark-md);
-    }
+    box-shadow: get-shadow(dark-md);
   }
   
   h3 {
     margin-bottom: get-spacing(md);
-    color: get-color(text-primary);
-    
-    @include dark-mode {
-      color: get-color(dark-text-primary);
-    }
+    color: get-color(dark-text-primary);
   }
 }
 
@@ -145,16 +101,11 @@
 .stat {
   text-align: center;
   padding: get-spacing(md);
-  background: get-color(bg-secondary);
+  background: get-color(dark-bg-secondary);
   border-radius: get-spacing(md);
-  border: 1px solid get-color(border-primary);
+  border: 1px solid get-color(dark-border-primary);
   min-width: 80px;
   transition: transform get-transition(fast);
-  
-  @include dark-mode {
-    background: get-color(dark-bg-secondary);
-    border-color: get-color(dark-border-primary);
-  }
   
   &:hover {
     transform: translateY(-5px);
@@ -170,9 +121,5 @@
 
 .stat-label {
   font-size: 0.9rem;
-  color: get-color(text-muted);
-  
-  @include dark-mode {
-    color: get-color(dark-text-muted);
-  }
+  color: get-color(dark-text-muted);
 }

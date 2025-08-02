@@ -13,80 +13,24 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 class DuckFactsApp {
   constructor() {
     this.currentLanguage = this.getCurrentLanguage()
-    this.isDarkMode = this.getDarkModePreference()
     this.init()
   }
 
   init() {
-    this.setupDarkModeToggle()
+    // Apply dark mode by default
+    document.body.classList.add('dark-mode')
+    
     this.setupLanguageSwitcher()
     this.setupSmoothScrolling()
     this.setupFactsLoader()
     this.setupAPITester()
     this.setupGSAPAnimations()
-    this.applyInitialTheme()
   }
 
   // Language utilities
   getCurrentLanguage() {
     const urlParams = new URLSearchParams(window.location.search)
     return urlParams.get('lang') || 'en'
-  }
-
-  // Dark mode utilities
-  getDarkModePreference() {
-    const saved = localStorage.getItem('darkMode')
-    if (saved !== null) {
-      return saved === 'enabled'
-    }
-    return window.matchMedia('(prefers-color-scheme: dark)').matches
-  }
-
-  applyInitialTheme() {
-    if (this.isDarkMode) {
-      document.body.classList.add('dark-mode')
-    } else {
-      document.body.classList.remove('dark-mode')
-    }
-  }
-
-  // Dark mode toggle functionality
-  setupDarkModeToggle() {
-    const toggle = document.getElementById('darkModeToggle')
-    if (!toggle) return
-
-    toggle.addEventListener('click', () => {
-      this.isDarkMode = !this.isDarkMode
-      this.updateDarkMode()
-    })
-
-    // Listen for system preference changes
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-      if (localStorage.getItem('darkMode') === null) {
-        this.isDarkMode = e.matches
-        this.updateDarkMode(false)
-      }
-    })
-  }
-
-  updateDarkMode(savePreference = true) {
-    if (this.isDarkMode) {
-      document.body.classList.add('dark-mode')
-      if (savePreference) {
-        localStorage.setItem('darkMode', 'enabled')
-      }
-    } else {
-      document.body.classList.remove('dark-mode')
-      if (savePreference) {
-        localStorage.setItem('darkMode', 'disabled')
-      }
-    }
-
-    // Smooth theme transition
-    gsap.to(document.body, {
-      duration: 0.3,
-      ease: "power2.out"
-    })
   }
 
   // Language switcher functionality
@@ -164,9 +108,7 @@ class DuckFactsApp {
           const shadow = self.direction === 1 ? '0 4px 6px -1px rgba(0, 0, 0, 0.1)' : 'none'
           
           gsap.to(navbar, {
-            backgroundColor: this.isDarkMode 
-              ? `rgba(15, 23, 42, ${opacity})` 
-              : `rgba(255, 255, 255, ${opacity})`,
+            backgroundColor: `rgba(15, 23, 42, ${opacity})`,
             boxShadow: shadow,
             duration: 0.3
           })

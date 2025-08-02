@@ -19,21 +19,13 @@ section {
   
   p {
     font-size: 1.1rem;
-    color: get-color(text-secondary);
-    
-    @include dark-mode {
-      color: get-color(dark-text-secondary);
-    }
+    color: get-color(dark-text-secondary);
   }
 }
 
 // Features section
 .features {
-  background: get-color(bg-secondary);
-  
-  @include dark-mode {
-    background: get-color(dark-bg-secondary);
-  }
+  background: get-color(dark-bg-secondary);
 }
 
 .features-grid {
@@ -62,11 +54,7 @@ section {
 
 // API section
 .api-section {
-  background: get-color(bg-secondary);
-  
-  @include dark-mode {
-    background: get-color(dark-bg-secondary);
-  }
+  background: get-color(dark-bg-secondary);
 }
 
 .api-content {

@@ -11,15 +11,10 @@
   left: 0;
   right: 0;
   z-index: get-z(navbar);
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(15, 23, 42, 0.95);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid get-color(border-primary);
+  border-bottom: 1px solid get-color(dark-border-primary);
   transition: all get-transition(normal);
-  
-  @include dark-mode {
-    background: rgba(15, 23, 42, 0.95);
-    border-bottom-color: get-color(dark-border-primary);
-  }
 }
 
 .nav-container {
@@ -38,11 +33,7 @@
   gap: get-spacing(sm);
   font-size: 1.5rem;
   font-weight: get-font(weight-bold);
-  color: get-color(text-primary);
-  
-  @include dark-mode {
-    color: get-color(dark-text-primary);
-  }
+  color: get-color(dark-text-primary);
   
   i {
     color: get-color(brand-primary);
@@ -68,27 +59,17 @@
   @include flex-center;
   gap: get-spacing(sm);
   padding: get-spacing(sm) get-spacing(md);
-  background: get-color(bg-secondary);
-  border: 1px solid get-color(border-primary);
+  background: get-color(dark-bg-secondary);
+  border: 1px solid get-color(dark-border-primary);
   border-radius: get-spacing(sm);
-  color: get-color(text-primary);
+  color: get-color(dark-text-primary);
   cursor: pointer;
   transition: all get-transition(fast);
   font-size: 0.9rem;
   
-  @include dark-mode {
-    background: get-color(dark-bg-secondary);
-    border-color: get-color(dark-border-primary);
-    color: get-color(dark-text-primary);
-  }
-  
   &:hover {
-    background: get-color(bg-accent);
+    background: get-color(dark-bg-accent);
     transform: translateY(-1px);
-    
-    @include dark-mode {
-      background: get-color(dark-bg-accent);
-    }
   }
   
   i {
@@ -101,10 +82,10 @@
   position: absolute;
   top: 100%;
   right: 0;
-  background: get-color(bg-primary);
-  border: 1px solid get-color(border-primary);
+  background: get-color(dark-bg-primary);
+  border: 1px solid get-color(dark-border-primary);
   border-radius: get-spacing(sm);
-  box-shadow: get-shadow(lg);
+  box-shadow: get-shadow(dark-lg);
   min-width: 150px;
   opacity: 0;
   visibility: hidden;
@@ -112,12 +93,6 @@
   transition: all get-transition(fast);
   margin-top: get-spacing(sm);
   z-index: get-z(dropdown);
-  
-  @include dark-mode {
-    background: get-color(dark-bg-primary);
-    border-color: get-color(dark-border-primary);
-    box-shadow: get-shadow(dark-lg);
-  }
   
   &.show {
     opacity: 1;
@@ -129,76 +104,22 @@
 .lang-option {
   display: block;
   padding: 0.75rem get-spacing(md);
-  color: get-color(text-primary);
-  border-bottom: 1px solid get-color(border-primary);
+  color: get-color(dark-text-primary);
+  border-bottom: 1px solid get-color(dark-border-primary);
   transition: background-color get-transition(fast);
-  
-  @include dark-mode {
-    color: get-color(dark-text-primary);
-    border-bottom-color: get-color(dark-border-primary);
-  }
   
   &:last-child {
     border-bottom: none;
   }
   
   &:hover {
-    background: get-color(bg-secondary);
+    background: get-color(dark-bg-secondary);
     color: get-color(brand-primary);
-    
-    @include dark-mode {
-      background: get-color(dark-bg-secondary);
-    }
   }
   
   &.active {
     background: get-color(brand-primary);
     color: white;
-  }
-}
-
-// Theme toggle
-.theme-toggle {
-  position: relative;
-  width: 50px;
-  height: 50px;
-  border: none;
-  border-radius: 50%;
-  background: get-gradient(primary);
-  cursor: pointer;
-  overflow: hidden;
-  transition: all get-transition(normal);
-  
-  &:hover {
-    transform: scale(1.1);
-    box-shadow: get-shadow(lg);
-  }
-  
-  i {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 1.2rem;
-    transition: all get-transition(normal);
-  }
-  
-  .fa-sun {
-    opacity: 0;
-    transform: translate(-50%, -50%) rotate(180deg);
-  }
-  
-  @include dark-mode {
-    .fa-moon {
-      opacity: 0;
-      transform: translate(-50%, -50%) rotate(-180deg);
-    }
-    
-    .fa-sun {
-      opacity: 1;
-      transform: translate(-50%, -50%) rotate(0deg);
-    }
   }
 }
 
@@ -219,11 +140,7 @@
   span {
     width: 25px;
     height: 3px;
-    background: get-color(text-primary);
+    background: get-color(dark-text-primary);
     transition: all get-transition(fast);
-    
-    @include dark-mode {
-      background: get-color(dark-text-primary);
-    }
   }
 }

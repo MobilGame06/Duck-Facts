@@ -55,28 +55,19 @@
 
 // Code blocks
 .code-block {
-  background: get-color(bg-accent);
-  border: 1px solid get-color(border-primary);
+  background: get-color(dark-bg-accent);
+  border: 1px solid get-color(dark-border-primary);
   border-radius: get-spacing(sm);
   padding: get-spacing(md);
   margin: get-spacing(md) 0;
   overflow-x: auto;
   @include custom-scrollbar;
   
-  @include dark-mode {
-    background: get-color(dark-bg-accent);
-    border-color: get-color(dark-border-primary);
-  }
-  
   pre {
     margin: 0;
     font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
     font-size: 0.9rem;
-    color: get-color(text-primary);
-    
-    @include dark-mode {
-      color: get-color(dark-text-primary);
-    }
+    color: get-color(dark-text-primary);
   }
 }
 

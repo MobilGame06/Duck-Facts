@@ -86,13 +86,13 @@
 }
 
 @mixin button-secondary {
-  background: get-color(bg-secondary);
-  color: get-color(text-primary);
-  border: 1px solid get-color(border-primary);
+  background: get-color(dark-bg-secondary);
+  color: get-color(dark-text-primary);
+  border: 1px solid get-color(dark-border-primary);
   
   &:hover {
-    background: get-color(bg-accent);
-    color: get-color(text-primary);
+    background: get-color(dark-bg-accent);
+    color: get-color(dark-text-primary);
   }
 }
 
@@ -109,8 +109,8 @@
 
 // Card styles
 @mixin card-base {
-  background: get-color(bg-primary);
-  border: 1px solid get-color(border-primary);
+  background: get-color(dark-bg-primary);
+  border: 1px solid get-color(dark-border-primary);
   border-radius: 1rem;
   transition: all get-transition(normal);
 }
@@ -118,7 +118,7 @@
 @mixin card-hover {
   &:hover {
     transform: translateY(-5px);
-    box-shadow: get-shadow(lg);
+    box-shadow: get-shadow(dark-lg);
   }
 }
 
@@ -172,16 +172,16 @@
   }
   
   &::-webkit-scrollbar-track {
-    background: get-color(bg-secondary);
+    background: get-color(dark-bg-secondary);
   }
   
   &::-webkit-scrollbar-thumb {
-    background: get-color(border-secondary);
+    background: get-color(dark-border-secondary);
     border-radius: 4px;
   }
   
   &::-webkit-scrollbar-thumb:hover {
-    background: get-color(text-muted);
+    background: get-color(dark-text-muted);
   }
 }
 

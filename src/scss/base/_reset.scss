@@ -20,15 +20,10 @@ body {
   font-family: get-font(font-family);
   font-weight: get-font(weight-normal);
   line-height: 1.6;
-  color: get-color(text-primary);
-  background-color: get-color(bg-primary);
+  color: get-color(dark-text-primary);
+  background-color: get-color(dark-bg-primary);
   transition: background-color get-transition(normal), color get-transition(normal);
   overflow-x: hidden;
-  
-  @include dark-mode {
-    color: get-color(dark-text-primary);
-    background-color: get-color(dark-bg-primary);
-  }
 }
 
 // Container

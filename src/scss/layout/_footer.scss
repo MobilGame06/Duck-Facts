@@ -3,14 +3,9 @@
 
 // Footer
 .footer {
-  background: get-color(bg-accent);
-  border-top: 1px solid get-color(border-primary);
+  background: get-color(dark-bg-accent);
+  border-top: 1px solid get-color(dark-border-primary);
   padding: get-spacing(xxl) 0;
-  
-  @include dark-mode {
-    background: get-color(dark-bg-accent);
-    border-top-color: get-color(dark-border-primary);
-  }
 }
 
 .footer-content {
@@ -30,11 +25,7 @@
   gap: get-spacing(sm);
   font-size: 1.2rem;
   font-weight: get-font(weight-bold);
-  color: get-color(text-primary);
-  
-  @include dark-mode {
-    color: get-color(dark-text-primary);
-  }
+  color: get-color(dark-text-primary);
   
   i {
     color: get-color(brand-primary);
@@ -52,12 +43,8 @@
   }
   
   a {
-    color: get-color(text-secondary);
+    color: get-color(dark-text-secondary);
     transition: color get-transition(fast);
-    
-    @include dark-mode {
-      color: get-color(dark-text-secondary);
-    }
     
     &:hover {
       color: get-color(brand-primary);
@@ -66,11 +53,7 @@
 }
 
 .footer-social {
-  color: get-color(text-secondary);
-  
-  @include dark-mode {
-    color: get-color(dark-text-secondary);
-  }
+  color: get-color(dark-text-secondary);
   
   i {
     color: get-color(error);

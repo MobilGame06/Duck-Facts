@@ -50,12 +50,8 @@
 .hero-subtitle {
   font-size: 1.25rem;
   margin-bottom: get-spacing(xl);
-  color: get-color(text-secondary);
+  color: get-color(dark-text-secondary);
   text-align: center;
-  
-  @include dark-mode {
-    color: get-color(dark-text-secondary);
-  }
 }
 
 .hero-buttons {
@@ -86,11 +82,7 @@
   border-radius: 50%;
   @include flex-center;
   animation: bounce 2s ease-in-out infinite;
-  box-shadow: get-shadow(xl);
-  
-  @include dark-mode {
-    box-shadow: get-shadow(dark-xl);
-  }
+  box-shadow: get-shadow(dark-xl);
   
   i {
     font-size: 5rem;
