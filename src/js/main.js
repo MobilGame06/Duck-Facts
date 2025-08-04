@@ -4,6 +4,9 @@
  */
 
 import '../scss/main.scss';
+import '@fontsource/inter';
+import '@fortawesome/fontawesome-free/css/all.css';
+
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
