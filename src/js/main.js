@@ -3,6 +3,7 @@
  * Enhanced build with Vite + SCSS + GSAP
  */
 
+import '../scss/main.scss';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
