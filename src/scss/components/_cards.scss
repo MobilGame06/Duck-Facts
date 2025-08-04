@@ -1,5 +1,5 @@
-@use "../abstracts/variables" as *;
-@use "../abstracts/mixins" as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 
 // Base card component
 .card {
@@ -14,12 +14,12 @@
   padding: get-spacing(xl);
   text-align: center;
   cursor: pointer;
-  
+
   h3 {
     margin-bottom: get-spacing(md);
     color: get-color(dark-text-primary);
   }
-  
+
   p {
     color: get-color(dark-text-secondary);
   }
@@ -32,7 +32,7 @@
   border-radius: 50%;
   @include flex-center;
   margin: 0 auto get-spacing(lg);
-  
+
   i {
     font-size: 1.5rem;
     color: white;
@@ -48,7 +48,7 @@
   position: relative;
   transition: all get-transition(normal);
   cursor: pointer;
-  
+
   &:hover {
     transform: translateY(-5px);
     box-shadow: get-shadow(dark-lg);
@@ -85,12 +85,12 @@
   @include card-base;
   padding: get-spacing(xl);
   transition: all get-transition(normal);
-  
+
   &:hover {
     transform: translateY(-2px);
     box-shadow: get-shadow(dark-md);
   }
-  
+
   h3 {
     margin-bottom: get-spacing(md);
     color: get-color(dark-text-primary);
@@ -106,7 +106,7 @@
   border: 1px solid get-color(dark-border-primary);
   min-width: 80px;
   transition: transform get-transition(fast);
-  
+
   &:hover {
     transform: translateY(-5px);
   }

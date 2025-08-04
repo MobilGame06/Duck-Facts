@@ -9,7 +9,7 @@ $colors: (
   text-muted: #64748b,
   border-primary: #e2e8f0,
   border-secondary: #cbd5e1,
-  
+
   // Brand colors
   brand-primary: #3b82f6,
   brand-secondary: #8b5cf6,
@@ -17,7 +17,7 @@ $colors: (
   success: #10b981,
   warning: #f59e0b,
   error: #ef4444,
-  
+
   // Dark theme overrides
   dark-bg-primary: #0f172a,
   dark-bg-secondary: #1e293b,
@@ -33,35 +33,40 @@ $colors: (
 $gradients: (
   primary: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%),
   secondary: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%),
-  accent: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%)
+  accent: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%),
 );
 
 // Shadows
 $shadows: (
-  sm: "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
-  md: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
-  lg: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
-  xl: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
-  dark-sm: "0 1px 2px 0 rgba(0, 0, 0, 0.3)",
-  dark-md: "0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2)",
-  dark-lg: "0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2)",
-  dark-xl: "0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.3)"
+  sm: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+  md: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+  lg: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+  xl:
+    '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+  dark-sm: '0 1px 2px 0 rgba(0, 0, 0, 0.3)',
+  dark-md:
+    '0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2)',
+  dark-lg:
+    '0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2)',
+  dark-xl:
+    '0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.3)',
 );
 
 // Transitions
 $transitions: (
   fast: 0.15s ease,
   normal: 0.3s ease,
-  slow: 0.5s ease
+  slow: 0.5s ease,
 );
 
 // Typography
 $typography: (
-  font-family: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+  font-family:
+    "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
   weight-normal: 400,
   weight-medium: 500,
   weight-semibold: 600,
-  weight-bold: 700
+  weight-bold: 700,
 );
 
 // Breakpoints
@@ -69,7 +74,7 @@ $breakpoints: (
   mobile: 480px,
   tablet: 768px,
   desktop: 1024px,
-  wide: 1200px
+  wide: 1200px,
 );
 
 // Spacing
@@ -80,7 +85,7 @@ $spacing: (
   lg: 1.5rem,
   xl: 2rem,
   xxl: 3rem,
-  xxxl: 4rem
+  xxxl: 4rem,
 );
 
 // Z-index layers
@@ -88,7 +93,7 @@ $z-index: (
   dropdown: 100,
   navbar: 1000,
   modal: 2000,
-  notification: 10000
+  notification: 10000,
 );
 
 // Helper functions

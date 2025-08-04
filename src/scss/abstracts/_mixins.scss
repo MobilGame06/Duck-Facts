@@ -68,7 +68,7 @@
 // Button states
 @mixin button-hover-lift {
   transition: all get-transition(fast);
-  
+
   &:hover {
     transform: translateY(-2px);
     box-shadow: get-shadow(lg);
@@ -79,7 +79,7 @@
   background: get-gradient(primary);
   color: white;
   box-shadow: get-shadow(md);
-  
+
   &:hover {
     color: white;
   }
@@ -89,7 +89,7 @@
   background: get-color(dark-bg-secondary);
   color: get-color(dark-text-primary);
   border: 1px solid get-color(dark-border-primary);
-  
+
   &:hover {
     background: get-color(dark-bg-accent);
     color: get-color(dark-text-primary);
@@ -100,7 +100,7 @@
   background: transparent;
   color: white;
   border: 2px solid get-color(brand-primary);
-  
+
   &:hover {
     background: get-color(brand-primary);
     color: white;
@@ -170,16 +170,16 @@
   &::-webkit-scrollbar {
     width: 8px;
   }
-  
+
   &::-webkit-scrollbar-track {
     background: get-color(dark-bg-secondary);
   }
-  
+
   &::-webkit-scrollbar-thumb {
     background: get-color(dark-border-secondary);
     border-radius: 4px;
   }
-  
+
   &::-webkit-scrollbar-thumb:hover {
     background: get-color(dark-text-muted);
   }

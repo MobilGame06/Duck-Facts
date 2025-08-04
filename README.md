@@ -3,6 +3,7 @@
 A simple REST API that serves interesting facts about ducks in multiple languages. This project is primarily a test for AI code generation and demonstrates modern Node.js API development practices.
 
 🦆 **[Live Demo/API](https://duck.mobilserver.xyz/)**
+
 ## About This Project
 
 This project serves as a test case for AI code generation, showcasing how AI can create a fully functional REST API with comprehensive testing, documentation, and modern development practices. It demonstrates proper API design, error handling, internationalization, and documentation standards.
