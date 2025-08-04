@@ -1,10 +1,4 @@
 @use '../abstracts/variables' as *;
-@use '../abstracts/mixins' as *;
-
-@use '../abstracts/variables' as *;
-@use '../abstracts/mixins' as *;
-
-/* Modern CSS Reset */
 * {
   margin: 0;
   padding: 0;
@@ -17,52 +11,47 @@ html {
 }
 
 body {
-  font-family: get-font(font-family);
-  font-weight: get-font(weight-normal);
+  font-family: $font-family;
+  font-weight: $font-weight-normal;
   line-height: 1.6;
-  color: get-color(dark-text-primary);
-  background-color: get-color(dark-bg-primary);
+  color: $dark-text-primary;
+  background-color: $dark-bg-primary;
   transition:
-    background-color get-transition(normal),
-    color get-transition(normal);
+    background-color $transition-normal,
+    color $transition-normal;
   overflow-x: hidden;
 }
 
-// Container
 .container {
-  max-width: get-breakpoint(wide);
+  max-width: $max-width-wide;
   margin: 0 auto;
-  padding: 0 get-spacing(lg);
+  padding: 0 $spacing-lg;
 
-  @include mobile {
-    padding: 0 get-spacing(md);
+  @media (max-width: $breakpoint-mobile) {
+    padding: 0 $spacing-md;
   }
 }
 
-// Links
 a {
-  color: get-color(brand-primary);
+  color: $brand-primary;
   text-decoration: none;
-  transition: color get-transition(fast);
+  transition: color $transition-fast;
 
   &:hover {
-    color: get-color(brand-secondary);
+    color: $brand-secondary;
   }
 }
 
-// Images
 img {
   max-width: 100%;
   height: auto;
 }
 
-// Lists
 ul,
 ol {
   list-style: none;
 }
 
-// Buttons
 button {
   border: none;
   background: none;

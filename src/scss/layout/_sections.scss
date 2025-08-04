@@ -1,73 +1,72 @@
 @use '../abstracts/variables' as *;
-@use '../abstracts/mixins' as *;
-
-// Section base styles
 section {
   padding: 5rem 0;
 }
 
 .section-header {
   text-align: center;
-  margin-bottom: get-spacing(xxxl);
+  margin-bottom: $spacing-xxxl;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
 
   h2 {
-    margin-bottom: get-spacing(md);
+    margin-bottom: $spacing-md;
   }
 
   p {
     font-size: 1.1rem;
-    color: get-color(dark-text-secondary);
+    color: $dark-text-secondary;
   }
 }
 
-// Features section
 .features {
-  background: get-color(dark-bg-secondary);
-}
+  background: $dark-bg-secondary;
 
-.features-grid {
-  @include grid-auto-fit(300px);
-  gap: get-spacing(xl);
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $spacing-xl;
 
-  @include tablet {
-    grid-template-columns: 1fr;
+    @media (max-width: $breakpoint-tablet) {
+      grid-template-columns: 1fr;
+    }
   }
 }
 
-// Facts showcase section
-.facts-grid {
-  @include grid-auto-fit(300px);
-  gap: get-spacing(xl);
-  margin-bottom: get-spacing(xxl);
+.facts-showcase {
+  .container {
+    .facts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: $spacing-xl;
+      margin-bottom: $spacing-xxl;
 
-  @include tablet {
-    grid-template-columns: 1fr;
+      @media (max-width: $breakpoint-tablet) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .facts-actions {
+      text-align: center;
+    }
   }
 }
 
-.facts-actions {
-  text-align: center;
-}
-
-// API section
 .api-section {
-  background: get-color(dark-bg-secondary);
-}
+  background: $dark-bg-secondary;
+  .container {
+    .api-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: $spacing-md;
+      flex-wrap: wrap;
 
-.example-response {
-  margin-top: get-spacing(md);
-}
-
-.api-actions {
-  @include flex-center;
-  gap: get-spacing(md);
-  flex-wrap: wrap;
-
-  @include mobile {
-    flex-direction: column;
-    align-items: center;
+      @media (max-width: $breakpoint-mobile) {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
   }
 }

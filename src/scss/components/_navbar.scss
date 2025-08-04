@@ -1,146 +1,124 @@
 @use '../abstracts/variables' as *;
-@use '../abstracts/mixins' as *;
 
-@use '../abstracts/variables' as *;
-@use '../abstracts/mixins' as *;
-
-// Navigation bar
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: get-z(navbar);
-  background: rgba(15, 23, 42, 0.95);
+  z-index: $z-navbar;
+  background: $dark-border-primary;
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid get-color(dark-border-primary);
-  transition: all get-transition(normal);
-}
+  border-bottom: 1px solid $dark-border-primary;
+  transition: all $transition-normal;
 
-.nav-container {
-  @include flex-between;
-  padding: get-spacing(md) get-spacing(lg);
-  max-width: get-breakpoint(wide);
-  margin: 0 auto;
-
-  @include mobile {
-    padding: 0.75rem get-spacing(md);
-  }
-}
-
-.nav-brand {
-  @include flex-center;
-  gap: get-spacing(sm);
-  font-size: 1.5rem;
-  font-weight: get-font(weight-bold);
-  color: get-color(dark-text-primary);
-
-  i {
-    color: get-color(brand-primary);
-    font-size: 1.8rem;
-  }
-}
-
-.nav-controls {
-  @include flex-center;
-  gap: get-spacing(md);
-
-  @include tablet {
-    gap: get-spacing(sm);
-  }
-}
-
-// Language switcher
-.language-switcher {
-  position: relative;
-}
-
-.lang-toggle {
-  @include flex-center;
-  gap: get-spacing(sm);
-  padding: get-spacing(sm) get-spacing(md);
-  background: get-color(dark-bg-secondary);
-  border: 1px solid get-color(dark-border-primary);
-  border-radius: get-spacing(sm);
-  color: get-color(dark-text-primary);
-  cursor: pointer;
-  transition: all get-transition(fast);
-  font-size: 0.9rem;
-
-  &:hover {
-    background: get-color(dark-bg-accent);
-    transform: translateY(-1px);
-  }
-
-  i {
-    font-size: 0.8rem;
-    transition: transform get-transition(fast);
-  }
-}
-
-.lang-dropdown {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background: get-color(dark-bg-primary);
-  border: 1px solid get-color(dark-border-primary);
-  border-radius: get-spacing(sm);
-  box-shadow: get-shadow(dark-lg);
-  min-width: 150px;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
-  transition: all get-transition(fast);
-  margin-top: get-spacing(sm);
-  z-index: get-z(dropdown);
-
-  &.show {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-}
-
-.lang-option {
-  display: block;
-  padding: 0.75rem get-spacing(md);
-  color: get-color(dark-text-primary);
-  border-bottom: 1px solid get-color(dark-border-primary);
-  transition: background-color get-transition(fast);
-
-  &:last-child {
-    border-bottom: none;
-  }
-
-  &:hover {
-    background: get-color(dark-bg-secondary);
-    color: get-color(brand-primary);
-  }
-
-  &.active {
-    background: get-color(brand-primary);
-    color: white;
-  }
-}
-
-// Mobile menu toggle
-.mobile-menu-toggle {
-  display: none;
-  @include flex-column;
-  gap: 3px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: get-spacing(sm);
-
-  @include tablet {
+  .nav-container {
     display: flex;
-  }
+    justify-content: space-between;
+    align-items: center;
+    padding: $spacing-md $spacing-lg;
+    max-width: $breakpoint-wide;
+    margin: 0 auto;
 
-  span {
-    width: 25px;
-    height: 3px;
-    background: get-color(dark-text-primary);
-    transition: all get-transition(fast);
+    @media (max-width: $breakpoint-mobile) {
+      padding: 0.75rem $spacing-md;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: $spacing-sm;
+      font-size: 1.5rem;
+      font-weight: $font-weight-bold;
+      color: $dark-text-primary;
+
+      i {
+        color: $brand-primary;
+        font-size: 1.8rem;
+      }
+    }
+
+    .nav-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: $spacing-md;
+
+      @media (max-width: $breakpoint-tablet) {
+        gap: $spacing-sm;
+      }
+
+      .language-switcher {
+        position: relative;
+
+        .lang-toggle {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: $spacing-sm;
+          padding: $spacing-sm $spacing-md;
+          background: $dark-bg-secondary;
+          border: 1px solid $dark-border-primary;
+          border-radius: $spacing-sm;
+          color: $dark-text-primary;
+          cursor: pointer;
+          transition: all $transition-fast;
+          font-size: 0.9rem;
+
+          &:hover {
+            background: $dark-bg-accent;
+            transform: translateY(-1px);
+          }
+
+          i {
+            font-size: 0.8rem;
+            transition: transform $transition-fast;
+          }
+        }
+        .lang-dropdown {
+          position: absolute;
+          top: 100%;
+          right: 0;
+          background: $dark-bg-primary;
+          border: 1px solid $dark-border-primary;
+          border-radius: $spacing-sm;
+          box-shadow: $shadow-dark-lg;
+          min-width: 150px;
+          opacity: 0;
+          visibility: hidden;
+          transform: translateY(-10px);
+          transition: all $transition-fast;
+          margin-top: $spacing-sm;
+          z-index: $z-dropdown;
+
+          &.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+          }
+          .lang-option {
+            display: block;
+            padding: 0.75rem $spacing-md;
+            color: $dark-text-primary;
+            border-bottom: 1px solid $dark-border-primary;
+            transition: background-color $transition-fast;
+
+            &:last-child {
+              border-bottom: none;
+            }
+
+            &:hover {
+              background: $dark-bg-secondary;
+              color: $brand-primary;
+            }
+
+            &.active {
+              background: $brand-primary;
+              color: white;
+            }
+          }
+        }
+      }
+    }
   }
 }

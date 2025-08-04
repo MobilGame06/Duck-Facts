@@ -1,79 +1,72 @@
 @use '../abstracts/variables' as *;
-@use '../abstracts/mixins' as *;
+@use 'sass:color';
 
-@use '../abstracts/variables' as *;
-@use '../abstracts/mixins' as *;
-
-// Base button styles
 .btn {
-  @include flex-center;
-  gap: get-spacing(sm);
-  padding: 0.75rem get-spacing(lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-sm;
+  padding: 0.75rem $spacing-lg;
   border-radius: 0.75rem;
-  font-weight: get-font(weight-medium);
+  font-weight: $font-weight-medium;
   text-decoration: none;
   border: none;
   cursor: pointer;
   font-size: 1rem;
   white-space: nowrap;
-  @include button-hover-lift;
-  @include focus-ring;
 
-  @include tablet {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  &:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $brand-primary;
+    outline-offset: 2px;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
     padding: 0.6rem 1.2rem;
     font-size: 0.9rem;
   }
 
-  @include mobile {
+  @media (max-width: $breakpoint-mobile) {
     width: 100%;
     max-width: 250px;
     justify-content: center;
   }
 }
 
-// Button variants
 .btn-primary {
-  @include button-primary;
-}
+  background-color: $brand-primary;
+  color: $dark-text-dark-primary;
 
-.btn-secondary {
-  @include button-secondary;
-}
-
-.btn-outline {
-  @include button-outline;
-}
-
-// Button states
-.btn:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-  transform: none !important;
-}
-
-// Loading state
-.btn-loading {
-  position: relative;
-  color: transparent !important;
-
-  &::after {
-    content: '';
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    top: 50%;
-    left: 50%;
-    margin-left: -8px;
-    margin-top: -8px;
-    border: 2px solid currentColor;
-    border-radius: 50%;
-    border-right-color: transparent;
-    animation: spin 0.75s linear infinite;
+  &:hover {
+    color: $dark-text-dark-primary;
+    background-color: color.scale($brand-primary, $lightness: -15%);
   }
 }
 
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
+.btn-secondary {
+  background-color: $brand-secondary;
+  color: $dark-text-secondary;
+
+  &:hover {
+    color: $dark-text-secondary;
+    background-color: color.scale($brand-secondary, $lightness: -15%);
+  }
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid $brand-primary;
+  color: $brand-primary;
+
+  &:hover {
+    background-color: color.scale($brand-primary, $lightness: -15%);
+    color: $dark-text-secondary;
   }
 }

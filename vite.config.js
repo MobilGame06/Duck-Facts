@@ -8,7 +8,7 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'src/js/main.js')
+        main: resolve(__dirname, 'src/js/main.js'),
       },
       output: {
         entryFileNames: 'js/[name].js',
