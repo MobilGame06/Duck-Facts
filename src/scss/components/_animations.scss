@@ -1,85 +1,55 @@
 @use '../abstracts/variables' as *;
-@use '../abstracts/mixins' as *;
 
-// Notification system
 .notification {
   position: fixed;
   top: 100px;
   right: 20px;
-  z-index: get-z(notification);
-  border-radius: get-spacing(sm);
-  box-shadow: get-shadow(lg);
+  z-index: $z-notification;
+  border-radius: $spacing-sm;
+  box-shadow: $shadow-lg;
   transform: translateX(100%);
-  transition: transform get-transition(normal);
+  transition: transform $transition-normal;
   max-width: 400px;
 
   &.notification-success {
-    background: get-color(success);
-    color: white;
+    background: $success;
+    color: $dark-text-primary;
   }
 
   &.notification-error {
-    background: get-color(error);
-    color: white;
+    background: $error;
+    color: $dark-text-primary;
   }
 
   &.notification-info {
-    background: get-color(brand-primary);
-    color: white;
+    background: $brand-primary;
+    color: $dark-text-primary;
   }
 
   &.show {
     transform: translateX(0);
   }
-}
+  .notification-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: $spacing-md $spacing-lg;
 
-.notification-content {
-  @include flex-center;
-  gap: 0.75rem;
-  padding: get-spacing(md) get-spacing(lg);
-}
+    .notification-close {
+      background: none;
+      border: none;
+      color: $dark-text-primary;
+      cursor: pointer;
+      margin-left: auto;
+      padding: $spacing-xs;
+      border-radius: $spacing-xs;
 
-.notification-close {
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  margin-left: auto;
-  padding: get-spacing(xs);
-  border-radius: get-spacing(xs);
-
-  &:hover {
-    background: rgba(255, 255, 255, 0.1);
+      &:hover {
+        background: $dark-border-primary;
+      }
+    }
   }
-}
-
-// Code blocks
-.code-block {
-  background: get-color(dark-bg-accent);
-  border: 1px solid get-color(dark-border-primary);
-  border-radius: get-spacing(sm);
-  padding: get-spacing(md);
-  margin: get-spacing(md) 0;
-  overflow-x: auto;
-  @include custom-scrollbar;
-
-  pre {
-    margin: 0;
-    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
-    font-size: 0.9rem;
-    color: get-color(dark-text-primary);
-  }
-}
-
-// Loading spinner
-.spinner {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  border: 2px solid transparent;
-  border-top: 2px solid currentColor;
-  border-radius: 50%;
-  animation: spin 0.75s linear infinite;
 }
 
 // Floating shapes
@@ -99,7 +69,7 @@
   &.shape-1 {
     width: 200px;
     height: 200px;
-    background: get-gradient(primary);
+    background: $gradient-primary;
     top: 20%;
     left: 10%;
     animation-delay: 0s;
@@ -108,7 +78,7 @@
   &.shape-2 {
     width: 150px;
     height: 150px;
-    background: get-gradient(secondary);
+    background: $gradient-secondary;
     top: 60%;
     right: 20%;
     animation-delay: 2s;
@@ -117,7 +87,7 @@
   &.shape-3 {
     width: 100px;
     height: 100px;
-    background: get-gradient(accent);
+    background: $gradient-accent;
     bottom: 20%;
     left: 20%;
     animation-delay: 4s;
@@ -126,7 +96,7 @@
   &.shape-4 {
     width: 80px;
     height: 80px;
-    background: get-gradient(primary);
+    background: $gradient-primary;
     top: 10%;
     right: 10%;
     animation-delay: 1s;
@@ -144,6 +114,12 @@
   }
   66% {
     transform: translateY(-10px) rotate(240deg);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }
 

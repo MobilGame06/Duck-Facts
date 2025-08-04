@@ -1,125 +1,110 @@
 @use '../abstracts/variables' as *;
-@use '../abstracts/mixins' as *;
 
-// Base card component
-.card {
-  @include card-base;
-  padding: get-spacing(xl);
-}
-
-// Feature cards
 .feature-card {
-  @include card-base;
-  @include card-hover;
-  padding: get-spacing(xl);
+  background: $dark-bg-accent;
+  border-radius: $spacing-md;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: all $transition-normal;
+
+  padding: $spacing-xl;
   text-align: center;
   cursor: pointer;
 
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow:
+      0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+
   h3 {
-    margin-bottom: get-spacing(md);
-    color: get-color(dark-text-primary);
+    margin-bottom: $spacing-md;
+    color: $dark-text-primary;
   }
 
   p {
-    color: get-color(dark-text-secondary);
+    color: $dark-text-secondary;
+  }
+
+  .feature-icon {
+    width: 60px;
+    height: 60px;
+    background: $gradient-primary;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto $spacing-lg;
+
+    i {
+      font-size: 1.5rem;
+      color: $dark-text-primary;
+    }
   }
 }
 
-.feature-icon {
-  width: 60px;
-  height: 60px;
-  background: get-gradient(primary);
-  border-radius: 50%;
-  @include flex-center;
-  margin: 0 auto get-spacing(lg);
-
-  i {
-    font-size: 1.5rem;
-    color: white;
-  }
-}
-
-// Fact cards
 .fact-card {
-  background: get-color(dark-bg-secondary);
-  border: 1px solid get-color(dark-border-primary);
-  border-radius: get-spacing(md);
-  padding: get-spacing(xl);
+  background: $dark-bg-secondary;
+  border: 1px solid $dark-border-primary;
+  border-radius: $spacing-md;
+  padding: $spacing-xl;
   position: relative;
-  transition: all get-transition(normal);
+  transition: all $transition-normal;
   cursor: pointer;
 
   &:hover {
     transform: translateY(-5px);
-    box-shadow: get-shadow(dark-lg);
+    box-shadow: $shadow-dark-lg;
+  }
+
+  .fact-icon {
+    color: $brand-primary;
+    font-size: 1.5rem;
+    margin-bottom: $spacing-md;
+  }
+
+  .fact-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: $spacing-md;
+    color: $dark-text-primary;
+  }
+
+  .fact-number {
+    position: absolute;
+    top: $spacing-md;
+    right: $spacing-md;
+    background: $gradient-primary;
+    color: $dark-text-primary;
+    padding: 0.25rem 0.75rem;
+    border-radius: $spacing-md;
+    font-size: 0.8rem;
+    font-weight: $font-weight-medium;
   }
 }
 
-.fact-icon {
-  color: get-color(brand-primary);
-  font-size: 1.5rem;
-  margin-bottom: get-spacing(md);
-}
-
-.fact-text {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: get-spacing(md);
-  color: get-color(dark-text-primary);
-}
-
-.fact-number {
-  position: absolute;
-  top: get-spacing(md);
-  right: get-spacing(md);
-  background: get-gradient(primary);
-  color: white;
-  padding: 0.25rem 0.75rem;
-  border-radius: get-spacing(md);
-  font-size: 0.8rem;
-  font-weight: get-font(weight-medium);
-}
-
-// Example/API cards
-.example-card {
-  @include card-base;
-  padding: get-spacing(xl);
-  transition: all get-transition(normal);
-
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: get-shadow(dark-md);
-  }
-
-  h3 {
-    margin-bottom: get-spacing(md);
-    color: get-color(dark-text-primary);
-  }
-}
-
-// Statistics cards
 .stat {
   text-align: center;
-  padding: get-spacing(md);
-  background: get-color(dark-bg-secondary);
-  border-radius: get-spacing(md);
-  border: 1px solid get-color(dark-border-primary);
+  padding: $spacing-md;
+  background: $dark-bg-secondary;
+  border-radius: $spacing-md;
+  border: 1px solid $dark-border-primary;
   min-width: 80px;
-  transition: transform get-transition(fast);
+  transition: transform $transition-fast;
 
   &:hover {
     transform: translateY(-5px);
   }
-}
 
-.stat-number {
-  font-size: 2rem;
-  font-weight: get-font(weight-bold);
-  color: get-color(brand-primary);
-  margin-bottom: get-spacing(sm);
-}
+  .stat-number {
+    font-size: 2rem;
+    font-weight: $font-weight-bold;
+    color: $brand-primary;
+    margin-bottom: $spacing-sm;
+  }
 
-.stat-label {
-  font-size: 0.9rem;
-  color: get-color(dark-text-muted);
+  .stat-label {
+    font-size: 0.9rem;
+    color: $dark-text-muted;
+  }
 }

@@ -1,110 +1,114 @@
 @use '../abstracts/variables' as *;
-@use '../abstracts/mixins' as *;
-
-// Hero section
 .hero {
   position: relative;
   min-height: 100vh;
-  @include flex-center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 6rem 0 4rem;
   overflow: hidden;
 
-  @include tablet {
+  @media (max-width: $breakpoint-tablet) {
     padding: 5rem 0 3rem;
   }
-}
 
-.hero-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-}
-
-.hero-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: get-spacing(xxxl);
-  align-items: center;
-  width: 100%;
-
-  @include desktop {
-    grid-template-columns: 1fr;
-    gap: get-spacing(xxl);
-    text-align: center;
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
   }
-}
-
-.hero-text {
-  @include slide-in-left(1s);
-}
-
-.hero-title {
-  margin-bottom: get-spacing(lg);
-  line-height: 1.1;
-  text-align: center;
-}
-
-.hero-subtitle {
-  font-size: 1.25rem;
-  margin-bottom: get-spacing(xl);
-  color: get-color(dark-text-secondary);
-  text-align: center;
-}
-
-.hero-buttons {
-  @include flex-center;
-  gap: get-spacing(md);
-  flex-wrap: wrap;
-
-  @include tablet {
-    justify-content: center;
-  }
-
-  @include mobile {
-    flex-direction: column;
+  .hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-xxxl;
     align-items: center;
-  }
-}
+    width: 100%;
 
-.hero-visual {
-  @include flex-column-center;
-  gap: get-spacing(xl);
-  @include slide-in-right(1s);
-}
+    @media (max-width: $breakpoint-desktop) {
+      grid-template-columns: 1fr;
+      gap: $spacing-xxl;
+      text-align: center;
+    }
+    .hero-text {
+      animation: slideInLeft 1s ease both;
 
-.duck-illustration {
-  width: 200px;
-  height: 200px;
-  background: get-gradient(primary);
-  border-radius: 50%;
-  @include flex-center;
-  animation: bounce 2s ease-in-out infinite;
-  box-shadow: get-shadow(dark-xl);
+      .hero-title {
+        margin-bottom: $spacing-lg;
+        line-height: 1.1;
+        text-align: center;
+      }
 
-  i {
-    font-size: 5rem;
-    color: white;
-  }
-}
+      .hero-subtitle {
+        font-size: 1.25rem;
+        margin-bottom: $spacing-xl;
+        color: $dark-text-secondary;
+        text-align: center;
+      }
 
-.duck-image {
-  width: 100%;
-  height: auto;
-}
+      .hero-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: $spacing-md;
+        flex-wrap: wrap;
 
-.stats {
-  @include flex-center;
-  gap: get-spacing(xl);
+        @media (max-width: $breakpoint-tablet) {
+          justify-content: center;
+        }
 
-  @include desktop {
-    justify-content: center;
-  }
+        @media (max-width: $breakpoint-mobile) {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
+    .hero-visual {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: $spacing-xl;
+      animation: slideInRight 1s ease both;
 
-  @include mobile {
-    flex-direction: column;
-    align-items: center;
+      .duck-illustration {
+        width: 200px;
+        height: 200px;
+        background: $brand-primary-gradient;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: bounce 2s ease-in-out infinite;
+        box-shadow: $shadow-dark-xl;
+
+        i {
+          font-size: 5rem;
+          color: white;
+        }
+
+        .duck-image {
+          width: 100%;
+          height: auto;
+        }
+      }
+      .stats {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: $spacing-xl;
+
+        @media (max-width: $breakpoint-desktop) {
+          justify-content: center;
+        }
+
+        @media (max-width: $breakpoint-mobile) {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
   }
 }
