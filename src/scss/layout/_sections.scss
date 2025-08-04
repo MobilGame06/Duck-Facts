@@ -57,20 +57,6 @@ section {
   background: get-color(dark-bg-secondary);
 }
 
-.api-content {
-  display: grid;
-  gap: get-spacing(xxl);
-}
-
-.api-examples {
-  @include grid-auto-fit(400px);
-  gap: get-spacing(xl);
-  
-  @include tablet {
-    grid-template-columns: 1fr;
-  }
-}
-
 .example-response {
   margin-top: get-spacing(md);
 }

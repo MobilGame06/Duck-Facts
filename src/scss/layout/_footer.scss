@@ -61,7 +61,12 @@
   }
   
   a {
-    color: get-color(brand-primary);
+    color: get-color(dark-text-secondary);
     font-weight: get-font(weight-medium);
+    text-decoration: underline;
+
+    &:hover {
+      color: get-color(brand-primary);
+    }
   }
 }
