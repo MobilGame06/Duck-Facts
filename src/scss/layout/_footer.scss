@@ -1,5 +1,5 @@
-@use "../abstracts/variables" as *;
-@use "../abstracts/mixins" as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 
 // Footer
 .footer {
@@ -13,7 +13,7 @@
   gap: get-spacing(xl);
   align-items: center;
   text-align: center;
-  
+
   @include tablet {
     grid-template-columns: 1fr;
     gap: get-spacing(lg);
@@ -26,7 +26,7 @@
   font-size: 1.2rem;
   font-weight: get-font(weight-bold);
   color: get-color(dark-text-primary);
-  
+
   i {
     color: get-color(brand-primary);
     font-size: 1.5rem;
@@ -37,15 +37,15 @@
   @include flex-center;
   gap: get-spacing(xl);
   flex-wrap: wrap;
-  
+
   @include tablet {
     gap: get-spacing(md);
   }
-  
+
   a {
     color: get-color(dark-text-secondary);
     transition: color get-transition(fast);
-    
+
     &:hover {
       color: get-color(brand-primary);
     }
@@ -54,14 +54,19 @@
 
 .footer-social {
   color: get-color(dark-text-secondary);
-  
+
   i {
     color: get-color(error);
     margin: 0 0.25rem;
   }
-  
+
   a {
-    color: get-color(brand-primary);
+    color: get-color(dark-text-secondary);
     font-weight: get-font(weight-medium);
+    text-decoration: underline;
+
+    &:hover {
+      color: get-color(brand-primary);
+    }
   }
 }

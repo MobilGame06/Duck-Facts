@@ -33,6 +33,7 @@ src/
 ## Available Scripts
 
 ### Development
+
 ```bash
 npm run dev:frontend    # Start Vite development server (port 5173)
 npm run dev            # Start Express server (port 3000)
@@ -40,12 +41,14 @@ npm run dev:full       # Run both servers concurrently
 ```
 
 ### Production Build
+
 ```bash
 npm run build         # Build for production (outputs to public/dist/)
 npm run preview       # Preview production build
 ```
 
 ### Quality Assurance
+
 ```bash
 npm run lint          # Run ESLint
 npm run lint:fix      # Fix ESLint issues automatically
@@ -72,7 +75,7 @@ The stylesheets follow the **7-1 pattern**:
 .my-component {
   background: get-color(brand-primary);
   color: get-color(text-primary);
-  
+
   @include dark-mode {
     background: get-color(dark-bg-primary);
     color: get-color(dark-text-primary);
@@ -82,11 +85,11 @@ The stylesheets follow the **7-1 pattern**:
 // Using responsive mixins
 .responsive-component {
   padding: get-spacing(lg);
-  
+
   @include tablet {
     padding: get-spacing(md);
   }
-  
+
   @include mobile {
     padding: get-spacing(sm);
   }
@@ -98,7 +101,7 @@ The stylesheets follow the **7-1 pattern**:
 The project includes sophisticated GSAP animations:
 
 - **Hero animations**: Staggered entrance effects
-- **Scroll triggers**: Elements animate in as they enter viewport  
+- **Scroll triggers**: Elements animate in as they enter viewport
 - **Interactive animations**: Button hovers, fact loading
 - **Smooth scrolling**: Enhanced navigation experience
 - **Dark mode transitions**: Smooth theme switching
@@ -107,10 +110,11 @@ The project includes sophisticated GSAP animations:
 
 ```javascript
 // Scroll-triggered animation
-gsap.fromTo('.my-element', 
+gsap.fromTo(
+  '.my-element',
   {
     opacity: 0,
-    y: 30
+    y: 30,
   },
   {
     opacity: 1,
@@ -118,11 +122,11 @@ gsap.fromTo('.my-element',
     duration: 0.8,
     scrollTrigger: {
       trigger: '.my-element',
-      start: "top 80%",
-      toggleActions: "play none none reverse"
-    }
+      start: 'top 80%',
+      toggleActions: 'play none none reverse',
+    },
   }
-)
+);
 ```
 
 ## Responsive Design

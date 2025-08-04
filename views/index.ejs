@@ -195,55 +195,13 @@
           <%= currentLang==='de' ? 'Integriere unsere Duck Facts API in deine Anwendung' : 'Integrate our Duck Facts API into your application' %>
         </p>
       </div>
-
-      <div class="api-content">
-        <div class="api-examples">
-          <div class="example-card">
-            <h3>
-              <%= currentLang==='de' ? 'Zufälligen Fakt abrufen' : 'Get Random Fact' %>
-            </h3>
-            <div class="code-block">
-              <pre><code>GET /api/facts/random</code></pre>
-            </div>
-            <div class="example-response">
-              <strong>
-                <%= currentLang==='de' ? 'Antwort:' : 'Response:' %>
-              </strong>
-              <div class="code-block">
-                <pre><code>{
-  "fact": "Ducks have an incredible memory and can recognize faces.",
-  "id": 16,
-  "language": "en"
-}</code></pre>
-              </div>
-            </div>
-          </div>
-
-          <div class="example-card">
-            <h3>
-              <%= currentLang==='de' ? 'Spezifischen Fakt abrufen' : 'Get Specific Fact' %>
-            </h3>
-            <div class="code-block">
-              <pre><code>GET /api/facts/:id</code></pre>
-            </div>
-            <div class="example-response">
-              <strong>
-                <%= currentLang==='de' ? 'Beispiel:' : 'Example:' %>
-              </strong>
-              <div class="code-block">
-                <pre><code>GET /api/facts/42?lang=de</code></pre>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="api-actions">
-          <button class="btn btn-primary" id="tryApiBtn">
-            <i class="fas fa-play"></i>
-            <%= currentLang==='de' ? 'API Jetzt Testen' : 'Try API Now' %>
-          </button>
-        </div>
+      <div class="api-actions">
+        <button class="btn btn-primary" id="tryApiBtn">
+          <i class="fas fa-play"></i>
+          <%= currentLang==='de' ? 'API Jetzt Testen' : 'Try API Now' %>
+        </button>
       </div>
+    </div>
     </div>
   </section>
 

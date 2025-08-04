@@ -1,5 +1,5 @@
-@use "../abstracts/variables" as *;
-@use "../abstracts/mixins" as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
@@ -22,7 +22,7 @@
   padding: get-spacing(md) get-spacing(lg);
   max-width: get-breakpoint(wide);
   margin: 0 auto;
-  
+
   @include mobile {
     padding: 0.75rem get-spacing(md);
   }
@@ -34,7 +34,7 @@
   font-size: 1.5rem;
   font-weight: get-font(weight-bold);
   color: get-color(dark-text-primary);
-  
+
   i {
     color: get-color(brand-primary);
     font-size: 1.8rem;
@@ -44,7 +44,7 @@
 .nav-controls {
   @include flex-center;
   gap: get-spacing(md);
-  
+
   @include tablet {
     gap: get-spacing(sm);
   }
@@ -66,12 +66,12 @@
   cursor: pointer;
   transition: all get-transition(fast);
   font-size: 0.9rem;
-  
+
   &:hover {
     background: get-color(dark-bg-accent);
     transform: translateY(-1px);
   }
-  
+
   i {
     font-size: 0.8rem;
     transition: transform get-transition(fast);
@@ -93,7 +93,7 @@
   transition: all get-transition(fast);
   margin-top: get-spacing(sm);
   z-index: get-z(dropdown);
-  
+
   &.show {
     opacity: 1;
     visibility: visible;
@@ -107,16 +107,16 @@
   color: get-color(dark-text-primary);
   border-bottom: 1px solid get-color(dark-border-primary);
   transition: background-color get-transition(fast);
-  
+
   &:last-child {
     border-bottom: none;
   }
-  
+
   &:hover {
     background: get-color(dark-bg-secondary);
     color: get-color(brand-primary);
   }
-  
+
   &.active {
     background: get-color(brand-primary);
     color: white;
@@ -132,11 +132,11 @@
   border: none;
   cursor: pointer;
   padding: get-spacing(sm);
-  
+
   @include tablet {
     display: flex;
   }
-  
+
   span {
     width: 25px;
     height: 3px;

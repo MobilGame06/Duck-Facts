@@ -1,5 +1,5 @@
-@use "../abstracts/variables" as *;
-@use "../abstracts/mixins" as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
@@ -18,12 +18,12 @@
   white-space: nowrap;
   @include button-hover-lift;
   @include focus-ring;
-  
+
   @include tablet {
     padding: 0.6rem 1.2rem;
     font-size: 0.9rem;
   }
-  
+
   @include mobile {
     width: 100%;
     max-width: 250px;
@@ -55,7 +55,7 @@
 .btn-loading {
   position: relative;
   color: transparent !important;
-  
+
   &::after {
     content: '';
     position: absolute;

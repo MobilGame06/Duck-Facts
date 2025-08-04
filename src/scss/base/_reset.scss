@@ -1,5 +1,5 @@
-@use "../abstracts/variables" as *;
-@use "../abstracts/mixins" as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
@@ -22,7 +22,9 @@ body {
   line-height: 1.6;
   color: get-color(dark-text-primary);
   background-color: get-color(dark-bg-primary);
-  transition: background-color get-transition(normal), color get-transition(normal);
+  transition:
+    background-color get-transition(normal),
+    color get-transition(normal);
   overflow-x: hidden;
 }
 
@@ -31,7 +33,7 @@ body {
   max-width: get-breakpoint(wide);
   margin: 0 auto;
   padding: 0 get-spacing(lg);
-  
+
   @include mobile {
     padding: 0 get-spacing(md);
   }
@@ -42,7 +44,7 @@ a {
   color: get-color(brand-primary);
   text-decoration: none;
   transition: color get-transition(fast);
-  
+
   &:hover {
     color: get-color(brand-secondary);
   }
@@ -55,7 +57,8 @@ img {
 }
 
 // Lists
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
