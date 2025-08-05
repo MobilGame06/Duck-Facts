@@ -4,7 +4,7 @@
  */
 
 import '../scss/main.scss';
-import '@fontsource/inter';
+import '@fontsource/inter/latin.css';
 import '@fortawesome/fontawesome-free/css/all.css';
 
 import { gsap } from 'gsap';
