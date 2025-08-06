@@ -8,7 +8,6 @@ import '@fontsource/inter/latin-400.css'; // Latin characters
 import '@fontsource/inter/latin-ext-400.css'; // Latin Extended for German chars (ä, ö, ü)
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
 import { 
-  faKiwiBird, // Use kiwi bird as duck replacement
   faChevronDown, 
   faCode, 
   faRandom, 
@@ -27,7 +26,6 @@ import {
 
 // Add only the icons we need to the library
 library.add(
-  faKiwiBird, // Duck replacement
   faChevronDown, 
   faCode,
   faRandom,
