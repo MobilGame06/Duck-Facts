@@ -4,8 +4,46 @@
  */
 
 import '../scss/main.scss';
-import '@fontsource/inter';
-import '@fortawesome/fontawesome-free/css/all.css';
+import '@fontsource/inter/latin-400.css'; // Latin characters
+import '@fontsource/inter/latin-ext-400.css'; // Latin Extended for German chars (ä, ö, ü)
+import { library, dom } from '@fortawesome/fontawesome-svg-core';
+import { 
+  faChevronDown, 
+  faCode, 
+  faRandom, 
+  faGlobe, 
+  faRocket, 
+  faQuoteLeft, 
+  faRefresh, 
+  faPlay, 
+  faHeart, 
+  faSpinner, 
+  faCheckCircle, 
+  faExclamationCircle, 
+  faInfoCircle, 
+  faTimes 
+} from '@fortawesome/free-solid-svg-icons';
+
+// Add only the icons we need to the library
+library.add(
+  faChevronDown, 
+  faCode,
+  faRandom,
+  faGlobe,
+  faRocket,
+  faQuoteLeft,
+  faRefresh,
+  faPlay,
+  faHeart,
+  faSpinner,
+  faCheckCircle,
+  faExclamationCircle,
+  faInfoCircle,
+  faTimes
+);
+
+// Replace any existing <i> tags with SVGs  
+dom.watch();
 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
