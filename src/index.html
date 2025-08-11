@@ -6,24 +6,16 @@
     <title>Duck Facts - Development</title>
     <link rel="stylesheet" href="./scss/main.scss" />
   </head>
-  <body>
+  <body data-controller="animation notification">
     <div id="app">
-      <h1>Vite + SCSS + GSAP Development</h1>
+      <h1>Vite + SCSS + GSAP + Stimulus Development</h1>
       <p>
         This is for development only. The actual site runs through Express
-        server.
+        server with Stimulus controllers.
       </p>
-      <button class="btn btn-primary" onclick="testGSAP()">
-        Test GSAP Animation
-      </button>
       <div class="shape shape-1"></div>
     </div>
 
-    <script>
-      function testGSAP() {
-        console.log('GSAP test triggered');
-      }
-    </script>
     <script type="module" src="./js/main.js"></script>
   </body>
 </html>

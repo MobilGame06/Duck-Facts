@@ -68,33 +68,6 @@ The stylesheets follow the **7-1 pattern**:
 6. **themes/** - Theme variations (dark mode handled in components)
 7. **vendors/** - Third-party library styles
 
-### Using Variables and Mixins
-
-```scss
-// Using color variables
-.my-component {
-  background: get-color(brand-primary);
-  color: get-color(text-primary);
-
-  @include dark-mode {
-    background: get-color(dark-bg-primary);
-    color: get-color(dark-text-primary);
-  }
-}
-
-// Using responsive mixins
-.responsive-component {
-  padding: get-spacing(lg);
-
-  @include tablet {
-    padding: get-spacing(md);
-  }
-
-  @include mobile {
-    padding: get-spacing(sm);
-  }
-}
-```
 
 ## GSAP Animations
 
@@ -106,28 +79,6 @@ The project includes sophisticated GSAP animations:
 - **Smooth scrolling**: Enhanced navigation experience
 - **Dark mode transitions**: Smooth theme switching
 
-### Adding New Animations
-
-```javascript
-// Scroll-triggered animation
-gsap.fromTo(
-  '.my-element',
-  {
-    opacity: 0,
-    y: 30,
-  },
-  {
-    opacity: 1,
-    y: 0,
-    duration: 0.8,
-    scrollTrigger: {
-      trigger: '.my-element',
-      start: 'top 80%',
-      toggleActions: 'play none none reverse',
-    },
-  }
-);
-```
 
 ## Responsive Design
 
@@ -137,16 +88,6 @@ The design system includes:
 - **Flexible grids**: CSS Grid with auto-fit
 - **Fluid typography**: Clamp functions for responsive text
 - **Touch-friendly**: Optimized for mobile interaction
-
-## Dark Mode
-
-Dark mode is implemented with:
-
-- CSS custom properties for theme colors
-- JavaScript toggle functionality
-- Smooth GSAP transitions
-- Local storage persistence
-- System preference detection
 
 ## Performance
 
