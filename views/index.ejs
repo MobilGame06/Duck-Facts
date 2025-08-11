@@ -11,9 +11,9 @@
   <link rel="stylesheet" href="/dist/css/main.css" />
 </head>
 
-<body>
+<body data-controller="animation notification">
   <!-- Navigation -->
-  <nav class="navbar">
+  <nav class="navbar" data-controller="navigation">
     <div class="nav-container">
       <div class="nav-brand">
         <span>DuckFacts</span>
@@ -21,12 +21,15 @@
 
       <div class="nav-controls">
         <!-- Language Switcher -->
-        <div class="language-switcher">
-          <button class="lang-toggle" id="languageDropdown">
+        <div class="language-switcher" data-controller="language">
+          <button class="lang-toggle" 
+                  id="languageDropdown" 
+                  data-language-target="toggle"
+                  data-action="click->language#toggle">
             <%= currentLang==='de' ? '🇩🇪 DE' : '🇺🇸 EN' %>
-              <i class="fas fa-chevron-down"></i>
+              <i class="fas fa-chevron-down" data-language-target="chevron"></i>
           </button>
-          <div class="lang-dropdown" id="langDropdown">
+          <div class="lang-dropdown" id="langDropdown" data-language-target="dropdown">
             <a href="/?lang=en" class="lang-option <%= currentLang === 'en' ? 'active' : '' %>">
               🇺🇸 English
             </a>
@@ -61,7 +64,10 @@
         </p>
 
         <div class="hero-buttons">
-          <a href="#api" class="btn btn-primary">
+          <a href="#api" 
+             class="btn btn-primary" 
+             data-navigation-target="link"
+             data-action="click->navigation#smoothScroll">
             <i class="fas fa-code"></i>
             <%= currentLang==='de' ? 'API Testen' : 'Try API' %>
           </a>
@@ -143,7 +149,7 @@
   </section>
 
   <!-- Facts Showcase -->
-  <section class="facts-showcase" id="facts">
+  <section class="facts-showcase" id="facts" data-controller="facts">
     <div class="container">
       <div class="section-header">
         <h2>
@@ -154,7 +160,7 @@
         </p>
       </div>
 
-      <div class="facts-grid">
+      <div class="facts-grid" data-facts-target="grid">
         <% exampleFacts.forEach(function(fact, index) { %>
           <div class="fact-card" data-index="<%= index %>">
             <div class="fact-icon">
@@ -170,7 +176,10 @@
       </div>
 
       <div class="facts-actions">
-        <button class="btn btn-outline" id="loadMoreFacts">
+        <button class="btn btn-outline" 
+                id="loadMoreFacts" 
+                data-facts-target="loadButton"
+                data-action="click->facts#loadMore">
           <i class="fas fa-refresh"></i>
           <%= currentLang==='de' ? 'Mehr Fakten laden' : 'Load More Facts' %>
         </button>
@@ -179,7 +188,7 @@
   </section>
 
   <!-- API Documentation Section -->
-  <section class="api-section" id="api">
+  <section class="api-section" id="api" data-controller="api-tester">
     <div class="container">
       <div class="section-header">
         <h2>
@@ -190,7 +199,10 @@
         </p>
       </div>
       <div class="api-actions">
-        <button class="btn btn-primary" id="tryApiBtn">
+        <button class="btn btn-primary" 
+                id="tryApiBtn" 
+                data-api-tester-target="button"
+                data-action="click->api-tester#test">
           <i class="fas fa-play"></i>
           <%= currentLang==='de' ? 'API Jetzt Testen' : 'Try API Now' %>
         </button>
