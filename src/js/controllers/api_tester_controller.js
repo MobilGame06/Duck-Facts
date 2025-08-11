@@ -1,8 +1,3 @@
-/**
- * API Tester Controller
- * Handles API testing functionality
- */
-
 import { Controller } from '@hotwired/stimulus';
 
 export default class extends Controller {
@@ -16,13 +11,13 @@ export default class extends Controller {
   async test() {
     const button = this.buttonTarget;
     const originalText = button.innerHTML;
-    
+
     button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Testing...';
     button.disabled = true;
 
     // Add loading animation
     const animationController = this.application.getControllerForElementAndIdentifier(
-      document.querySelector('[data-controller*="animation"]'), 
+      document.querySelector('[data-controller*="animation"]'),
       'animation'
     );
     if (animationController) {

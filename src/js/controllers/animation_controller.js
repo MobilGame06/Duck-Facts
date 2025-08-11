@@ -1,8 +1,3 @@
-/**
- * Animation Controller
- * Handles GSAP animations, scroll triggers, and visual effects
- */
-
 import { Controller } from '@hotwired/stimulus';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -12,12 +7,11 @@ export default class extends Controller {
   static targets = ['hero', 'section', 'card', 'button', 'shape', 'duck'];
 
   connect() {
-    // Register GSAP plugins
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-    
+
     // Apply dark mode by default
     document.body.classList.add('dark-mode');
-    
+
     this.setupAnimations();
   }
 
