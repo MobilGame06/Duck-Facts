@@ -37,7 +37,6 @@ src/
 ```bash
 npm run dev:frontend    # Start Vite development server (port 5173)
 npm run dev            # Start Express server (port 3000)
-npm run dev:full       # Run both servers concurrently
 ```
 
 ### Production Build
@@ -68,7 +67,6 @@ The stylesheets follow the **7-1 pattern**:
 6. **themes/** - Theme variations (dark mode handled in components)
 7. **vendors/** - Third-party library styles
 
-
 ## GSAP Animations
 
 The project includes sophisticated GSAP animations:
@@ -78,7 +76,6 @@ The project includes sophisticated GSAP animations:
 - **Interactive animations**: Button hovers, fact loading
 - **Smooth scrolling**: Enhanced navigation experience
 - **Dark mode transitions**: Smooth theme switching
-
 
 ## Responsive Design
 
