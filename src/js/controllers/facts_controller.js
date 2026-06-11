@@ -20,6 +20,11 @@ export default class extends Controller {
   async loadRandomFacts() {
     const factsGrid = this.gridTarget;
     const loadButton = this.loadButtonTarget;
+    const initialGridHeight = factsGrid.offsetHeight;
+
+    if (initialGridHeight > 0) {
+      factsGrid.style.minHeight = `${initialGridHeight}px`;
+    }
 
     // Show loading state
     const originalText = loadButton.innerHTML;
@@ -75,6 +80,8 @@ export default class extends Controller {
       console.error('Error loading facts:', error);
       this.showNotification('Error loading facts. Please try again.', 'error');
     } finally {
+      factsGrid.style.minHeight = '';
+
       // Reset button
       loadButton.innerHTML = originalText;
       loadButton.disabled = false;
