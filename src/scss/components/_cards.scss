@@ -51,6 +51,7 @@
   position: relative;
   transition: all $transition-normal;
   cursor: pointer;
+  min-height: 220px;
 
   &:hover {
     transform: translateY(-5px);

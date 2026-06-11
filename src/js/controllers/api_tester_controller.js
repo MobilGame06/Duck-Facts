@@ -5,15 +5,23 @@ export default class extends Controller {
 
   connect() {
     this.currentLanguage = this.getCurrentLanguage();
+    this.cooldownMs = 2000;
+    this.cooldownUntil = 0;
+    this.cooldownTimeout = null;
   }
 
   // Action triggered when "Try API Now" button is clicked
   async test() {
+    if (Date.now() < this.cooldownUntil) {
+      return;
+    }
+
     const button = this.buttonTarget;
     const originalText = button.innerHTML;
 
     button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Testing...';
     button.disabled = true;
+    this.cooldownUntil = Date.now() + this.cooldownMs;
 
     // Add loading animation
     const animationController = this.application.getControllerForElementAndIdentifier(
@@ -41,8 +49,15 @@ export default class extends Controller {
       console.error('API test error:', error);
       this.showNotification('API test failed. Please try again.', 'error');
     } finally {
-      button.innerHTML = originalText;
-      button.disabled = false;
+      if (this.cooldownTimeout) {
+        clearTimeout(this.cooldownTimeout);
+      }
+
+      this.cooldownTimeout = setTimeout(() => {
+        button.innerHTML = originalText;
+        button.disabled = false;
+        this.cooldownTimeout = null;
+      }, Math.max(this.cooldownUntil - Date.now(), 0));
     }
   }
 
@@ -57,5 +72,12 @@ export default class extends Controller {
       detail: { message, type }
     });
     document.dispatchEvent(notificationEvent);
+  }
+
+  disconnect() {
+    if (this.cooldownTimeout) {
+      clearTimeout(this.cooldownTimeout);
+      this.cooldownTimeout = null;
+    }
   }
 }
