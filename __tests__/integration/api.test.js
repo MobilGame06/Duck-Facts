@@ -1,5 +1,6 @@
 const request = require('supertest');
 const app = require('../../app');
+const facts = require('../../data/facts.json');
 
 describe('API Integration Tests', () => {
   describe('GET /api/facts/random', () => {
@@ -49,7 +50,7 @@ describe('API Integration Tests', () => {
         facts.add(response.body.fact);
       }
 
-      // With 171 facts, getting at least 2 different ones in 10 calls is very likely
+      // With hundreds of facts, getting at least 2 different ones in 10 calls is very likely
       expect(facts.size).toBeGreaterThan(1);
     });
 
@@ -111,10 +112,13 @@ describe('API Integration Tests', () => {
       );
     });
 
-    it('should handle boundary conditions - last fact (id=170)', async () => {
-      const response = await request(app).get('/api/facts/170').expect(200);
+    it('should handle boundary conditions - last fact', async () => {
+      const lastFactId = facts.en.length - 1;
+      const response = await request(app)
+        .get(`/api/facts/${lastFactId}`)
+        .expect(200);
 
-      expect(response.body.id).toBe(170);
+      expect(response.body.id).toBe(lastFactId);
       expect(response.body.lang).toBe('en');
       expect(response.body.fact).toBeTruthy();
     });

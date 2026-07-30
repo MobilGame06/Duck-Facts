@@ -56,7 +56,7 @@ router.get('/facts/random', async (req, res, _next) => {
  * /api/facts/{id}:
  *   get:
  *     summary: Get a specific duck fact by ID
- *     description: Returns a specific duck fact identified by its unique ID. The ID must be a valid integer within the available range (0-170).
+ *     description: Returns a specific duck fact identified by its unique ID. The ID must be a valid integer within the available range for the selected language.
  *     tags: [facts]
  *     parameters:
  *       - $ref: '#/components/parameters/FactId'
