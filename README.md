@@ -96,7 +96,7 @@ GET /api/facts/{id}
 
 **Path Parameters:**
 
-- `id` (required): Integer ID of the fact (0-170)
+- `id` (required): Integer ID of the fact (0 to current maximum index for the selected language)
 
 **Query Parameters:**
 
