@@ -9,7 +9,7 @@ describe('facts data integrity', () => {
     expect(facts.en.length).toBe(facts.de.length);
   });
 
-  it('contains at least 100 newly added bilingual facts', () => {
+  it('contains at least 271 bilingual facts per language', () => {
     expect(facts.en.length).toBeGreaterThanOrEqual(271);
     expect(facts.de.length).toBeGreaterThanOrEqual(271);
   });
