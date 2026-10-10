@@ -1,4 +1,11 @@
 const { promises: fs } = require('fs');
+const path = require('path');
+
+const factsDirectory = path.join(__dirname, '../data/facts');
+const supportedLanguages = new Set(['en', 'de']);
+const factsCache = new Map();
+
+const getFactLanguage = (lang) => (supportedLanguages.has(lang) ? lang : 'en');
 
 /**
  * Load and parse JSON data from a file
@@ -19,27 +26,65 @@ const loadData = async (filename) => {
 };
 
 /**
- * Load facts for a specific language from the multilingual facts file
- * @param {string} filename - Path to the JSON file
- * @param {string} lang - Language code (default: 'en')
- * @returns {Promise<Array>} Array of facts in the specified language
+ * Cache validated records and their ID index once per language and process.
+ * Pending reads are shared; failed reads are evicted so requests can retry.
  */
-const loadFactsByLanguage = async (filename, lang = 'en') => {
-  try {
-    const data = await loadData(filename);
-    const facts = data[lang];
-    if (!facts) {
-      // Fall back to English if requested language not found
-      return data['en'] || [];
-    }
-    return facts;
-  } catch (error) {
-    // Only log errors in non-test environments
-    if (process.env.NODE_ENV !== 'test') {
-      console.error(`Error loading facts for language ${lang}:`, error);
-    }
-    throw error;
+const loadFactsData = (lang) => {
+  const language = getFactLanguage(lang);
+
+  if (!factsCache.has(language)) {
+    const filename = path.join(factsDirectory, `${language}.json`);
+    const pendingFacts = loadData(filename)
+      .then((facts) => {
+        if (!Array.isArray(facts) || facts.length === 0) {
+          throw new Error(`Invalid facts data for language ${language}`);
+        }
+
+        const byId = new Map();
+        for (const record of facts) {
+          if (
+            !record ||
+            !Number.isSafeInteger(record.id) ||
+            record.id < 0 ||
+            byId.has(record.id) ||
+            typeof record.fact !== 'string' ||
+            !record.fact.trim()
+          ) {
+            throw new Error(`Invalid facts data for language ${language}`);
+          }
+
+          Object.freeze(record);
+          byId.set(record.id, record);
+        }
+
+        return { facts: Object.freeze(facts), byId };
+      })
+      .catch((error) => {
+        factsCache.delete(language);
+        throw error;
+      });
+
+    factsCache.set(language, pendingFacts);
   }
+
+  return factsCache.get(language);
 };
 
-module.exports = { loadData, loadFactsByLanguage };
+/** @returns {Promise<ReadonlyArray<{id: number, fact: string}>>} */
+const loadFactsByLanguage = async (lang = 'en') => {
+  const data = await loadFactsData(lang);
+  return data.facts;
+};
+
+/** Look up the explicit ID in constant time, regardless of file order. */
+const loadFactById = async (id, lang = 'en') => {
+  const data = await loadFactsData(lang);
+  return data.byId.get(id);
+};
+
+module.exports = {
+  loadData,
+  loadFactsByLanguage,
+  loadFactById,
+  getFactLanguage,
+};

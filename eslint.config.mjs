@@ -18,7 +18,7 @@ export default [
     },
   },
   {
-    files: ['src/**/*.js', 'vite.config.js'],
+    files: ['src/**/*.js'],
     languageOptions: {
       globals: {
         ...globals.browser,

@@ -1,6 +1,9 @@
 const request = require('supertest');
 const app = require('../../app');
-const facts = require('../../data/facts.json');
+const facts = {
+  en: require('../../data/facts/en.json'),
+  de: require('../../data/facts/de.json'),
+};
 
 describe('API Integration Tests', () => {
   describe('GET /api/facts/random', () => {
@@ -15,6 +18,10 @@ describe('API Integration Tests', () => {
       expect(response.body.id).toBeGreaterThanOrEqual(0);
       expect(response.body.fact.length).toBeGreaterThan(0);
       expect(response.body.lang).toBe('en'); // default language
+      expect(facts.en).toContainEqual({
+        id: response.body.id,
+        fact: response.body.fact,
+      });
     });
 
     it('should return German facts when lang=de is specified', async () => {
@@ -28,6 +35,10 @@ describe('API Integration Tests', () => {
       expect(response.body.lang).toBe('de');
       expect(typeof response.body.fact).toBe('string');
       expect(response.body.fact.length).toBeGreaterThan(0);
+      expect(facts.de).toContainEqual({
+        id: response.body.id,
+        fact: response.body.fact,
+      });
     });
 
     it('should default to English for invalid language codes', async () => {
@@ -113,7 +124,7 @@ describe('API Integration Tests', () => {
     });
 
     it('should handle boundary conditions - last fact', async () => {
-      const lastFactId = facts.en.length - 1;
+      const lastFactId = Math.max(...facts.en.map((record) => record.id));
       const response = await request(app)
         .get(`/api/facts/${lastFactId}`)
         .expect(200);
@@ -122,6 +133,19 @@ describe('API Integration Tests', () => {
       expect(response.body.lang).toBe('en');
       expect(response.body.fact).toBeTruthy();
     });
+
+    it.each(['en', 'de'])(
+      'serves the first and last added facts in %s',
+      async (lang) => {
+        for (const id of [271, 470, 471, 499]) {
+          const response = await request(app)
+            .get(`/api/facts/${id}?lang=${lang}`)
+            .expect(200);
+          const record = facts[lang].find((fact) => fact.id === id);
+          expect(response.body).toEqual({ ...record, lang });
+        }
+      }
+    );
 
     it('should return 404 for out of range ID (too high)', async () => {
       const response = await request(app).get('/api/facts/999').expect(404);
@@ -170,5 +194,16 @@ describe('API Integration Tests', () => {
 
       expect(response.text).toContain('Not Found');
     });
+  });
+
+  describe('GET /', () => {
+    it.each(['en', 'de'])(
+      'renders fact text from the %s records',
+      async (lang) => {
+        const response = await request(app).get(`/?lang=${lang}`).expect(200);
+        expect(response.text).toContain(facts[lang][2].fact);
+        expect(response.text).not.toContain('[object Object]');
+      }
+    );
   });
 });

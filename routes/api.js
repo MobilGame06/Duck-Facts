@@ -1,6 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const { loadFactsByLanguage } = require('../utils/dataLoader');
+const {
+  loadFactsByLanguage,
+  loadFactById,
+  getFactLanguage,
+} = require('../utils/dataLoader');
 const { validateFactId } = require('../middleware/validation');
 
 /**
@@ -35,15 +39,13 @@ const { validateFactId } = require('../middleware/validation');
  */
 router.get('/facts/random', async (req, res, _next) => {
   try {
-    const lang =
-      req.query.lang && ['en', 'de'].includes(req.query.lang)
-        ? req.query.lang
-        : 'en';
-    const data = await loadFactsByLanguage('./data/facts.json', lang);
+    const lang = getFactLanguage(req.query.lang);
+    const data = await loadFactsByLanguage(lang);
     const randomIndex = Math.floor(Math.random() * data.length);
+    const record = data[randomIndex];
     res.json({
-      id: randomIndex,
-      fact: data[randomIndex],
+      id: record.id,
+      fact: record.fact,
       lang: lang,
     });
   } catch {
@@ -112,17 +114,14 @@ router.get('/facts/:id', validateFactId, async (req, res, _next) => {
   const id = req.params.id; // Already validated and converted to integer by middleware
 
   try {
-    const lang =
-      req.query.lang && ['en', 'de'].includes(req.query.lang)
-        ? req.query.lang
-        : 'en';
-    const data = await loadFactsByLanguage('./data/facts.json', lang);
-    if (id < 0 || id >= data.length) {
+    const lang = getFactLanguage(req.query.lang);
+    const record = await loadFactById(id, lang);
+    if (!record) {
       return res.status(404).json({ error: 'Fact not found' });
     }
     res.json({
-      id: id,
-      fact: data[id],
+      id: record.id,
+      fact: record.fact,
       lang: lang,
     });
   } catch {

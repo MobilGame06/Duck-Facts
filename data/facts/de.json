@@ -1,0 +1,2002 @@
+[
+  {
+    "id": 0,
+    "fact": "Enten haben wasserdichte Federn dank einer Öldrüse in der Nähe ihrer Schwänze."
+  },
+  {
+    "id": 1,
+    "fact": "Eine Gruppe von Enten an Land nennt man 'Watscheln', aber im Flug ist es ein 'Schwarm'."
+  },
+  {
+    "id": 2,
+    "fact": "Männliche Enten werden Erpel genannt; weibliche sind einfach Enten."
+  },
+  {
+    "id": 3,
+    "fact": "Enten schlafen mit einem offenen Auge, um wachsam gegenüber Raubtieren zu bleiben."
+  },
+  {
+    "id": 4,
+    "fact": "Einige Enten können mit Geschwindigkeiten von über 100 km/h fliegen."
+  },
+  {
+    "id": 5,
+    "fact": "Die älteste Ente der Welt wurde 20 Jahre alt."
+  },
+  {
+    "id": 6,
+    "fact": "Enten haben drei Augenlider und können Farben sehen."
+  },
+  {
+    "id": 7,
+    "fact": "Das Quaken einer Ente hat ein Echo, entgegen dem Mythos."
+  },
+  {
+    "id": 8,
+    "fact": "Enten können sowohl in Süß- als auch in Salzwasserumgebungen leben."
+  },
+  {
+    "id": 9,
+    "fact": "Der Schnabel einer Ente enthält winzige Platten namens Lamellen, die beim Filtern von Nahrung helfen."
+  },
+  {
+    "id": 10,
+    "fact": "Enten können gehen, schwimmen und fliegen – die dreifache Bedrohung der Vogelwelt!"
+  },
+  {
+    "id": 11,
+    "fact": "Entenküken werden Entchen genannt und können innerhalb von Stunden nach dem Schlüpfen schwimmen."
+  },
+  {
+    "id": 12,
+    "fact": "Holzenten nisten in Bäumen, und ihre Küken springen aus Höhen von bis zu 15 Metern!"
+  },
+  {
+    "id": 13,
+    "fact": "Enten können ihre Köpfe um 180 Grad drehen, um sich zu putzen."
+  },
+  {
+    "id": 14,
+    "fact": "Einige Enten wandern jedes Jahr Tausende von Kilometern."
+  },
+  {
+    "id": 15,
+    "fact": "Männliche Enten verlieren oft ihr helles Gefieder nach der Paarungszeit."
+  },
+  {
+    "id": 16,
+    "fact": "Enten haben ein unglaubliches Gedächtnis und können Gesichter erkennen."
+  },
+  {
+    "id": 17,
+    "fact": "Die Füße einer Ente haben keine Nerven oder Blutgefäße, daher frieren sie nicht."
+  },
+  {
+    "id": 18,
+    "fact": "Enten werden seit über 4.000 Jahren domestiziert."
+  },
+  {
+    "id": 19,
+    "fact": "Es gibt über 120 verschiedene Entenarten weltweit."
+  },
+  {
+    "id": 20,
+    "fact": "Enten kommunizieren mit einer Vielzahl von Geräuschen, nicht nur mit Quaken."
+  },
+  {
+    "id": 21,
+    "fact": "Mandarinenten gelten in Asien als Symbol für Liebe und Treue."
+  },
+  {
+    "id": 22,
+    "fact": "Enten können beim Schwimmen auf dem Wasser schlafen."
+  },
+  {
+    "id": 23,
+    "fact": "Einige Tauchenten können über eine Minute unter Wasser bleiben."
+  },
+  {
+    "id": 24,
+    "fact": "Die Spießente kann während der Migration über 800 Kilometer an einem einzigen Tag zurücklegen."
+  },
+  {
+    "id": 25,
+    "fact": "Der Schnabel einer Ente ist so empfindlich wie eine menschliche Fingerspitze."
+  },
+  {
+    "id": 26,
+    "fact": "Nicht alle Enten quaken – einige pfeifen, grunzen oder quietschen."
+  },
+  {
+    "id": 27,
+    "fact": "Moschusenten zischen statt zu quaken."
+  },
+  {
+    "id": 28,
+    "fact": "Enten sind seit Jahrhunderten in Kunst und Mythologie zu finden."
+  },
+  {
+    "id": 29,
+    "fact": "Donald Duck wurde in Finnland (Gerücht!) verboten, weil er keine Hose trug."
+  },
+  {
+    "id": 30,
+    "fact": "Enten nicken mit dem Kopf, wenn sie glücklich sind – wie gefiederte Tänzer."
+  },
+  {
+    "id": 31,
+    "fact": "Stockenten sind die Vorfahren der meisten domestizierten Entenrassen."
+  },
+  {
+    "id": 32,
+    "fact": "Enten spielen genauso gerne in Pfützen wie in Teichen."
+  },
+  {
+    "id": 33,
+    "fact": "Enten können mit der Hälfte ihres Gehirns wach schlafen – das ultimative Multitasking!"
+  },
+  {
+    "id": 34,
+    "fact": "Einige Enten legen bis zu 12 Eier auf einmal."
+  },
+  {
+    "id": 35,
+    "fact": "Entenküken prägen sich auf das erste sich bewegende Objekt, das sie sehen – auch wenn es ein Mensch ist!"
+  },
+  {
+    "id": 36,
+    "fact": "Enten können regionale Akzente haben, je nachdem, wo sie leben."
+  },
+  {
+    "id": 37,
+    "fact": "Die Federn einer Ente sind so wasserdicht, dass selbst nach dem Tauchen die Daunen trocken bleiben."
+  },
+  {
+    "id": 38,
+    "fact": "Einige Enten können ihre Köpfe fast vollständig wie Eulen drehen."
+  },
+  {
+    "id": 39,
+    "fact": "Enten täuschen manchmal Verletzungen vor, um Raubtiere von ihren Nestern wegzulocken."
+  },
+  {
+    "id": 40,
+    "fact": "Enten sind ausgezeichnet im Teamschwimmen – sie nutzen den Windschatten wie Radfahrer!"
+  },
+  {
+    "id": 41,
+    "fact": "Entenküken können den Ruf ihrer Mutter erkennen, noch bevor sie schlüpfen."
+  },
+  {
+    "id": 42,
+    "fact": "In China werden Enten manchmal anstelle von Pestiziden eingesetzt – sie fressen die Käfer!"
+  },
+  {
+    "id": 43,
+    "fact": "Einige Enten, wie die Kragenente, nisten in der Nähe von Wasserfällen."
+  },
+  {
+    "id": 44,
+    "fact": "Das Herz einer Ente schlägt etwa 190 Mal pro Minute."
+  },
+  {
+    "id": 45,
+    "fact": "Die Augen einer Ente sind an den Seiten ihres Kopfes platziert und geben ihr fast 340° Sicht."
+  },
+  {
+    "id": 46,
+    "fact": "Enten kauen nicht – sie schlucken ihr Essen ganz oder zerdrücken es mit kleinen Steinen in ihren Muskelmägen."
+  },
+  {
+    "id": 47,
+    "fact": "Die Federn eines männlichen Waldenterichs sind so bunt, dass sie gemalt aussehen."
+  },
+  {
+    "id": 48,
+    "fact": "Enten haben einen hochentwickelten Tastsinn in ihren Schnäbeln."
+  },
+  {
+    "id": 49,
+    "fact": "Enten können an 'Engelsflügel' leiden, wenn sie zu viele Kohlenhydrate gefüttert bekommen, was Flügeldeformationen verursacht."
+  },
+  {
+    "id": 50,
+    "fact": "Im alten Rom wurden Enten als Haustiere gehalten und auch bei Banketten serviert."
+  },
+  {
+    "id": 51,
+    "fact": "Die Rosaohrenente Australiens hat eine spiralförmige Zunge, mit der sie Plankton aufsaugt."
+  },
+  {
+    "id": 52,
+    "fact": "Enten paaren sich oft für eine Saison, aber nicht immer fürs Leben."
+  },
+  {
+    "id": 53,
+    "fact": "Die 'lachende Ente' (Moschusente) macht Geräusche, die wie menschliches Kichern klingen."
+  },
+  {
+    "id": 54,
+    "fact": "Einige Enten täuschen Verletzungen vor (wie Hinken), um Raubtiere von ihren Nestern abzulenken."
+  },
+  {
+    "id": 55,
+    "fact": "Die Quietscheente wurde 2013 in die Toy Hall of Fame aufgenommen."
+  },
+  {
+    "id": 56,
+    "fact": "Entenküken bekommen in nur wenigen Wochen Federn und beginnen im Alter von 6-8 Wochen zu fliegen."
+  },
+  {
+    "id": 57,
+    "fact": "Die Federn einer Ente sind so geschichtet, dass sie helfen, warme Luft einzuschließen und den Körper zu isolieren."
+  },
+  {
+    "id": 58,
+    "fact": "Die südamerikanische Sturzbach-Ente lebt in schnell fließenden Bergbächen."
+  },
+  {
+    "id": 59,
+    "fact": "Enten wurden ins All geschickt – irgendwie. Sie waren Testtiere in frühen Flügen!"
+  },
+  {
+    "id": 60,
+    "fact": "Einige Enten können ihre Köpfe vollständig nach hinten drehen, um ihre Rückenfedern zu putzen."
+  },
+  {
+    "id": 61,
+    "fact": "In einigen Kulturen sind Enten ein Zeichen für Wohlstand und Glück."
+  },
+  {
+    "id": 62,
+    "fact": "Der Begriff 'sitting duck' (leichtes Ziel) stammt davon, wie einfach es ist, sie während der Ruhe zu jagen."
+  },
+  {
+    "id": 63,
+    "fact": "Enten können auf allen Kontinenten außer der Antarktis leben."
+  },
+  {
+    "id": 64,
+    "fact": "Enten lieben sauberes Wasser und baden mehrmals täglich, wenn sie die Chance haben."
+  },
+  {
+    "id": 65,
+    "fact": "Die Schwimmhäute einer Ente helfen ihr beim Schwimmen, aber sie kann auch gut an Land gehen."
+  },
+  {
+    "id": 66,
+    "fact": "Enten können sich an über 100 verschiedene Objekte und Orte erinnern."
+  },
+  {
+    "id": 67,
+    "fact": "Einige Enten tauchen fast vertikal wie Torpedos, um Beute zu fangen."
+  },
+  {
+    "id": 68,
+    "fact": "Die Stimme einer Ente kann über offenes Wasser bis zu einen halben Kilometer weit getragen werden."
+  },
+  {
+    "id": 69,
+    "fact": "Wenn sie erschreckt sind, erstarren einige Enten völlig – eine Form der 'Entenpanik'."
+  },
+  {
+    "id": 70,
+    "fact": "Enten blinzeln seitlich – mit einem durchsichtigen dritten Augenlid namens Nickhaut."
+  },
+  {
+    "id": 71,
+    "fact": "Einige Entenarten bauen ihre Nester in verlassenen Eichhörnchen- oder Eulennestern."
+  },
+  {
+    "id": 72,
+    "fact": "In der niederländischen Folklore symbolisieren Enten emotionale Widerstandsfähigkeit und Ruhe unter Druck."
+  },
+  {
+    "id": 73,
+    "fact": "Eine 'Entenkette' – die Einzelreihe von Babys, die der Mutter folgen – wird Brutparade genannt."
+  },
+  {
+    "id": 74,
+    "fact": "Enten täuschen manchmal lautes Quaken vor, um Raubtiere abzulenken, während Entenküken entkommen."
+  },
+  {
+    "id": 75,
+    "fact": "Die Indische Laufente steht aufrecht und kann wie ein Pinguin sprinten."
+  },
+  {
+    "id": 76,
+    "fact": "Enten können links- oder rechtshändig sein – sie haben eine bevorzugte Seite zum Wenden."
+  },
+  {
+    "id": 77,
+    "fact": "Die alten Ägypter glaubten, dass Enten Fruchtbarkeit und neues Leben brachten."
+  },
+  {
+    "id": 78,
+    "fact": "Beim Wettkampf-Entenhüten (ja, das gibt es wirklich) führen Border Collies Enten durch Hindernisparcours."
+  },
+  {
+    "id": 79,
+    "fact": "Einige Enten adoptieren verwaiste Entenküken – sogar von anderen Arten."
+  },
+  {
+    "id": 80,
+    "fact": "Eine Ente kann bis zu 200 Mücken pro Tag fressen – quakbetriebene Schädlingsbekämpfung!"
+  },
+  {
+    "id": 81,
+    "fact": "Das älteste Entenfossil stammt aus der Zeit vor 40 Millionen Jahren, aus dem Eozän."
+  },
+  {
+    "id": 82,
+    "fact": "Enten haben spezialisierte Salzdrüsen über ihren Augen, die Salz aus Meerwasser filtern."
+  },
+  {
+    "id": 83,
+    "fact": "Die Riesentafelente kann bis zu 9 Meter tief tauchen, um Nahrung zu finden."
+  },
+  {
+    "id": 84,
+    "fact": "Enteneier brauchen 28 Tage zum Ausbrüten, außer Moschusenten, die 35 Tage brauchen."
+  },
+  {
+    "id": 85,
+    "fact": "Die Blauflügel-Krickente kann während der Migration in Höhen über 7.000 Metern fliegen."
+  },
+  {
+    "id": 86,
+    "fact": "Der muskulöse Muskelmagen einer Ente kann einen Druck von bis zu 28 kg pro Quadratzentimeter ausüben."
+  },
+  {
+    "id": 87,
+    "fact": "Die Labrador-Ente starb 1878 aus und war das erste dokumentierte nordamerikanische Wasservogel-Aussterben."
+  },
+  {
+    "id": 88,
+    "fact": "Enten können in Gefangenschaft bis zu 29 Jahre leben, obwohl wilde Enten normalerweise 5-10 Jahre leben."
+  },
+  {
+    "id": 89,
+    "fact": "Der Schnabel des männlichen Schwarzkopf-Ruderente wird während der Brutzeit leuchtend blau."
+  },
+  {
+    "id": 90,
+    "fact": "Enten wurden im Krieg eingesetzt – sie wurden trainiert, U-Boote während des 2. Weltkriegs zu entdecken."
+  },
+  {
+    "id": 91,
+    "fact": "Die Madagaskar-Moorente galt als ausgestorben, bis sie 2006 wiederentdeckt wurde."
+  },
+  {
+    "id": 92,
+    "fact": "Enten können Magnetfelder durch spezielle Proteine in ihren Augen namens Cryptochrome sehen."
+  },
+  {
+    "id": 93,
+    "fact": "Die Schellente macht beim Flug ein pfeifendes Geräusch mit ihren Flügeln."
+  },
+  {
+    "id": 94,
+    "fact": "Entenfedern wurden früher zum Stopfen von Kissen und Matratzen verwendet, bevor es synthetische Alternativen gab."
+  },
+  {
+    "id": 95,
+    "fact": "Die Ringschnabelente hat eigentlich keinen sichtbaren Ring um den Hals bei den meisten Lichtverhältnissen."
+  },
+  {
+    "id": 96,
+    "fact": "Enten wurden unabhängig von mehreren Zivilisationen domestiziert, einschließlich dem alten Ägypten und China."
+  },
+  {
+    "id": 97,
+    "fact": "Die Daunen der Eiderente sind so isolierend, dass indigene Völker sie unter extremen arktischen Bedingungen verwendeten."
+  },
+  {
+    "id": 98,
+    "fact": "Enten können menschliche Emotionen erkennen und reagieren unterschiedlich auf fröhliche versus wütende Gesichter."
+  },
+  {
+    "id": 99,
+    "fact": "Die Dampferente erhielt ihren Namen, weil ihr Flügelschlagen auf dem Wasser einem Raddampfer ähnelt."
+  },
+  {
+    "id": 100,
+    "fact": "Enten haben hohle Knochen wie andere Vögel, was sie für den Flug leichter macht."
+  },
+  {
+    "id": 101,
+    "fact": "Die Pfeifente kann auf Bäumen sitzen und nisten wie Holzenten."
+  },
+  {
+    "id": 102,
+    "fact": "Entenlockvögel wurden erstmals von amerikanischen Ureinwohnern vor über 2.000 Jahren verwendet."
+  },
+  {
+    "id": 103,
+    "fact": "Die Brandseeschwalbe ernährt sich fast ausschließlich von Weichtieren und Krebstieren."
+  },
+  {
+    "id": 104,
+    "fact": "Enten haben eine spezielle Zehe namens Hallux, die ihnen hilft, Äste zu greifen, wenn sie sitzen."
+  },
+  {
+    "id": 105,
+    "fact": "Die Höckerente Afrikas kann bis zu 4,5 kg wiegen und ist damit eine der schwersten Enten."
+  },
+  {
+    "id": 106,
+    "fact": "Enten mausern ihre Federn in einer bestimmten Reihenfolge, um ihre Flugfähigkeit zu erhalten."
+  },
+  {
+    "id": 107,
+    "fact": "Die Rosenkopfente Indiens und Myanmars ist möglicherweise ausgestorben – die letzte bestätigte Sichtung war 1949."
+  },
+  {
+    "id": 108,
+    "fact": "Enten sind seit über 1.000 Jahren Symbole des Wohlstands im Feng Shui."
+  },
+  {
+    "id": 109,
+    "fact": "Die Büffelkopfente ist eine der kleinsten Tauchenten Nordamerikas."
+  },
+  {
+    "id": 110,
+    "fact": "Enten können sich mit Vogelgrippe infizieren, aber viele Arten zeigen natürliche Resistenz."
+  },
+  {
+    "id": 111,
+    "fact": "Die Brandgans nistet in Kaninchenbau und Baumhöhlen."
+  },
+  {
+    "id": 112,
+    "fact": "Entenschnäbel wachsen ihr ganzes Leben lang weiter und nutzen sich durch ständigen Gebrauch ab."
+  },
+  {
+    "id": 113,
+    "fact": "Der Mittelsäger hält den Geschwindigkeitsrekord für Wasservögel mit 130 km/h."
+  },
+  {
+    "id": 114,
+    "fact": "Enten wurden auf Währungen abgebildet – der kanadische Dollar zeigte einst den Eistaucher."
+  },
+  {
+    "id": 115,
+    "fact": "Die Holzente war 1900 aufgrund der Überjagd fast ausgestorben, hat aber eine bemerkenswerte Erholung gemacht."
+  },
+  {
+    "id": 116,
+    "fact": "Enten können an Bleivergiftung leiden, wenn sie verbrauchte Schrotpatronen aufnehmen."
+  },
+  {
+    "id": 117,
+    "fact": "Die Paradies-Brandgans Neuseelands paart sich fürs Leben und beide Eltern ziehen gemeinsam die Jungen auf."
+  },
+  {
+    "id": 118,
+    "fact": "Die Navigation der Enten während der Migration beruht auf Sternmustern, Sonnenstand und Magnetfeldern."
+  },
+  {
+    "id": 119,
+    "fact": "Die Brilleneiderente kann beim Tauchen bis zu 3 Minuten den Atem anhalten."
+  },
+  {
+    "id": 120,
+    "fact": "Enten wurden in Therapieprogrammen für Kinder mit Autismus und ältere Patienten eingesetzt."
+  },
+  {
+    "id": 121,
+    "fact": "Die Schwarzbauch-Pfeifente wird auch Baumeine genannt wegen ihrer Sitzengewohnheiten."
+  },
+  {
+    "id": 122,
+    "fact": "Entenfedern haben wasserdichte Kleidungstechnologie und Stoffbehandlungen inspiriert."
+  },
+  {
+    "id": 123,
+    "fact": "Die australische Holzente ist auch als Mähnenente bekannt wegen ihrer charakteristischen Haube."
+  },
+  {
+    "id": 124,
+    "fact": "Enten können kurz rückwärts fliegen, wenn sie landen oder Hindernissen ausweichen."
+  },
+  {
+    "id": 125,
+    "fact": "Die Weißflügel-Trauerente wandert zwischen arktischen Brutgebieten und gemäßigten Küsten."
+  },
+  {
+    "id": 126,
+    "fact": "Entenzungen haben nach hinten gerichtete Stacheln namens Papillen, die bei der Nahrungsmanipulation helfen."
+  },
+  {
+    "id": 127,
+    "fact": "Die Nilgans ist trotz ihres Namens tatsächlich enger mit Enten als mit Gänsen verwandt."
+  },
+  {
+    "id": 128,
+    "fact": "Enten spielen wichtige Rollen bei der Samenverbreitung und helfen, die Pflanzenvielfalt in Feuchtgebieten zu erhalten."
+  },
+  {
+    "id": 129,
+    "fact": "Die Eisente kann tiefer tauchen als jede andere Ente – bis zu 60 Meter."
+  },
+  {
+    "id": 130,
+    "fact": "Enten wurden in über 50 verschiedene Hausrassen mit unterschiedlichen Eigenschaften gezüchtet."
+  },
+  {
+    "id": 131,
+    "fact": "Die Sichelente hat die längsten Schwanzfedern aller Entenarten."
+  },
+  {
+    "id": 132,
+    "fact": "Enten können Infraschall hören – sehr tiefe Töne unter der menschlichen Hörschwelle."
+  },
+  {
+    "id": 133,
+    "fact": "Die Kapente Südafrikas kann ihre Nahrung durch Sieben von Schlamm durch ihren Schnabel gewinnen."
+  },
+  {
+    "id": 134,
+    "fact": "Entenfedern haben mikroskopische Haken, die sie zusammenhalten und wasserdicht machen."
+  },
+  {
+    "id": 135,
+    "fact": "Die Rotschulterente wurde nach den charakteristischen roten Schulterflecken des Männchens benannt."
+  },
+  {
+    "id": 136,
+    "fact": "Enten können bei der Landung ihre Geschwindigkeit von 50 km/h auf null in nur wenigen Metern reduzieren."
+  },
+  {
+    "id": 137,
+    "fact": "Die Hawaiigans, obwohl technisch eine Gans, ist enger mit Enten verwandt als mit anderen Gänsen."
+  },
+  {
+    "id": 138,
+    "fact": "Enten haben specialized Salzdrüsen, die es ihnen ermöglichen, Salzwasser zu trinken und das Salz auszuscheiden."
+  },
+  {
+    "id": 139,
+    "fact": "Die Rothalsgans Südamerikas ist bekannt für ihre lauten, trompetenartigen Rufe."
+  },
+  {
+    "id": 140,
+    "fact": "Enten können ihre Körpertemperatur regulieren, indem sie ihre Durchblutung zu ihren Füßen reduzieren."
+  },
+  {
+    "id": 141,
+    "fact": "Die Pfeifente ist eine der wenigen Entenarten, die regelmäßig auf Bäumen sitzt."
+  },
+  {
+    "id": 142,
+    "fact": "Enteneier haben eine natürliche Schutzschicht, die als Bloom bekannt ist und Bakterien abhält."
+  },
+  {
+    "id": 143,
+    "fact": "Die Kasarka kann in Höhen von über 8.000 Metern über dem Himalaya fliegen."
+  },
+  {
+    "id": 144,
+    "fact": "Enten haben ein ausgezeichnetes Farbsehen und können UV-Licht sehen."
+  },
+  {
+    "id": 145,
+    "fact": "Die Bergente nistet in Höhen von bis zu 4.000 Metern in den Anden."
+  },
+  {
+    "id": 146,
+    "fact": "Entenküken können innerhalb von 24 Stunden nach dem Schlüpfen schwimmen, tauchen und ihre eigene Nahrung finden."
+  },
+  {
+    "id": 147,
+    "fact": "Die Kolbenente hat einen charakteristischen roten Schnabel und rote Augen während der Brutzeit."
+  },
+  {
+    "id": 148,
+    "fact": "Enten wurden in der traditionellen chinesischen Medizin für verschiedene Heilzwecke verwendet."
+  },
+  {
+    "id": 149,
+    "fact": "Die Australische Stelzenente kann ihre Beine und Füße zum Fangen von Insekten im Flug verwenden."
+  },
+  {
+    "id": 150,
+    "fact": "Enten haben eine komplexe soziale Struktur mit etablierten Hierarchien in Gruppen."
+  },
+  {
+    "id": 151,
+    "fact": "Die Weißwangengans führt eine der längsten Wanderungen aller Wasservögel durch."
+  },
+  {
+    "id": 152,
+    "fact": "Entenschnäbel enthalten Tausende von Nervenenden, was sie zu sehr empfindlichen Tastorganen macht."
+  },
+  {
+    "id": 153,
+    "fact": "Die Gelbschnabelente wurde nach ihrem charakteristischen gelben Schnabel benannt."
+  },
+  {
+    "id": 154,
+    "fact": "Enten können lernen, einfache Aufgaben zu lösen und sich an komplexe Umgebungen anzupassen."
+  },
+  {
+    "id": 155,
+    "fact": "Die Spießente kann während langer Flüge abwechselnd mit einer Gehirnhälfte schlafen."
+  },
+  {
+    "id": 156,
+    "fact": "Entenfedern werden heute noch in hochwertigen Daunenjacken und Bettwaren verwendet."
+  },
+  {
+    "id": 157,
+    "fact": "Die Brandseeschwalbe kann Salzwasser trinken und das überschüssige Salz durch ihre Nasendrüsen ausscheiden."
+  },
+  {
+    "id": 158,
+    "fact": "Enten haben spezialisierte Muskeln in ihren Flügeln, die es ihnen ermöglichen, sehr präzise zu manövrieren."
+  },
+  {
+    "id": 159,
+    "fact": "Die Orinoco-Gans ist eine der größten Entenarten Südamerikas."
+  },
+  {
+    "id": 160,
+    "fact": "Entenkot wird als natürlicher Dünger in der Landwirtschaft geschätzt."
+  },
+  {
+    "id": 161,
+    "fact": "Die Rostgans hat ein einzigartiges Brutverhalten, bei dem beide Eltern die Eier abwechselnd bebrüten."
+  },
+  {
+    "id": 162,
+    "fact": "Enten können zwischen verschiedenen menschlichen Stimmen unterscheiden und auf vertraute Personen reagieren."
+  },
+  {
+    "id": 163,
+    "fact": "Die Höhlenente nistet ausschließlich in Baumhöhlen und kann bis zu 15 Meter hoch nisten."
+  },
+  {
+    "id": 164,
+    "fact": "Entenfedern haben antibakterielle Eigenschaften, die sie vor Infektionen schützen."
+  },
+  {
+    "id": 165,
+    "fact": "Die Sichelfüßige Ente hat gebogene Krallen, die ihr beim Klettern auf Bäume helfen."
+  },
+  {
+    "id": 166,
+    "fact": "Enten spielen eine wichtige Rolle im Ökosystem als Bestäuber und Samenverbreiter."
+  },
+  {
+    "id": 167,
+    "fact": "Die Streifengans kann in einer einzigen Nacht über 1.000 Kilometer während der Migration fliegen."
+  },
+  {
+    "id": 168,
+    "fact": "Enteneier haben unterschiedliche Farben je nach Art – von weiß über grün bis hin zu dunkelbraun."
+  },
+  {
+    "id": 169,
+    "fact": "Die Zwergente ist mit nur 25 cm Länge eine der kleinsten Entenarten der Welt."
+  },
+  {
+    "id": 170,
+    "fact": "Enten haben ein ausgeprägtes Zeitgefühl und können täglich Routinen entwickeln."
+  },
+  {
+    "id": 171,
+    "fact": "Enten gehören zur Vogelfamilie Anatidae."
+  },
+  {
+    "id": 172,
+    "fact": "Die meisten Enten sind kleiner als Gänse und Schwäne."
+  },
+  {
+    "id": 173,
+    "fact": "Entenfüße haben Schwimmhäute zwischen den drei vorderen Zehen."
+  },
+  {
+    "id": 174,
+    "fact": "Schwimmhäute wirken im Wasser wie Paddel."
+  },
+  {
+    "id": 175,
+    "fact": "Die Körperform einer Ente hilft ihr, leicht auf dem Wasser zu schwimmen."
+  },
+  {
+    "id": 176,
+    "fact": "Viele Enten haben einen breiten, flachen Schnabel."
+  },
+  {
+    "id": 177,
+    "fact": "Lamellen im Entenschnabel helfen, Nahrung aus dem Wasser zu filtern."
+  },
+  {
+    "id": 178,
+    "fact": "Gründelenten fressen hauptsächlich an der Wasseroberfläche."
+  },
+  {
+    "id": 179,
+    "fact": "Tauchenten treiben sich unter Wasser mit ihren Füßen an."
+  },
+  {
+    "id": 180,
+    "fact": "Entendaunen halten Luft fest und sorgen für Isolierung."
+  },
+  {
+    "id": 181,
+    "fact": "Beim Putzen verteilen Enten Öl, das ihre Federn wasserabweisend macht."
+  },
+  {
+    "id": 182,
+    "fact": "Bei der Mauser werden abgenutzte Federn ersetzt."
+  },
+  {
+    "id": 183,
+    "fact": "Viele Entenarten ziehen saisonal."
+  },
+  {
+    "id": 184,
+    "fact": "Zugrouten werden Flyways genannt."
+  },
+  {
+    "id": 185,
+    "fact": "Der Ostatlantische Zugweg wird von vielen europäischen Enten genutzt."
+  },
+  {
+    "id": 186,
+    "fact": "Enteneier werden meist vom Weibchen ausgebrütet."
+  },
+  {
+    "id": 187,
+    "fact": "Bei vielen Arten beginnt das Brüten erst nach dem Legen der letzten Eier."
+  },
+  {
+    "id": 188,
+    "fact": "Synchrones Schlüpfen hilft Entenküken, das Nest gemeinsam zu verlassen."
+  },
+  {
+    "id": 189,
+    "fact": "Frisch geschlüpfte Entenküken sind mit Daunen und nicht mit Federn bedeckt."
+  },
+  {
+    "id": 190,
+    "fact": "Entenküken müssen ihr Gefieder beim Heranwachsen durch Putzen wasserfest machen."
+  },
+  {
+    "id": 191,
+    "fact": "Viele Entenküken suchen kurz nach dem Schlüpfen selbst Nahrung."
+  },
+  {
+    "id": 192,
+    "fact": "Entenküken kommunizieren mit leisen Kontaktrufen."
+  },
+  {
+    "id": 193,
+    "fact": "Weibliche Stockenten quaken laut, während Männchen leisere Laute machen."
+  },
+  {
+    "id": 194,
+    "fact": "Balzverhalten umfasst oft Kopfnicken und Schwanzbewegungen."
+  },
+  {
+    "id": 195,
+    "fact": "Das Brutgefieder der Männchen ist oft auffälliger als das der Weibchen."
+  },
+  {
+    "id": 196,
+    "fact": "Nach der Brut tragen viele Erpel ein Schlichtkleid."
+  },
+  {
+    "id": 197,
+    "fact": "Im Schlichtkleid ähneln Männchen oft den Weibchen."
+  },
+  {
+    "id": 198,
+    "fact": "Entenknochen sind leicht, aber dennoch stabil."
+  },
+  {
+    "id": 199,
+    "fact": "Luftsäcke bei Vögeln unterstützen eine effiziente Atmung im Flug."
+  },
+  {
+    "id": 200,
+    "fact": "Enten können im Schlaf auf einem Bein ruhen."
+  },
+  {
+    "id": 201,
+    "fact": "Gegenstrom-Wärmeaustausch hilft Entenfüßen, Wärme zu sparen."
+  },
+  {
+    "id": 202,
+    "fact": "Gesunde Feuchtgebiete sind ein wichtiger Lebensraum für Enten."
+  },
+  {
+    "id": 203,
+    "fact": "Der Verlust von Feuchtgebieten ist eine große Bedrohung für viele Entenbestände."
+  },
+  {
+    "id": 204,
+    "fact": "Durch das Fressen aquatischer Insekten helfen Enten bei deren Kontrolle."
+  },
+  {
+    "id": 205,
+    "fact": "Einige Enten verbreiten Pflanzensamen zwischen Feuchtgebieten."
+  },
+  {
+    "id": 206,
+    "fact": "Enten sind Teil des Nahrungsnetzes für Räuber wie Füchse und Adler."
+  },
+  {
+    "id": 207,
+    "fact": "Stockenten passen sich gut an Städte und Parks an."
+  },
+  {
+    "id": 208,
+    "fact": "Das Füttern von Brot kann Enten ernährungsphysiologisch schaden."
+  },
+  {
+    "id": 209,
+    "fact": "Blattgemüse und Getreide sind als Zusatzfutter für Enten besser geeignet."
+  },
+  {
+    "id": 210,
+    "fact": "Sauberes Wasser verringert das Krankheitsrisiko bei Hausenten."
+  },
+  {
+    "id": 211,
+    "fact": "Hausenten stammen größtenteils von der Stockente ab."
+  },
+  {
+    "id": 212,
+    "fact": "Moschusenten wurden unabhängig von stockentenstämmigen Hausenten domestiziert."
+  },
+  {
+    "id": 213,
+    "fact": "Enteneier haben meist größere Eigelbe als Hühnereier."
+  },
+  {
+    "id": 214,
+    "fact": "Eierschalen von Enten sind oft etwas dicker als die von Hühnern."
+  },
+  {
+    "id": 215,
+    "fact": "Viele Entenarten bilden Paarbindungen für eine Brutsaison."
+  },
+  {
+    "id": 216,
+    "fact": "Einige Arten kehren jedes Jahr in dasselbe Brutgebiet zurück."
+  },
+  {
+    "id": 217,
+    "fact": "Junge Enten werden erst Wochen nach dem Schlüpfen flugfähig."
+  },
+  {
+    "id": 218,
+    "fact": "Das Alter beim Flüggewerden variiert je nach Art und Bedingungen."
+  },
+  {
+    "id": 219,
+    "fact": "Durch die seitliche Augenstellung können Enten fast rundum sehen."
+  },
+  {
+    "id": 220,
+    "fact": "Eine Nickhaut schützt die Augen von Enten im Wasser."
+  },
+  {
+    "id": 221,
+    "fact": "Enten haben ein gutes Farbsehen."
+  },
+  {
+    "id": 222,
+    "fact": "Schnabelspitzenorgane sind bei manchen Enten sehr druckempfindlich."
+  },
+  {
+    "id": 223,
+    "fact": "Löffelenten haben besonders breite Schnäbel zum Filtrieren von Nahrung."
+  },
+  {
+    "id": 224,
+    "fact": "Säger haben schmale, gezähnte Schnäbel zum Fischfang."
+  },
+  {
+    "id": 225,
+    "fact": "Meeresenten überwintern häufig an Küsten."
+  },
+  {
+    "id": 226,
+    "fact": "Eiderenten sind Meeresenten, die für ihre isolierenden Daunen bekannt sind."
+  },
+  {
+    "id": 227,
+    "fact": "Krickenten gehören zu den kleineren Entenarten."
+  },
+  {
+    "id": 228,
+    "fact": "Spießenten sind für ihre langen, spitzen Schwanzfedern bekannt."
+  },
+  {
+    "id": 229,
+    "fact": "Brautenten nisten häufig in Baumhöhlen."
+  },
+  {
+    "id": 230,
+    "fact": "Nistkästen können Bestände von höhlenbrütenden Enten unterstützen."
+  },
+  {
+    "id": 231,
+    "fact": "Entenküken aus Baumhöhlen springen kurz nach dem Schlüpfen auf den Boden."
+  },
+  {
+    "id": 232,
+    "fact": "Enten nutzen akustische und visuelle Signale, um ihre Brut zusammenzuhalten."
+  },
+  {
+    "id": 233,
+    "fact": "Bruten können sich zu größeren Gruppen, sogenannten Kindergruppen, zusammenschließen."
+  },
+  {
+    "id": 234,
+    "fact": "Zu den Eierraubern gehören Krähen, Möwen und Waschbären."
+  },
+  {
+    "id": 235,
+    "fact": "Füchse und Greifvögel können erwachsene Enten jagen."
+  },
+  {
+    "id": 236,
+    "fact": "Tarnfarbenes Gefieder hilft brütenden Weibchen, verborgen zu bleiben."
+  },
+  {
+    "id": 237,
+    "fact": "Entennester sind oft mit Daunen ausgepolstert."
+  },
+  {
+    "id": 238,
+    "fact": "Die Gelegegröße unterscheidet sich zwischen Entenarten."
+  },
+  {
+    "id": 239,
+    "fact": "Kaltes Wetter kann die Brut in nördlichen Regionen verzögern."
+  },
+  {
+    "id": 240,
+    "fact": "Wasserstände im Frühjahr beeinflussen den Bruterfolg in Feuchtgebieten."
+  },
+  {
+    "id": 241,
+    "fact": "Dürre kann das Nahrungsangebot für Entenküken verringern."
+  },
+  {
+    "id": 242,
+    "fact": "Hochwasser kann niedrige Nester an Ufern zerstören."
+  },
+  {
+    "id": 243,
+    "fact": "Viele Enten sind in der Morgen- und Abenddämmerung besonders aktiv bei der Nahrungssuche."
+  },
+  {
+    "id": 244,
+    "fact": "Enten ruhen oft während der Tagesmitte."
+  },
+  {
+    "id": 245,
+    "fact": "Schwarmverhalten kann das Erkennen von Räubern verbessern."
+  },
+  {
+    "id": 246,
+    "fact": "Einige Enten mausern in geschützten Feuchtgebieten, um das Risiko durch Räuber zu senken."
+  },
+  {
+    "id": 247,
+    "fact": "Während der flugunfähigen Mauser brauchen Enten sichere Lebensräume."
+  },
+  {
+    "id": 248,
+    "fact": "Beringung hilft Forschenden, den Entenzug zu verfolgen."
+  },
+  {
+    "id": 249,
+    "fact": "Satellitentelemetrie zeigt heute detaillierte Bewegungsmuster von Enten."
+  },
+  {
+    "id": 250,
+    "fact": "Citizen-Science-Vogelzählungen liefern nützliche Daten zu Entenbeständen."
+  },
+  {
+    "id": 251,
+    "fact": "Jagdregeln nutzen oft Schonzeiten und Limits zum Schutz von Entenbeständen."
+  },
+  {
+    "id": 252,
+    "fact": "Ungiftige Schrotmunition verringert die Bleibelastung bei Wasservögeln."
+  },
+  {
+    "id": 253,
+    "fact": "In vielen Regionen hat die Wiederherstellung von Feuchtgebieten die Entenzahlen verbessert."
+  },
+  {
+    "id": 254,
+    "fact": "Städtische Regenrückhaltebecken können Enten anziehen, aber auch Schadstoffe mit sich bringen."
+  },
+  {
+    "id": 255,
+    "fact": "Ölunfälle können die Wasserfestigkeit des Entengefieders stark schädigen."
+  },
+  {
+    "id": 256,
+    "fact": "Plastikmüll kann Enten verfangen oder versehentlich aufgenommen werden."
+  },
+  {
+    "id": 257,
+    "fact": "Die Überwachung der Vogelgrippe bezieht oft Wildenten als Indikatorarten ein."
+  },
+  {
+    "id": 258,
+    "fact": "Parasiten können die Gesundheit von Enten beeinträchtigen, besonders in dicht besiedelten Lebensräumen."
+  },
+  {
+    "id": 259,
+    "fact": "Ausgewogene Ernährung ist wichtig für die Bein- und Flügelentwicklung junger Enten."
+  },
+  {
+    "id": 260,
+    "fact": "Hausentenrassen unterscheiden sich stark in Größe und Eierleistung."
+  },
+  {
+    "id": 261,
+    "fact": "Laufenten sind für ihre aufrechte Körperhaltung bekannt."
+  },
+  {
+    "id": 262,
+    "fact": "Pekingenten sind weltweit eine häufige Hausentenrasse."
+  },
+  {
+    "id": 263,
+    "fact": "Khaki-Campbell-Enten sind für ihre hohe Eierleistung bekannt."
+  },
+  {
+    "id": 264,
+    "fact": "Einige Hausenten können keinen langen Flug aufrechterhalten."
+  },
+  {
+    "id": 265,
+    "fact": "Enten brauchen Wasser, das tief genug ist, um Nasenlöcher und Augen zu reinigen."
+  },
+  {
+    "id": 266,
+    "fact": "Regelmäßiges Baden hilft, das Gefieder in gutem Zustand zu halten."
+  },
+  {
+    "id": 267,
+    "fact": "Schatten und gute Belüftung sind für Enten bei heißem Wetter wichtig."
+  },
+  {
+    "id": 268,
+    "fact": "Eisfreies Trinkwasser ist für Enten im Winter entscheidend."
+  },
+  {
+    "id": 269,
+    "fact": "Ruhige Brutbereiche verbessern bei vielen Enten den Bruterfolg."
+  },
+  {
+    "id": 270,
+    "fact": "Der Schutz von Feuchtgebieten nützt Enten und vielen anderen Arten."
+  },
+  {
+    "id": 271,
+    "fact": "Kanadapfeifenten grasen auf Rasenflächen, sogar auf Golfplätzen."
+  },
+  {
+    "id": 272,
+    "fact": "Kanadapfeifenten fressen sowohl Wasserpflanzen als auch Landpflanzen."
+  },
+  {
+    "id": 273,
+    "fact": "Weibliche Kanadapfeifenten fressen während der Eibildung mehr Insekten."
+  },
+  {
+    "id": 274,
+    "fact": "Kanadapfeifenten können mehrere Hundert Meter vom Wasser entfernt nisten."
+  },
+  {
+    "id": 275,
+    "fact": "Ein Gelege der Kanadapfeifente kann 3–13 Eier enthalten."
+  },
+  {
+    "id": 276,
+    "fact": "Die Brutdauer der Kanadapfeifente beträgt etwa 22–28 Tage."
+  },
+  {
+    "id": 277,
+    "fact": "Männliche Kanadapfeifenten verlassen ihre Partnerinnen meist noch während der Brut."
+  },
+  {
+    "id": 278,
+    "fact": "Kanadapfeifenten ziehen überwiegend bei Tageslicht."
+  },
+  {
+    "id": 279,
+    "fact": "Pfeifenten brüten an nordischen Waldseen und in Feuchtgebieten der Tundra."
+  },
+  {
+    "id": 280,
+    "fact": "Pfeifenten suchen manchmal nachts nach Nahrung."
+  },
+  {
+    "id": 281,
+    "fact": "Pfeifenten grasen an Land und suchen auch im Wasser Nahrung."
+  },
+  {
+    "id": 282,
+    "fact": "Pfeifenten fressen Pflanzen, die Schwäne und Gänse an die Oberfläche bringen."
+  },
+  {
+    "id": 283,
+    "fact": "Weibliche Pfeifenten und ihre Küken benötigen im Sommer viele wirbellose Tiere."
+  },
+  {
+    "id": 284,
+    "fact": "Ein Gelege der Pfeifente umfasst etwa 6–12 Eier."
+  },
+  {
+    "id": 285,
+    "fact": "Balzende Pfeifentenerpel heben ihre Flügel und zeigen dabei weiße Flächen."
+  },
+  {
+    "id": 286,
+    "fact": "Weibliche Pfeifenten bauen die Nester und betreuen die Küken."
+  },
+  {
+    "id": 287,
+    "fact": "Schnatterenten nutzen auch Viehtränkteiche, wenn natürliche Feuchtgebiete fehlen."
+  },
+  {
+    "id": 288,
+    "fact": "Schnatterenten fressen untergetauchte Blätter, Stängel, Wurzeln und Samen."
+  },
+  {
+    "id": 289,
+    "fact": "Schnatterenten fressen zur Brutzeit mehr tierische Nahrung als im Winter."
+  },
+  {
+    "id": 290,
+    "fact": "Schnatterenten stehlen manchmal Amerikanischen Blässhühnern Nahrung."
+  },
+  {
+    "id": 291,
+    "fact": "Schnatterenten wählen zum Nisten oft Inseln, um Fressfeinden auszuweichen."
+  },
+  {
+    "id": 292,
+    "fact": "Ein Schnatterentengelege enthält gewöhnlich 7–12 Eier."
+  },
+  {
+    "id": 293,
+    "fact": "Die Brutdauer der Schnatterente beträgt etwa 24–27 Tage."
+  },
+  {
+    "id": 294,
+    "fact": "Schnatterenten finden ihre Partner häufig während des Herbstzuges."
+  },
+  {
+    "id": 295,
+    "fact": "Blauflügelenten rasten während des Zuges häufig auf Reisfeldern."
+  },
+  {
+    "id": 296,
+    "fact": "Blauflügelenten nutzen in Teilen ihres südlichen Verbreitungsgebiets Mangroven."
+  },
+  {
+    "id": 297,
+    "fact": "Weibliche Blauflügelenten fressen während der Eiablage eiweißreiche tierische Nahrung."
+  },
+  {
+    "id": 298,
+    "fact": "Blauflügelenten fressen in ihren Winterquartieren mehr Samen."
+  },
+  {
+    "id": 299,
+    "fact": "Weibliche Blauflügelenten können mehrere Tage lang einen Nistplatz auswählen."
+  },
+  {
+    "id": 300,
+    "fact": "Blauflügelentennester sind durch Gras verborgen, auch von oben."
+  },
+  {
+    "id": 301,
+    "fact": "Ein Gelege der Blauflügelente kann 6–14 Eier enthalten."
+  },
+  {
+    "id": 302,
+    "fact": "Blauflügelenten tauchen bei der Nahrungssuche nur selten."
+  },
+  {
+    "id": 303,
+    "fact": "Zimtenten brüten in Süßwasserfeuchtgebieten im Westen Nordamerikas."
+  },
+  {
+    "id": 304,
+    "fact": "Überwinternde Zimtenten können Mangrovensümpfe in Mexiko nutzen."
+  },
+  {
+    "id": 305,
+    "fact": "Zimtenten fressen neben Pflanzensamen auch Wasserflöhe."
+  },
+  {
+    "id": 306,
+    "fact": "Zimtenten suchen manchmal in eng aufeinander abgestimmten Gruppen Nahrung."
+  },
+  {
+    "id": 307,
+    "fact": "Weibliche Zimtenten verstecken ihre Nester meist unter abgestorbenen Sumpfgräsern."
+  },
+  {
+    "id": 308,
+    "fact": "Weibliche Zimtenten erhöhen bei steigendem Wasserstand ihr Nest mit zusätzlichem Material."
+  },
+  {
+    "id": 309,
+    "fact": "Die Brutdauer der Zimtente beträgt etwa 21–25 Tage."
+  },
+  {
+    "id": 310,
+    "fact": "Zimtenterpel bewachen ihre Partnerinnen während eines großen Teils der Brutzeit."
+  },
+  {
+    "id": 311,
+    "fact": "Amerikanische Krickenten nutzen Biberteiche als Brutlebensraum."
+  },
+  {
+    "id": 312,
+    "fact": "Krickenten auf Alaskas Aleuten können dort ganzjährig bleiben."
+  },
+  {
+    "id": 313,
+    "fact": "Amerikanische Krickenten durchsuchen freiliegenden Schlamm nach kleinen wirbellosen Tieren."
+  },
+  {
+    "id": 314,
+    "fact": "Junge Amerikanische Krickenten fressen in den ersten zwei Wochen vorwiegend Insektenlarven."
+  },
+  {
+    "id": 315,
+    "fact": "Ein Gelege der Amerikanischen Krickente enthält gewöhnlich 6–9 Eier."
+  },
+  {
+    "id": 316,
+    "fact": "Die Brutdauer der Amerikanischen Krickente beträgt etwa 20–23 Tage."
+  },
+  {
+    "id": 317,
+    "fact": "Amerikanische Krickenten können direkt von der Wasseroberfläche abheben."
+  },
+  {
+    "id": 318,
+    "fact": "Amerikanische Krickenten tauchen gelegentlich, um Fressfeinden zu entkommen."
+  },
+  {
+    "id": 319,
+    "fact": "Löffelenten fressen winzige Krebstiere und andere wirbellose Wassertiere."
+  },
+  {
+    "id": 320,
+    "fact": "Löffelenten bewegen ihre eingetauchten Schnäbel beim Filtern seitwärts."
+  },
+  {
+    "id": 321,
+    "fact": "Löffelenten schwimmen manchmal im Kreis, um Nahrung aufzuwirbeln."
+  },
+  {
+    "id": 322,
+    "fact": "Löffelenten suchen nur selten auf trockenem Land nach Nahrung."
+  },
+  {
+    "id": 323,
+    "fact": "Weibliche Löffelenten nisten meist nahe am Wasser in niedriger Vegetation."
+  },
+  {
+    "id": 324,
+    "fact": "Ein Löffelentengelege enthält gewöhnlich 8–12 Eier."
+  },
+  {
+    "id": 325,
+    "fact": "Die Brutdauer der Löffelente beträgt etwa 22–25 Tage."
+  },
+  {
+    "id": 326,
+    "fact": "Löffelentenerpel verteidigen ihre Brutreviere gegen andere Löffelenten."
+  },
+  {
+    "id": 327,
+    "fact": "Spießenten gehören zu den wenigen Enten, die auf bearbeiteten Äckern nisten."
+  },
+  {
+    "id": 328,
+    "fact": "Spießenten fressen Getreide wie Reis, Weizen, Mais und Gerste."
+  },
+  {
+    "id": 329,
+    "fact": "Spießenten in Kalifornien können nachts auf überfluteten Reisfeldern Nahrung suchen."
+  },
+  {
+    "id": 330,
+    "fact": "Weibliche Spießenten scharren mehrere Bodenmulden, bevor sie einen Nistplatz auswählen."
+  },
+  {
+    "id": 331,
+    "fact": "Ein Gelege der Spießente kann 3–12 Eier enthalten."
+  },
+  {
+    "id": 332,
+    "fact": "Die Brutdauer der Spießente beträgt etwa 22–24 Tage."
+  },
+  {
+    "id": 333,
+    "fact": "Balzende Spießentenerpel pfeifen mit nach oben gestrecktem Hals."
+  },
+  {
+    "id": 334,
+    "fact": "Ziehende Spießenten können lange, wellenförmige Fluglinien bilden."
+  },
+  {
+    "id": 335,
+    "fact": "Brautenten gedeihen in bewaldeten Sümpfen und Biberteichen."
+  },
+  {
+    "id": 336,
+    "fact": "Brautenten fressen an Land Eicheln und andere Nüsse."
+  },
+  {
+    "id": 337,
+    "fact": "Brautenten fressen auch Früchte wie Brombeeren und Wildkirschen."
+  },
+  {
+    "id": 338,
+    "fact": "Brautenten können ihre Nisthöhlen nicht selbst aushöhlen."
+  },
+  {
+    "id": 339,
+    "fact": "Brautenten nutzen oft Höhlen, die durch verrottete abgebrochene Äste entstehen."
+  },
+  {
+    "id": 340,
+    "fact": "Brautentenküken klettern mithilfe ihrer Krallen aus Nisthöhlen."
+  },
+  {
+    "id": 341,
+    "fact": "Brautenten können mit kurzen, flachen Tauchgängen Nahrung suchen."
+  },
+  {
+    "id": 342,
+    "fact": "Weibliche Brautenten legen manchmal Eier in die Nester anderer Brautenten."
+  },
+  {
+    "id": 343,
+    "fact": "Rotkopfenten sammeln sich im Winter in großen Schwärmen am Golf von Mexiko."
+  },
+  {
+    "id": 344,
+    "fact": "Überwinternde Rotkopfenten fressen Seegras in flachen Küstenbuchten."
+  },
+  {
+    "id": 345,
+    "fact": "Rotkopfenten können trotz ihrer Zugehörigkeit zu den Tauchenten auch gründeln."
+  },
+  {
+    "id": 346,
+    "fact": "Weibliche Rotkopfenten nisten häufig zwischen Rohrkolben über dem Wasser."
+  },
+  {
+    "id": 347,
+    "fact": "Rotkopfenten können bei hohen Wasserständen auf Bisamburgen nisten."
+  },
+  {
+    "id": 348,
+    "fact": "Weibliche Rotkopfenten bauen manchmal eine Pflanzenrampe zu ihren Nestern."
+  },
+  {
+    "id": 349,
+    "fact": "Weibliche Rotkopfenten können Eier in die Nester anderer Vögel legen."
+  },
+  {
+    "id": 350,
+    "fact": "Balzende Rotkopfentenerpel können einen miauenden Ruf erzeugen."
+  },
+  {
+    "id": 351,
+    "fact": "Riesentafelenten fressen im Winter Knollen und Rhizome von Wasserpflanzen."
+  },
+  {
+    "id": 352,
+    "fact": "Riesentafelenten fressen zur Brutzeit auch Muscheln und Insekten."
+  },
+  {
+    "id": 353,
+    "fact": "Weibliche Riesentafelenten bauen große schwimmende Plattformen aus Sumpfpflanzen."
+  },
+  {
+    "id": 354,
+    "fact": "Riesentafelentennester werden an aufrecht stehenden Pflanzen befestigt."
+  },
+  {
+    "id": 355,
+    "fact": "Weibliche Riesentafelenten ergänzen zu Beginn der Brut weiter das Nestmaterial."
+  },
+  {
+    "id": 356,
+    "fact": "Ein Gelege der Riesentafelente enthält gewöhnlich 5–11 Eier."
+  },
+  {
+    "id": 357,
+    "fact": "Riesentafelenten brauchen zum Abheben einen Anlauf über das Wasser."
+  },
+  {
+    "id": 358,
+    "fact": "Riesentafelenten gehen nur selten auf trockenes Land."
+  },
+  {
+    "id": 359,
+    "fact": "Ringschnabelenten brüten in Sümpfen und Mooren der borealen Zone."
+  },
+  {
+    "id": 360,
+    "fact": "Ringschnabelenten nutzen trotz ihrer Zugehörigkeit zu den Tauchenten häufig flaches Wasser."
+  },
+  {
+    "id": 361,
+    "fact": "Ringschnabelenten verschlucken Weichtiere ganz und zerkleinern deren Schalen im Muskelmagen."
+  },
+  {
+    "id": 362,
+    "fact": "Ringschnabelenten fressen neben Wasserinsekten auch Egel."
+  },
+  {
+    "id": 363,
+    "fact": "Ringschnabelentennester haben oft eine Rampe für das Weibchen."
+  },
+  {
+    "id": 364,
+    "fact": "Ein Gelege der Ringschnabelente kann 6–14 Eier enthalten."
+  },
+  {
+    "id": 365,
+    "fact": "Die Brutdauer der Ringschnabelente beträgt etwa 25–29 Tage."
+  },
+  {
+    "id": 366,
+    "fact": "Ringschnabelenten springen zu Beginn eines Tauchgangs bogenförmig nach vorn."
+  },
+  {
+    "id": 367,
+    "fact": "Veilchenenten brüten von Präriefeuchtgebieten bis zu borealen Wäldern und Tundren."
+  },
+  {
+    "id": 368,
+    "fact": "Veilchenenten fressen vorwiegend Weichtiere, Insekten und Krebstiere."
+  },
+  {
+    "id": 369,
+    "fact": "Veilchenenten öffnen und schließen beim Durchsuchen von Schlamm rasch ihre Schnäbel."
+  },
+  {
+    "id": 370,
+    "fact": "Veilchenenten nisten manchmal auf schwimmenden Pflanzenmatten."
+  },
+  {
+    "id": 371,
+    "fact": "Weibliche Veilchenenten beginnen mit der Eiablage, bevor ihre Nester fertig sind."
+  },
+  {
+    "id": 372,
+    "fact": "Die Brutdauer der Veilchenente beträgt etwa 21–27 Tage."
+  },
+  {
+    "id": 373,
+    "fact": "Weibliche Veilchenenten kehren häufiger an frühere Brutplätze zurück als Männchen."
+  },
+  {
+    "id": 374,
+    "fact": "Veilchenenten können den Herbstzug verzögern, bis ihre Brutgewässer zuzufrieren beginnen."
+  },
+  {
+    "id": 375,
+    "fact": "Bergenten brüten an flachen Seen in baumlosen Feuchtgebieten."
+  },
+  {
+    "id": 376,
+    "fact": "Bergenten überwintern neben Küstengebieten auch an den Großen Seen."
+  },
+  {
+    "id": 377,
+    "fact": "Bergenten können bei störendem Bootsverkehr tagsüber ihre Nahrung nachts suchen."
+  },
+  {
+    "id": 378,
+    "fact": "Bergenten durchsuchen schlammige Gewässerböden nach wirbellosen Wassertieren."
+  },
+  {
+    "id": 379,
+    "fact": "Bergenten können ungefähr sieben Meter tief tauchen."
+  },
+  {
+    "id": 380,
+    "fact": "Ein Gelege der Bergente kann 5–13 Eier enthalten."
+  },
+  {
+    "id": 381,
+    "fact": "Die Brutdauer der Bergente beträgt etwa 23–28 Tage."
+  },
+  {
+    "id": 382,
+    "fact": "Bergentenerpel sammeln sich nach der Brut zum Mausern an geschützten Seen."
+  },
+  {
+    "id": 383,
+    "fact": "Büffelkopfenten nisten häufig in Höhlen, die Goldspechte geschaffen haben."
+  },
+  {
+    "id": 384,
+    "fact": "Büffelkopfenten passen in Nisthöhlen, die für größere Enten zu klein sind."
+  },
+  {
+    "id": 385,
+    "fact": "Büffelkopfenten bevorzugen im Winter geschützte Buchten und Häfen."
+  },
+  {
+    "id": 386,
+    "fact": "Büffelkopfenten verschlucken ihre Beute gewöhnlich noch unter Wasser."
+  },
+  {
+    "id": 387,
+    "fact": "Ein Nahrungstauchgang der Büffelkopfente dauert durchschnittlich etwa zwölf Sekunden."
+  },
+  {
+    "id": 388,
+    "fact": "Büffelkopfenten pressen vor dem Tauchen Luft aus ihrem Gefieder."
+  },
+  {
+    "id": 389,
+    "fact": "Junge Büffelkopfenten gründeln manchmal an der Oberfläche, statt zu tauchen."
+  },
+  {
+    "id": 390,
+    "fact": "Büffelkopfenten können über mehrere Jahre mit demselben Partner zusammenkommen."
+  },
+  {
+    "id": 391,
+    "fact": "Schellenten bevorzugen klare Brutgewässer, in denen Beute gut sichtbar ist."
+  },
+  {
+    "id": 392,
+    "fact": "Schellenten fressen neben wirbellosen Wassertieren auch Fischlaich."
+  },
+  {
+    "id": 393,
+    "fact": "Erfahrene Schellentenweibchen nutzen häufig eine frühere Nisthöhle erneut."
+  },
+  {
+    "id": 394,
+    "fact": "Schellenten können in alten Helmspechthöhlen nisten."
+  },
+  {
+    "id": 395,
+    "fact": "Schellenteneier sind bläulich grün bis olivgrün."
+  },
+  {
+    "id": 396,
+    "fact": "Die Brutdauer der Schellente beträgt etwa 27–33 Tage."
+  },
+  {
+    "id": 397,
+    "fact": "Schellenten stimmen ihre Tauchgänge häufig mit benachbarten Vögeln ab."
+  },
+  {
+    "id": 398,
+    "fact": "Schellenten legen unter Wasser die Flügel an und paddeln mit den Füßen."
+  },
+  {
+    "id": 399,
+    "fact": "Spatelenten brüten an Seen nahe bewaldeten Gebirgslebensräumen."
+  },
+  {
+    "id": 400,
+    "fact": "Spatelenten überwintern häufig nahe Muschelbänken in geschützten Salzwassergebieten."
+  },
+  {
+    "id": 401,
+    "fact": "Spatelenten fressen während der Brutzeit vorwiegend Insektenlarven."
+  },
+  {
+    "id": 402,
+    "fact": "Überwinternde Spatelenten fressen viele Miesmuscheln und Strandschnecken."
+  },
+  {
+    "id": 403,
+    "fact": "Spatelenten können bei der Beutesuche kleine Steine unter Wasser bewegen."
+  },
+  {
+    "id": 404,
+    "fact": "Spatelenten bringen größere Beutetiere häufig vor dem Fressen an die Oberfläche."
+  },
+  {
+    "id": 405,
+    "fact": "Weibliche Spatelenten nisten manchmal in Felsspalten oder Heuböden."
+  },
+  {
+    "id": 406,
+    "fact": "Die Brutdauer der Spatelente beträgt etwa 29–31 Tage."
+  },
+  {
+    "id": 407,
+    "fact": "Kappensäger brüten in bewaldeten Feuchtgebieten verschiedener Regionen Nordamerikas."
+  },
+  {
+    "id": 408,
+    "fact": "Kappensäger fressen neben Fischen auch Flusskrebse, Insekten und Amphibien."
+  },
+  {
+    "id": 409,
+    "fact": "Kappensäger orten ihre Beute unter Wasser mit den Augen."
+  },
+  {
+    "id": 410,
+    "fact": "Kappensägerküken können bereits mit einem Tag nach Nahrung tauchen."
+  },
+  {
+    "id": 411,
+    "fact": "Weibliche Kappensäger prüfen nach der Brut manchmal Nisthöhlen für das nächste Jahr."
+  },
+  {
+    "id": 412,
+    "fact": "Kappensägereier sind fast kugelförmig und besitzen ungewöhnlich dicke Schalen."
+  },
+  {
+    "id": 413,
+    "fact": "Balzende Kappensägermännchen spreizen ihre Hauben und zeigen dabei weiße Flächen."
+  },
+  {
+    "id": 414,
+    "fact": "Kappensägermännchen erzeugen bei der Balz froschähnliche Quaklaute."
+  },
+  {
+    "id": 415,
+    "fact": "Gänsesäger bevorzugen Süßwasserwinterquartiere, nutzen aber auch Küstenbuchten."
+  },
+  {
+    "id": 416,
+    "fact": "Gänsesäger entdecken ihre Beute in klarem Wasser mit den Augen."
+  },
+  {
+    "id": 417,
+    "fact": "Gänsesägerküken fressen anfangs hauptsächlich wirbellose Wassertiere."
+  },
+  {
+    "id": 418,
+    "fact": "Gänsesägerküken beginnen mit etwa zwölf Tagen auf Fischnahrung umzustellen."
+  },
+  {
+    "id": 419,
+    "fact": "Gänsesäger nisten manchmal in Schornsteinen, Schuppen oder Felsspalten."
+  },
+  {
+    "id": 420,
+    "fact": "Die Brutdauer des Gänsesägers beträgt etwa 28–35 Tage."
+  },
+  {
+    "id": 421,
+    "fact": "Gänsesäger tauchen manchmal gemeinsam, nachdem ein Vogel den Anfang macht."
+  },
+  {
+    "id": 422,
+    "fact": "Hechte können Gänsesägerküken erbeuten."
+  },
+  {
+    "id": 423,
+    "fact": "Mittelsäger nutzen Salzwasser häufiger als Gänsesäger."
+  },
+  {
+    "id": 424,
+    "fact": "Mittelsäger suchen manchmal mit nur knapp eingetauchten Augen nach Beute."
+  },
+  {
+    "id": 425,
+    "fact": "Mittelsäger können kleine Fische gemeinsam zusammentreiben, bevor sie diese fangen."
+  },
+  {
+    "id": 426,
+    "fact": "Weibliche Mittelsäger verstecken Bodennester unter Baumstämmen oder niedrigen Ästen."
+  },
+  {
+    "id": 427,
+    "fact": "Mittelsäger nisten manchmal in Kolonien gemeinsam mit Möwen und Seeschwalben."
+  },
+  {
+    "id": 428,
+    "fact": "Die Brutdauer des Mittelsägers beträgt etwa 28–35 Tage."
+  },
+  {
+    "id": 429,
+    "fact": "Mittelsäger benötigen vor dem Abheben einen Anlauf auf dem Wasser."
+  },
+  {
+    "id": 430,
+    "fact": "Balzende Mittelsägermännchen zeigen eine Verbeugung, die an einen Knicks erinnert."
+  },
+  {
+    "id": 431,
+    "fact": "Schwarzkopfruderenten filtern schlammige Teichböden, um kleine Tiere herauszulösen."
+  },
+  {
+    "id": 432,
+    "fact": "Zuckmückenlarven bilden einen bedeutenden Teil der Nahrung von Schwarzkopfruderenten."
+  },
+  {
+    "id": 433,
+    "fact": "Schwarzkopfruderenten flechten häufig ein Pflanzendach über ihre Nester."
+  },
+  {
+    "id": 434,
+    "fact": "Die Eierschalen der Schwarzkopfruderente besitzen eine körnige Oberfläche."
+  },
+  {
+    "id": 435,
+    "fact": "Die Brutdauer der Schwarzkopfruderente beträgt etwa 20–26 Tage."
+  },
+  {
+    "id": 436,
+    "fact": "Schwarzkopfruderenten entkommen Gefahren gewöhnlich durch Schwimmen oder Tauchen."
+  },
+  {
+    "id": 437,
+    "fact": "Schwarzkopfruderenten bilden ihre Paare nach der Ankunft im Brutgebiet."
+  },
+  {
+    "id": 438,
+    "fact": "Balzende Schwarzkopfruderentenmännchen schlagen ihre Schnäbel gegen den aufgeblähten Hals."
+  },
+  {
+    "id": 439,
+    "fact": "Eisenten brüten in der arktischen Tundra nahe Süßwasserfeuchtgebieten."
+  },
+  {
+    "id": 440,
+    "fact": "Eisenten überwintern neben Meeren auch auf großen Süßwasserseen."
+  },
+  {
+    "id": 441,
+    "fact": "Eisenten nutzen offene Wasserflächen im Meereis, sogenannte Polynjas."
+  },
+  {
+    "id": 442,
+    "fact": "Eisenten suchen manchmal nachts nach Nahrung."
+  },
+  {
+    "id": 443,
+    "fact": "Weibliche Eisenten kleiden ihre Nester mit Zwergweiden- oder Zwergbirkenblättern aus."
+  },
+  {
+    "id": 444,
+    "fact": "Ein Eisentengelege enthält gewöhnlich 6–9 Eier."
+  },
+  {
+    "id": 445,
+    "fact": "Die Brutdauer der Eisente beträgt etwa 24–29 Tage."
+  },
+  {
+    "id": 446,
+    "fact": "Eisenten nutzen teilweise geöffnete Flügel zum Antrieb unter Wasser."
+  },
+  {
+    "id": 447,
+    "fact": "Kragenenten führen ihre Küken nach dem Schlüpfen zu langsameren Gewässern."
+  },
+  {
+    "id": 448,
+    "fact": "Kragenenten überwintern hauptsächlich an felsigen Küsten."
+  },
+  {
+    "id": 449,
+    "fact": "Überwinternde Kragenenten fressen Krabben, Seepocken, Muscheln und Meeresschnecken."
+  },
+  {
+    "id": 450,
+    "fact": "Kragenenten können auf Felsvorsprüngen oder in Baumhöhlen nisten."
+  },
+  {
+    "id": 451,
+    "fact": "Kragenenten bauen Nester aus Moos, Nadeln, Blättern oder kleinen Steinen."
+  },
+  {
+    "id": 452,
+    "fact": "Die Brutdauer der Kragenente beträgt etwa 27–29 Tage."
+  },
+  {
+    "id": 453,
+    "fact": "Kragenentenpaare können ihre Bindung über mehrere Jahre erhalten."
+  },
+  {
+    "id": 454,
+    "fact": "Kragenenten fressen kleine Beute unter Wasser und bringen größere Beute hinauf."
+  },
+  {
+    "id": 455,
+    "fact": "Brillenenten brüten im Übergangsgebiet zwischen nördlichem borealem Wald und Tundra."
+  },
+  {
+    "id": 456,
+    "fact": "Brillenenten ziehen ihre Küken auf flachen Seen mit wenigen Raubfischen auf."
+  },
+  {
+    "id": 457,
+    "fact": "Brillenentenfamilien können mehrere benachbarte Seen nutzen."
+  },
+  {
+    "id": 458,
+    "fact": "Brillenenten fressen an Pazifikküsten Heringslaich."
+  },
+  {
+    "id": 459,
+    "fact": "Brillenenten fressen während der Brutzeit wirbellose Süßwassertiere."
+  },
+  {
+    "id": 460,
+    "fact": "Weibliche Brillenenten verbergen Bodennester unter Pflanzen oder Felsvorsprüngen."
+  },
+  {
+    "id": 461,
+    "fact": "Die Brutdauer der Brillenente beträgt etwa 28–30 Tage."
+  },
+  {
+    "id": 462,
+    "fact": "Brillenentenflügel erzeugen bei Schwarmflügen pfeifende Geräusche."
+  },
+  {
+    "id": 463,
+    "fact": "Amerikanische Trauerenten brüten an kleinen, flachen Seen in nördlichen borealen Wäldern."
+  },
+  {
+    "id": 464,
+    "fact": "Amerikanische Trauerenten sammeln sich nach der Brut an bestimmten Küstenmauserplätzen."
+  },
+  {
+    "id": 465,
+    "fact": "Amerikanische Trauerenten können während des Herbstzuges an Binnenseen rasten."
+  },
+  {
+    "id": 466,
+    "fact": "Amerikanische Trauerenten fressen im Brutgebiet viele Insekten und Larven."
+  },
+  {
+    "id": 467,
+    "fact": "Überwinternde Amerikanische Trauerenten fressen vorwiegend Muscheln."
+  },
+  {
+    "id": 468,
+    "fact": "Weibliche Amerikanische Trauerenten legen Nester an geschützten Bodenstellen nahe Wasser an."
+  },
+  {
+    "id": 469,
+    "fact": "Die Brutdauer der Amerikanischen Trauerente beträgt etwa 27–28 Tage."
+  },
+  {
+    "id": 470,
+    "fact": "Männliche Amerikanische Trauerenten ziehen nach der Eiablage zu Mausergebieten."
+  },
+  {
+    "id": 471,
+    "fact": "Rotschnabelpfeifgänse verlassen ihre Ruheplätze zur Nahrungssuche gewöhnlich bei Sonnenuntergang."
+  },
+  {
+    "id": 472,
+    "fact": "Rotschnabelpfeifgänse fressen Feldfrüchte wie Sorghum, Hirse und Reis."
+  },
+  {
+    "id": 473,
+    "fact": "Beide Partner eines Rotschnabelpfeifganspaares helfen bei der Wahl des Nistplatzes."
+  },
+  {
+    "id": 474,
+    "fact": "In Höhlen brütende Rotschnabelpfeifgänse legen ihre Eier meist direkt auf vorhandenes Material."
+  },
+  {
+    "id": 475,
+    "fact": "Die Eier der Rotschnabelpfeifgans sind weiß."
+  },
+  {
+    "id": 476,
+    "fact": "Ein Gelege der Rotschnabelpfeifgans kann 9–18 Eier enthalten."
+  },
+  {
+    "id": 477,
+    "fact": "Die Brutdauer der Rotschnabelpfeifgans beträgt etwa 25–30 Tage."
+  },
+  {
+    "id": 478,
+    "fact": "Weibliche Rotschnabelpfeifgänse legen manchmal Eier in die Nester anderer Pfeifgänse."
+  },
+  {
+    "id": 479,
+    "fact": "Gelbbrustpfeifgänse bevorzugen flache Süßwasserfeuchtgebiete, darunter überflutete Reisfelder."
+  },
+  {
+    "id": 480,
+    "fact": "Beide Partner eines Gelbbrustpfeifganspaares helfen beim Nestbau."
+  },
+  {
+    "id": 481,
+    "fact": "Gelbbrustpfeifgansnester besitzen häufig Rampen zum Wasser."
+  },
+  {
+    "id": 482,
+    "fact": "Gelbbrustpfeifgänse ergänzen Nestmaterial, wenn ihr Nest absinkt oder überflutet wird."
+  },
+  {
+    "id": 483,
+    "fact": "Männliche und weibliche Gelbbrustpfeifgänse teilen sich das Ausbrüten der Eier."
+  },
+  {
+    "id": 484,
+    "fact": "Beide Gelbbrustpfeifganseltern helfen bei der Aufzucht ihrer Küken."
+  },
+  {
+    "id": 485,
+    "fact": "Die Brutdauer der Gelbbrustpfeifgans beträgt etwa 24–25 Tage."
+  },
+  {
+    "id": 486,
+    "fact": "Eiderenten lösen Muscheln mit ihren Schnäbeln von Unterwasserfelsen."
+  },
+  {
+    "id": 487,
+    "fact": "Eiderenten suchen in Gebieten mit starkem Tidenhub häufig bei Ebbe Nahrung."
+  },
+  {
+    "id": 488,
+    "fact": "Eiderenten bringen Seeigel vor dem Fressen an die Wasseroberfläche."
+  },
+  {
+    "id": 489,
+    "fact": "Eiderentenküken fressen neben kleinen Tieren auch Meeresalgen."
+  },
+  {
+    "id": 490,
+    "fact": "Weibliche Eiderenten bedecken ihre Eier beim Verlassen des Nestes häufig mit Daunen."
+  },
+  {
+    "id": 491,
+    "fact": "Die Brutdauer der Eiderente beträgt etwa 24–26 Tage."
+  },
+  {
+    "id": 492,
+    "fact": "Weibliche Eiderenten nutzen häufig ihren Nistplatz aus dem Vorjahr erneut."
+  },
+  {
+    "id": 493,
+    "fact": "Prachteiderenten nisten in der arktischen Tundra nahe Seen oder Meeresküsten."
+  },
+  {
+    "id": 494,
+    "fact": "Prachteiderenten können ihre Küken in Süßwasser- oder Salzwasserlebensräumen aufziehen."
+  },
+  {
+    "id": 495,
+    "fact": "Prachteiderenten können Beute von der Unterseite des Meereises sammeln."
+  },
+  {
+    "id": 496,
+    "fact": "Prachteiderenten fressen neben Muscheln und Krebstieren auch Seesterne."
+  },
+  {
+    "id": 497,
+    "fact": "Prachteiderenten können in flachem Süßwasser nach Nahrung gründeln."
+  },
+  {
+    "id": 498,
+    "fact": "Junge Prachteiderenten verbringen ihren ersten Sommer gewöhnlich auf dem Meer."
+  },
+  {
+    "id": 499,
+    "fact": "Ein Gelege der Prachteiderente kann 2–7 Eier enthalten."
+  }
+]

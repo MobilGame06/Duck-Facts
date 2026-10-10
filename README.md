@@ -10,7 +10,7 @@ This project serves as a test case for AI code generation, showcasing how AI can
 
 ## Features
 
-- 🌐 Multi-language support (English and German)
+- 🌐 Multi-language support (500 facts each in English and German)
 - 📚 RESTful API with comprehensive endpoints
 - 📖 Interactive Swagger/OpenAPI documentation
 - 🧪 Comprehensive test suite with >95% coverage
@@ -22,7 +22,7 @@ This project serves as a test case for AI code generation, showcasing how AI can
 
 ### Prerequisites
 
-- Node.js (v14 or higher)
+- Node.js 20.19+, 22.13+, or 24+ (matching the `engines.node` range in `package.json`)
 - npm (v6 or higher)
 
 ### Setup
@@ -96,7 +96,7 @@ GET /api/facts/{id}
 
 **Path Parameters:**
 
-- `id` (required): Integer ID of the fact (0 to current maximum index for the selected language)
+- `id` (required): Integer ID stored in the fact record (currently 0–499)
 
 **Query Parameters:**
 
@@ -202,7 +202,7 @@ Duck-Facts/
 │   ├── integration/     # API integration tests
 │   └── unit/           # Unit tests
 ├── bin/                # Server startup script
-├── data/               # JSON data files
+├── data/facts/         # Separate en.json and de.json fact records, plus SOURCES.md
 ├── middleware/         # Express middleware
 ├── public/             # Static assets
 ├── routes/             # API route definitions
@@ -238,10 +238,26 @@ We welcome contributions! Please follow these guidelines:
 
 To add new duck facts:
 
-1. Edit `data/facts.json`
-2. Add facts to both `en` and `de` arrays
-3. Ensure facts are family-friendly and educational
-4. Run tests to verify the changes work correctly
+1. Edit `data/facts/en.json` and `data/facts/de.json`.
+2. Append a record with the same new, unique `id` in both files, using the appropriate translation:
+
+   ```json
+   {
+     "id": 500,
+     "fact": "Your new duck fact in the language of this file."
+   }
+   ```
+
+3. Keep existing IDs stable; an ID identifies a fact across languages, independently of array order. Do not reuse IDs.
+4. Ensure facts are family-friendly and educational, and document their sources in [data/facts/SOURCES.md](data/facts/SOURCES.md).
+5. Run tests to verify matching IDs, nonempty text, and duplicate-free facts.
+6. Restart the server or redeploy after editing the data to refresh the in-memory cache.
+
+### Loading and Performance
+
+The homepage and API share a lazy cache in `utils/dataLoader.js`. The first request for a language reads and parses only its JSON file, validates the records, and builds an ID lookup map. Concurrent requests share that initial read. Subsequent requests reuse immutable records without filesystem access or JSON parsing. Random selection and lookup by explicit ID both take O(1) time after loading.
+
+Only requested languages occupy the cache, with at most one entry for each supported language per Node.js process (or warm serverless instance). Failed loads are removed from the cache so a later request can retry. Unsupported language codes fall back to English. Data paths resolve relative to the loader module, so they do not depend on the working directory.
 
 ### Reporting Issues
 

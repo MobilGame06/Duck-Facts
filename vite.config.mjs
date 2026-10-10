@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
-import { resolve } from 'path';
+import { fileURLToPath } from 'node:url';
 
 export default defineConfig({
   root: 'src',
@@ -7,15 +7,15 @@ export default defineConfig({
   build: {
     outDir: '../public/dist',
     emptyOutDir: true,
-    rollupOptions: {
+    rolldownOptions: {
       input: {
-        main: resolve(__dirname, 'src/js/main.js'),
+        main: fileURLToPath(new URL('./src/js/main.js', import.meta.url)),
       },
       output: {
         entryFileNames: 'js/[name].js',
         chunkFileNames: 'js/[name]-[hash].js',
         assetFileNames: (assetInfo) => {
-          if (assetInfo.name.endsWith('.css')) {
+          if (assetInfo.names.some((name) => name.endsWith('.css'))) {
             return 'css/[name][extname]';
           }
           return 'assets/[name]-[hash][extname]';

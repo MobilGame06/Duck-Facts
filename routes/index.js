@@ -1,20 +1,17 @@
 const express = require('express');
 const router = express.Router();
-const { loadFactsByLanguage } = require('../utils/dataLoader');
+const { loadFactsByLanguage, getFactLanguage } = require('../utils/dataLoader');
 
 /* GET home page. */
 router.get('/', async (req, res, _next) => {
+  const lang = getFactLanguage(req.query.lang);
   try {
-    const lang =
-      req.query.lang && ['en', 'de'].includes(req.query.lang)
-        ? req.query.lang
-        : 'en';
-    const facts = await loadFactsByLanguage('./data/facts.json', lang);
+    const facts = await loadFactsByLanguage(lang);
 
     // Get 4 example facts for display
-    const exampleFacts = [facts[2], facts[17], facts[29], facts[16]].filter(
-      Boolean
-    ); // Using different indices for variety
+    const exampleFacts = [facts[2], facts[17], facts[29], facts[16]]
+      .filter(Boolean)
+      .map((record) => record.fact); // Using different indices for variety
 
     res.render('index', {
       title: 'Duck Facts API',
@@ -23,12 +20,8 @@ router.get('/', async (req, res, _next) => {
     });
   } catch {
     // Fallback if data loading fails
-    const currentLang =
-      req.query.lang && ['en', 'de'].includes(req.query.lang)
-        ? req.query.lang
-        : 'en';
     const fallbackFacts =
-      currentLang === 'de'
+      lang === 'de'
         ? [
             'Männliche Enten werden Erpel genannt; weibliche sind einfach Enten.',
             'Enten können Vibrationen im Wasser durch ihre Schnäbel spüren.',
@@ -44,7 +37,7 @@ router.get('/', async (req, res, _next) => {
 
     res.render('index', {
       title: 'Duck Facts API',
-      currentLang: currentLang,
+      currentLang: lang,
       exampleFacts: fallbackFacts,
     });
   }
