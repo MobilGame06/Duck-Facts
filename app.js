@@ -24,6 +24,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
+app.use('/api', (_req, res, next) => {
+  res.set('Access-Control-Allow-Origin', '*');
+  next();
+});
 app.use('/api', apiRouter);
 
 // catch 404 and forward to error handler
