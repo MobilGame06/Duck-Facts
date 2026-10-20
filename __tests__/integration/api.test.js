@@ -76,6 +76,26 @@ describe('API Integration Tests', () => {
     });
   });
 
+  describe('API CORS headers', () => {
+    it('returns Access-Control-Allow-Origin for GET /api/facts/random', async () => {
+      const response = await request(app)
+        .get('/api/facts/random')
+        .set('Origin', 'https://example.com')
+        .expect(200);
+
+      expect(response.headers['access-control-allow-origin']).toBe('*');
+    });
+
+    it('returns Access-Control-Allow-Origin for GET /api/facts/:id', async () => {
+      const response = await request(app)
+        .get('/api/facts/0')
+        .set('Origin', 'https://example.com')
+        .expect(200);
+
+      expect(response.headers['access-control-allow-origin']).toBe('*');
+    });
+  });
+
   describe('GET /api/facts/:id', () => {
     it('should return a specific duck fact by valid ID', async () => {
       const response = await request(app).get('/api/facts/0').expect(200);
